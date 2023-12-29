@@ -1,4 +1,18 @@
 ---
+import Nav from "./ui/Nav.astro";
+import '../assets/styles/index.css';
+
+const categories = {
+    id: 0,
+    title: '',
+    products: [
+        {
+            title: '',
+            description: '',
+            url: ''
+        }
+    ]
+}
 ---
 
 <html lang="en">
@@ -8,8 +22,11 @@
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
+
+
     </head>
     <body class="body">
+        <Nav />
         <slot />
     </body>
 </html>
