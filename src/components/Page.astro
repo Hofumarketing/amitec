@@ -2,17 +2,8 @@
 import Nav from "./ui/Nav.astro";
 import '../assets/styles/index.css';
 
-const categories = {
-    id: 0,
-    title: '',
-    products: [
-        {
-            title: '',
-            description: '',
-            url: ''
-        }
-    ]
-}
+
+
 ---
 
 <html lang="en">
@@ -21,6 +12,9 @@ const categories = {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+
         <title>Astro</title>
 
 
@@ -29,4 +23,16 @@ const categories = {
         <Nav />
         <slot />
     </body>
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#slider').mount();
+    });
+
+
+</script>
+
+
 </html>

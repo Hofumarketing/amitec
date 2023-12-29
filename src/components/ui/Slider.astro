@@ -1,0 +1,61 @@
+---
+// Tutaj możesz umieścić skrypty JavaScript do obsługi slidera
+
+import Whitebutton from "./Whitebutton.astro";
+import Button from "./Button.astro";
+let activeSlide = 0;
+const slides = [
+    'image1.jpg', // Zmień na swoje obrazy
+    'image2.jpg',
+    'image3.jpg'
+];
+
+const slides2 = [
+    {
+        id: 0,
+        title: 'Wszystko co najlepsze dla Twojego gospodarstwa',
+        description: 'Skorzystaj z szerokiej oferty wysokiej jakości środków produkcji rolnej oraz usług doradczych. Wznieś swój agrobiznes na poziom Plus+, na którym pięknie rosną stada, zbiory i dochody.',
+        image: '/src/assets/img/slide1.jpg',
+    },
+    {
+        id: 1,
+        title: 'Wszystko co najlepsze dla Twojego gospodarstwa',
+        description: 'Skorzystaj z szerokiej oferty wysokiej jakości środków produkcji rolnej oraz usług doradczych. Wznieś swój agrobiznes na poziom Plus+, na którym pięknie rosną stada, zbiory i dochody.',
+        image: '/src/assets/IMG/slide2.jpg',
+    },
+    {
+        id: 2,
+        title: 'Wszystko co najlepsze dla Twojego gospodarstwa',
+        description: 'Skorzystaj z szerokiej oferty wysokiej jakości środków produkcji rolnej oraz usług doradczych. Wznieś swój agrobiznes na poziom Plus+, na którym pięknie rosną stada, zbiory i dochody.',
+        image: '/src/assets/IMG/slide3.jpg',
+    }
+];
+
+
+---
+
+
+
+<div id="slider" class="splide">
+    <div class="splide__track">
+        <ul class="splide__list">
+            {slides2.map((slide, index) => (
+                    <div class="splide__slide  flex flex-wrap">
+                        <div class=" flex  items-center  justify-center bg-orange w-1/3 p-12">
+                            <div class="wrapper">
+                                <h1 class="text-neutral-900  mb-6 text-[64px] font-bold font-['Gilroy'] ">{slide.title}</h1>
+                                <p class=" mb-6 text-neutral-900 text-base font-normal font-['Gilroy'] leading-[17.60px]">{slide.description}</p>
+                                <Button type="white"> Sprawdź</Button>
+                            </div>
+                        </div>
+                        <div class="w-2/3 bg-center	  bg-no-repeat	 bg-cover	h-100vh" style={{ backgroundImage: `url(${slide.image})` }}>
+                            {/* Dodatkowa zawartość slajdu */}
+                        </div>
+                    </div>
+            ))}
+        </ul>
+    </div>
+</div>
+
+
+

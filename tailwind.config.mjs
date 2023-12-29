@@ -3,8 +3,16 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				'gilory': ['Gilory', 'sans-serif'], // Dodaj 'Gilory' jako dostępną czcionkę
+			},
 			colors: {
 				'blue123': '#1fb8ff',
+				'orange' : '#FF9700',
+				'green' : '#036949',
+			},
+			height: {
+				'100vh': '100vh',
 			}
 		},
 	},
