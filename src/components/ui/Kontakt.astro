@@ -1,0 +1,60 @@
+---
+// Tutaj możesz umieścić skrypty JavaScript do obsługi slidera
+
+
+
+import H2 from "./h2.astro";
+import Paragraph from "./paragraph.astro";---
+
+
+<section class="pt-28 bg-zink  p bg-opacity-20  ">
+    <div class="max-w-[1440px] w-full flex mx-auto" >
+        <div class="w-3/5">
+            <h2 class="text-neutral-900 text-[40px] font-bold font-['Gilroy'] leading-10" > Usługi doradcze</h2>
+            <p class="mt-8 text-neutral-900 text-base font-normal font-['Gilroy'] leading-snug">Zawsze chętnie dzielimy się wiedzą. Biznes „nakarmiony” sprawdzonymi informacjami rośnierównie zdrowo i efektywnie, jak zwierzęta mające dostęp do naszych dodatków paszowych.</p>
+        </div>
+        <div class="w-2/5">
+            <H2 type="small">Skontaktuj się z nami </H2>
+            <Paragraph type="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat</Paragraph>
+
+            <form  className="max-w-md mx-auto mt-7 my-10">
+                <div class="mb-6 flex flex-wrap">
+                    <label  class="w-full block mb-2 text-sm font-medium text-gray-900" htmlFor="name" >
+                        Imię
+                    </label>
+                    <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            required
+                    />
+                </div>
+                <div className="mb-6">
+                    <label htmlFor="email" class="block mb-2 text-sm font-medium text-gray-900">
+                        Email
+                    </label>
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            required
+                    />
+                </div>
+
+                <button
+                        type="submit"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                >
+                    Wyślij
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+
+</section>
+

@@ -1,5 +1,6 @@
 ---
-
+import Button from "./Button.astro";
+import Buttonunderline from "./Buttonunderline.astro";
 const categories = [
     {
         id: 0,
@@ -26,30 +27,35 @@ const products = [
         id: 0,
         title: 'Previcur',
         image: '/src/assets/img/products/prod1.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+
     },
     {
         id: 1,
         title: 'Previcur',
         image: '/src/assets/img/products/prod2.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 
     },
     {
         id: 2,
         title: 'Previcur',
         image: '/src/assets/img/products/prod3.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 
     },
     {
         id: 3,
         title: 'Previcur',
         image: '/src/assets/img/products/prod4.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 
     },
     {
         id: 4,
         title: 'Previcur',
         image: '/src/assets/img/products/prod5.jpg',
-
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     },
 
 
@@ -65,20 +71,27 @@ const products = [
         <div class="max-w-[424px] mt-8 text-center text-white text-base font-normal font-['Gilroy'] leading-[17.60px]">
             Sprzedajemy produkty, które łączą w sobie jakość surowców oraz gwarancję bezpieczeństwa. Wybierz optymalne dodatki paszowe do produkcji zwierzęcej oraz inne środki produkcji rolnej. Iprzygotuj się na żniwa w postaci lepszych wyników
         </div>
-        <div class="w-full grid grid-cols-2 pt-12 mx-auto max-w-[1400px]">
+        <div class="w-full flex flex-wrap flex-auto pt-12 mx-auto max-w-[1400px]">
 
-            <div class="max-w-[500px] text-white text-[32px] font-bold font-['Gilroy'] leading-9" >
+            <div class="flex-initial w-1/3 text-white text-[32px] font-bold font-['Gilroy'] leading-9" >
                 {categories.map((slide, index) => (
-                        <h2 class="mb-6"> {slide.title}</h2>
-
+                        <h2 class="first:opacity-100 opacity-30	 mb-6"> {slide.title}</h2>
                 ))}
             </div>
-            <div class="" >
+            <div class="flex flex-1 flex-wrap" >
                 {products.map((slide, index) => (
-                        <h2> {slide.title}</h2>
-                        <div class="bg-center	  bg-no-repeat	pt-[100%] bg-cover w-full	h-10" style={{ backgroundImage: `url(${slide.image})` }}>
-                            {/* Dodatkowa zawartość slajdu */}
+                        <div class="w-1/3 p-1">
+
+                            <div class="bg-center	  bg-no-repeat	pt-[100%] bg-cover w-full	h-10" style={{ backgroundImage: `url(${slide.image})` }}>
+                                {/* Dodatkowa zawartość slajdu */}
+                            </div>
+                            <div class="p-4 bg-white hover:bg-orange text-black">
+                                <h2 class="text-black text-xl font-bold font-['Gilroy'] leading-snug"> {slide.title}</h2>
+                                <p class="">{slide.description} </p>
+                                <Buttonunderline type="white-underline">Sprawdź</Buttonunderline>
+                            </div>
                         </div>
+
                 ))}
             </div>
         </div>

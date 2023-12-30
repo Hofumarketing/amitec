@@ -10,12 +10,15 @@ function btnClasses(type) {
     switch (type) {
         case 'white':
             return 'bg-white hover:bg-black text-black hover:text-white';
-        case 'primary':
-            return 'bg-red-500';
+        case 'orange':
+            return 'border mt-8 border-orange hover:bg-orange hover:text-black text-sm font-bold ';
+        case 'black':
+            return 'bg-transparent text-black border mt-8 border-black hover:bg-black hover:text-white';
+
     }
 }
 
-const classes = ['transition-all ease-in-out duration-300 px-12 py-2 rounded-full', btnClasses(type)];
+const classes = ['transition-all font-[Gilroy] ease-in-out duration-300 px-12 py-2 rounded-full', btnClasses(type)];
 ---
 
 <button class:list={classes}>

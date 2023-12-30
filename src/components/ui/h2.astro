@@ -1,0 +1,30 @@
+---
+
+interface Props {
+    type: 'black' | 'white' | 'onas' | 'regular' | 'small' ;
+}
+
+const { type } = Astro.props
+
+function btnClasses(type) {
+    switch (type) {
+        case 'white':
+            return 'text-white';
+        case 'black':
+            return 'text-black ';
+        case 'onas':
+            return 'text-black text-5xl ';
+        case 'regular':
+            return 'text-black text-[32px] ';
+        case 'small':
+            return 'text-black text-[28px] ';
+
+    }
+}
+
+const classes = ['text-black  font-bold font-[Gilroy]', btnClasses(type)];
+---
+
+<h2 class:list={classes}>
+    <slot />
+</h2>

@@ -33,6 +33,21 @@ import '../assets/styles/index.css';
 
 
 </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide4 = new Splide('#splide4', {
+                type: 'slide', // Enables looping
+                direction: 'ttb', // Top-to-bottom vertical orientation
+                perPage: 1.5, // Number of slides per page
+                perMove: 1, // Number of slides moved per arrow click or swipe
+                height: '500px', // Set a fixed height for the slider
+                arrows: true, // Show navigation arrows
+                pagination: false, // Disable pagination dots
+                // Additional configuration options can be added here
+            });
 
+            splide4.mount(); // Mount the slider
+        });
+    </script>
 
 </html>

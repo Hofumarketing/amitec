@@ -10,6 +10,7 @@ export default {
 				'blue123': '#1fb8ff',
 				'orange' : '#FF9700',
 				'green' : '#036949',
+				'zink' : '#D9D9D9',
 			},
 			height: {
 				'100vh': '100vh',
