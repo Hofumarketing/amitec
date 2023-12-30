@@ -12,13 +12,17 @@ function btnClasses(type) {
             return 'bg-white hover:bg-black text-black hover:text-white';
         case 'orange':
             return 'border mt-8 border-orange hover:bg-orange hover:text-black text-sm font-bold ';
+        case 'orange-f-w':
+            return 'border w-full mt-8 border-orange hover:bg-orange hover:text-black text-sm font-bold ';
+        case 'fullorange-f-w':
+            return 'border w-full mt-8 border-orange bg-orange hover:bg-white hover:text-black text-sm font-bold ';
         case 'black':
             return 'bg-transparent text-black border mt-8 border-black hover:bg-black hover:text-white';
 
     }
 }
 
-const classes = ['transition-all font-[Gilroy] ease-in-out duration-300 px-12 py-2 rounded-full', btnClasses(type)];
+const classes = ['transition-all font-[Gilroy] h-11  ease-in-out duration-300 px-12 py-2 rounded-full', btnClasses(type)];
 ---
 
 <button class:list={classes}>
