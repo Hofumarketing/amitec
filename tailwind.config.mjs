@@ -11,6 +11,7 @@ export default {
 				'orange' : '#FF9700',
 				'green' : '#036949',
 				'zink' : '#D9D9D9',
+				'emerald': '#036949'
 			},
 			height: {
 				'100vh': '100vh',

@@ -9,14 +9,19 @@ const { type } = Astro.props
 function btnClasses(type) {
     switch (type) {
         case 'white':
-            return 'text-white';
+            return 'text-white text-neutral-900 pt-7 pb-7 text-base';
         case 'black':
             return 'text-black ';
         case 'light':
             return 'text-neutral-900 pt-7 pb-7 text-base ';
+        case 'bold':
+            return 'text-neutral-900 pt-7 pb-7 text-base font-bold ';
+        case 'capitalize':
+            return 'capitalize ';
 
     }
 }
+
 
 const classes = ['text-black font-[Gilroy]', btnClasses(type)];
 ---

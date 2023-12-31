@@ -35,13 +35,54 @@ import '../assets/styles/index.css';
 </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var splide4 = new Splide('#splide4', {
+            var splide1 = new Splide('#splide1', {
                 type: 'slide', // Enables looping
                 direction: 'ttb', // Top-to-bottom vertical orientation
                 perPage: 1.5, // Number of slides per page
                 perMove: 1, // Number of slides moved per arrow click or swipe
                 height: '500px', // Set a fixed height for the slider
-                arrows: true, // Show navigation arrows
+                pagination: false, // Disable pagination dots
+                // Additional configuration options can be added here
+            });
+
+            splide1.mount(); // Mount the slider
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide2 = new Splide('#splide2', {
+                type: 'loop', // Enables looping
+                autoplay: true,
+                perPage: 4, // Number of slides per page
+                perMove: 1, // Number of slides moved per arrow click or swipe
+                pagination: false, // Disable pagination dots
+                // Additional configuration options can be added here
+            });
+
+            splide2.mount(); // Mount the slider
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide3 = new Splide('#splide3', {
+                type: 'loop', // Enables looping
+                autoplay: true,
+                perPage: 3, // Number of slides per page
+                perMove: 1, // Number of slides moved per arrow click or swipe
+                pagination: false, // Disable pagination dots
+                // Additional configuration options can be added here
+            });
+
+            splide3.mount(); // Mount the slider
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide4 = new Splide('#splide4', {
+                type: 'loop', // Enables looping
+                autoplay: true,
+                perPage: 3.5, // Number of slides per page
+                perMove: 1, // Number of slides moved per arrow click or swipe
                 pagination: false, // Disable pagination dots
                 // Additional configuration options can be added here
             });
@@ -49,5 +90,7 @@ import '../assets/styles/index.css';
             splide4.mount(); // Mount the slider
         });
     </script>
+
+
 
 </html>
