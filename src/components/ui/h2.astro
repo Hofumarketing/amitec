@@ -18,7 +18,8 @@ function btnClasses(type) {
             return 'text-black text-[32px] ';
         case 'small':
             return 'text-black text-[28px] ';
-
+        case 'blog':
+            return 'text-black text-2xl leading-relaxed pb-[32px]';
     }
 }
 
@@ -28,3 +29,4 @@ const classes = ['text-black  font-bold font-[Gilroy]', btnClasses(type)];
 <h2 class:list={classes}>
     <slot />
 </h2>
+

@@ -2,7 +2,7 @@
 // Tutaj możesz umieścić skrypty JavaScript do obsługi slidera
 
 import Whitebutton from "./Whitebutton.astro";
-import Button from "./Button.astro";
+import Button from "../ui/Button.astro";
 let activeSlide = 0;
 const slides = [
     'image1.jpg', // Zmień na swoje obrazy
@@ -16,21 +16,26 @@ const slides2 = [
         title: 'Wszystko co najlepsze dla Twojego gospodarstwa',
         description: 'Skorzystaj z szerokiej oferty wysokiej jakości środków produkcji rolnej oraz usług doradczych. Wznieś swój agrobiznes na poziom Plus+, na którym pięknie rosną stada, zbiory i dochody.',
         image: '/src/assets/img/slide1.jpg',
+        bgcolor: 'orange',
+
     },
     {
         id: 1,
         title: 'Wszystko co najlepsze dla Twojego gospodarstwa',
         description: 'Skorzystaj z szerokiej oferty wysokiej jakości środków produkcji rolnej oraz usług doradczych. Wznieś swój agrobiznes na poziom Plus+, na którym pięknie rosną stada, zbiory i dochody.',
         image: '/src/assets/IMG/slide2.jpg',
+
+
     },
     {
         id: 2,
         title: 'Wszystko co najlepsze dla Twojego gospodarstwa',
         description: 'Skorzystaj z szerokiej oferty wysokiej jakości środków produkcji rolnej oraz usług doradczych. Wznieś swój agrobiznes na poziom Plus+, na którym pięknie rosną stada, zbiory i dochody.',
         image: '/src/assets/IMG/slide3.jpg',
+        bgcolor: 'black',
+        textcolor: 'white',
     }
 ];
-
 
 ---
 
@@ -41,14 +46,14 @@ const slides2 = [
         <ul class="splide__list">
             {slides2.map((slide, index) => (
                     <div class="splide__slide  flex flex-wrap">
-                        <div class=" flex  items-center  justify-center bg-orange w-2/5 p-12">
-                            <div class="wrapper absolute left-0 right-0 mx-auto max-w-[1440px] w-full">
-                                <h1 class=" w-[400px] text-neutral-900  mb-6 text-[64px] font-bold font-['Gilroy'] ">{slide.title}</h1>
-                                <p class=" w-[400px] mb-6 text-neutral-900 text-base font-normal font-['Gilroy'] leading-[17.60px]">{slide.description}</p>
+                        <div class={` order-1 md:order-0 flex  items-center  justify-center w-full min-h-[50vh] lg:h-100vh lg:w-2/5 p-12 bg-${slide.bgcolor ?? 'white'}`}>
+                            <div class="wrapper lg:absolute left-0  text-cneter lg:text-left right-0 mx-auto max-w-[1400px] w-full">
+                                <h1 class={`lg:w-[400px] text-neutral-900  mb-6 text-[64px] font-bold font-['Gilroy']  text-${slide.textcolor}`}>{slide.title}</h1>
+                                <p class={` lg:w-[400px] mb-6 text-neutral-900 text-base font-normal font-['Gilroy'] leading-[17.60px]  text-${slide.textcolor}`}> {slide.description}</p>
                                 <Button type="white"> Sprawdź</Button>
                             </div>
                         </div>
-                        <div class="w-3/5 bg-center	  bg-no-repeat	 bg-cover	h-100vh" style={{ backgroundImage: `url(${slide.image})` }}>
+                        <div class="order-0 md:order-1 w-full lg:w-3/5 bg-center	  bg-no-repeat	 bg-cover	h-[50vh] lg:h-100vh" style={{ backgroundImage: `url(${slide.image})` }}>
                             {/* Dodatkowa zawartość slajdu */}
                         </div>
                     </div>

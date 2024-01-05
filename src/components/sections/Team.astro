@@ -1,0 +1,84 @@
+---
+import Button from "../ui/Button.astro";
+const team = [
+    {
+        id: 0,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+    {
+        id: 1,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+    {
+        id: 2,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+    {
+        id: 3,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+    {
+        id: 4,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+
+]
+
+---
+
+
+<section class=" split-gradient pt-20 pb-20 w-full mx-auto">
+    <div class="max-w-[1400px] w-full mx-auto">
+        <div class="text-center  text-black text-5xl font-bold font-['Gilroy'] leading-[52.80px] border-b border-black ">
+            <h2 class="p-10">Zespół Plus +</h2>
+        </div>
+    <div class="flex pt-10">
+        <div class="w-1/2">
+            <img src="src/assets/IMG/Onas/Rectangle60.jpg" >
+        </div>
+        <div class="w-1/2 flex items-end justify-start">
+            <div class="w-2/3 pl-[23px]">
+                <h2 class="text-neutral-900 text-xl font-bold font-['Gilroy'] leading-tight"> Maciej Swarbuła </h2>
+                <p class="text-black text-xl font-normal font-['Gilroy'] leading-normal">Prezes zarządu</p>
+                <p class="pt-[26px] text-black text-xl font-normal font-['Gilroy'] leading-normal">Wytycza kierunki rozwoju, podejmuje strategiczne decyzje i wdraża w życie wizję firmy. Może się pochwalić 25-letnim doświadczeniem w branży rolniczej + 100-hektarowym gospodarstwem. Motor napędowy  i dobry duch firmy.</p>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+<section class="w-full mx-auto">
+    <div class="max-w-[1400px] w-full grid grid-cols-4 gap-2.5 mx-auto">
+
+
+        {team.map((slide, index) => (
+                <div class="pb-5 ">
+                    <div class="w-[100%] bg-center bg-no-repeat bg-cover	h-[60vh]" style={{ backgroundImage: `url(${slide.image})` }}>
+                        {/* Dodatkowa zawartość slajdu */}
+                    </div>
+                    <div>
+                        <div class="w-[329px]">
+                            <h2 class="text-black text-xl pt-[24px] font-bold font-['Gilroy'] leading-normal"> {slide.name}</h2>
+                            <p class="text-black text-base pt-[12px]  font-normal font-['Gilroy']">{slide.description}</p>
+                        </div>
+                    </div>
+                </div>
+        ))}
+
+
+
+    </div>
+
+</section>

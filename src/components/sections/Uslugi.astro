@@ -2,7 +2,7 @@
 // Tutaj możesz umieścić skrypty JavaScript do obsługi slidera
 
 
-import Button from "./Button.astro";
+import Button from "../ui/Button.astro";
 const blogpost = [
     {
         id: 0,
@@ -50,14 +50,14 @@ const blogpost = [
 
 
 <section class="pt-28 bg-zink  p bg-opacity-20  ">
-    <div class="max-w-[1440px] w-full flex mx-auto" >
-        <div class="w-1/3">
+    <div class="max-w-[1400px] w-full flex mx-auto" >
+        <div class="w-full lg:w-1/3">
             <h2 class="text-neutral-900 text-[40px] font-bold font-['Gilroy'] leading-10" > Usługi doradcze</h2>
             <p class="mt-8 text-neutral-900 text-base font-normal font-['Gilroy'] leading-snug">Zawsze chętnie dzielimy się wiedzą. Biznes „nakarmiony” sprawdzonymi informacjami rośnierównie zdrowo i efektywnie, jak zwierzęta mające dostęp do naszych dodatków paszowych.</p>
         </div>
 
     </div>
-    <div class="wrapper  max-w-[1440px] w-full mx-auto mt-16">
+    <div class="wrapper  max-w-[1400px] w-full mx-auto mt-16">
 
         <div class="splide relative" id="splide1">
             <div class="splide__track">
@@ -80,33 +80,22 @@ const blogpost = [
 
                 </div>
                 <ul class="splide__list">
-
-
                     {blogpost.map((slide, index) => (
-                            <div class="splide__slide flex w-3/4 mb-4 ">
-                                  <div class="image-container w-2/3">
-
+                            <div class="splide__slide flex flex-wrap w-full lg:w-3/4 mb-4 ">
+                                  <div class="image-container w-full lg:w-2/3">
                                       <div class="w-full bg-center	 h-full  bg-no-repeat bg-cover  " style={{ backgroundImage: `url(${slide.image})` }}>
                                           {/* Dodatkowa zawartość slajdu */}
                                       </div>
-
-
                                   </div>
-                                  <div class="w-1/3 flex justify-center items-center">
-                                      <div class="pl-20">
+                                  <div class="w-full lg:w-1/3 flex justify-center items-center">
+                                      <div class="lg:pl-20">
                                           <h3 class="text-neutral-900 text-xl font-bold font-['Gilroy'] leading-tight"> {slide.title}</h3>
                                           <p class="text-neutral-900 mt-4 text-base font-normal font-['Gilroy'] leading-tight"> {slide.description}</p>
                                           <Button type="orange"> Więcej</Button>
                                       </div>
                                   </div>
-
-
                             </div>
                     ))}
-
-
-
-
                     </ul>
 
                     </div>

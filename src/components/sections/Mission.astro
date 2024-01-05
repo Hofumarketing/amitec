@@ -1,0 +1,49 @@
+---
+import Button from "../ui/Button.astro";
+
+const about = [
+    {
+        id: 0,
+        description: 'Odpowiadamy na potrzeby rolników, udostępniając im szeroką ofertę produktów i usług z najwyższej półki.',
+        image: 'src/assets/IMG/Onas/Rectangle70.jpg',
+    },
+    {
+        id: 1,
+        description: 'Wdrażamy zindywidualizowane rozwiązania, które są pieczołowicie dobierane do specyfiki konkretnego agrobiznesu..',
+        image: 'src/assets/IMG/Onas/Rectangle74.jpg',
+    },
+    {
+        id: 2,
+        description: 'Łączymy najwyższą jakość surowców z aktualną wiedzą naukową i najnowszymi zdobyczami techniki..',
+        image: 'src/assets/IMG/Onas/Rectangle75.jpg',
+    },
+
+    {
+        id: 3,
+        description: 'Stwarzamy nowe możliwości dla agrobiznesu, by w pełni wykorzystać potencjał każdego ambitnego właściciela gospodarstwa rolnego.',
+        image: 'src/assets/IMG/Onas/Rectangle76.jpg',
+    },
+
+
+]
+---
+
+
+
+
+<section class="max-w-[1400px] pt-20 pb-20 w-full mx-auto">
+    {about.map((slide, index) => (
+            <div className={`mb-28 flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                <div class="w-[33%] bg-center	  bg-no-repeat	 bg-cover	h-[40vh]" style={{ backgroundImage: `url(${slide.image})` }}>
+                    {/* Dodatkowa zawartość slajdu */}
+                </div>
+                <div className={`w-[33%] pl-10 flex items-center justify-start  ${index % 2 === 0 ? ' ' : '  -order-1 '}`}>
+                   <div class="w-[329px]  flex-col justify-start items-start gap-8 inline-flex">
+                       <p class="text-orange text-[32px] font-normal font-['Gilroy'] uppercase leading-loose">{String(index + 1).padStart(2, '0')}</p>
+                       <p class="text-black text-base font-normal font-['Gilroy']">{slide.description}</p>
+                   </div>
+                </div>
+            </div>
+    ))}
+
+</section>

@@ -1,0 +1,118 @@
+---
+import Button from "../ui/Button.astro";
+const porady = [
+    {
+        id: 0,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/21.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+
+    },
+    {
+        id: 1,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/22.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+    },
+    {
+        id: 2,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/23.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+    },
+    {
+        id: 3,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/24.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+    },
+    {
+        id: 4,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/21.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+
+    },
+    {
+        id: 5,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/22.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+    },
+    {
+        id: 6,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/23.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+    },
+    {
+        id: 7,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/24.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+    },
+    {
+        id: 8,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/22.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+    },
+    {
+        id: 9,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/23.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+    },
+    {
+        id: 10,
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.',
+        image: 'src/assets/IMG/aktualnosci/24.jpg',
+        title: 'Skuteczna konserwacja kiszonek',
+    },
+];
+
+
+---
+
+
+<section class=" split-gradient2to3  pt-32  pb-20 w-full mx-auto">
+    <div class="flex w-full flex-wrap justify-center pb-20">
+        <h2 class="text-center w-full text-black text-5xl font-bold font-['Gilroy'] leading-[52.80px]"> Praktyczne porady </h2>
+        <div class="max-w-[424px] mt-8 text-black text-center text-base font-normal font-['Gilroy'] leading-[17.60px]">
+            Przygotowaliśmy zbiór sugestii, które sprawdzą się także w Twoim gospodarstwie
+
+        </div>
+    </div>
+    <div class="flex w-full flex-wrap justify-center pb-20">
+        <p class="m-5 hover:underline hover:underline-solid cursor-pointer decoration-2	underline-offset-4	"> Lorem Ipsum</p>
+        <p class="m-5 hover:underline hover:underline-solid cursor-pointer decoration-2 underline-offset-4	"> Lorem Ipsum</p>
+        <p class="m-5 hover:underline hover:underline-solid cursor-pointer decoration-2	underline-offset-4	"> Lorem Ipsum</p>
+    </div>
+    <div class="mx-auto w-full max-w-[1400px] grid grid-cols-4">
+
+        {porady.map((slide, index) => (
+                <div class="pb-10">
+                    <div class="image-container  mr-5">
+
+                        <div class="w-full bg-center   bg-center bg-no-repeat bg-cover pt-[75%]" style={{ backgroundImage: `url(${slide.image})` }}>
+                            {/* Dodatkowa zawartość slajdu */}
+                        </div>
+                        <h3 class="text-black text-xl font-bold font-['Gilroy'] leading-tight pt-[20px]"> {slide.title}</h3>
+                        <div class="w-5/6">
+                            <p class="pt-[24px] text-black text-base font-normal font-['Gilroy'] leading-tight">{slide.description}</p>
+                        </div>
+                        <div class="flex items-center">
+                           <button class="pt-[33px] text-black text-sm font-bold font-['Gilroy'] leading-3 underline decoration-solid"> Czytaj więcej </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+        ))}
+
+    </div>
+    <div class="flex w-full justify-center">
+        <Button type="orange"> Zobacz więcej </Button>
+    </div>
+</section>

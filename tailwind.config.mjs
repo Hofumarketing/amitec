@@ -11,11 +11,14 @@ export default {
 				'orange' : '#FF9700',
 				'green' : '#036949',
 				'zink' : '#D9D9D9',
-				'emerald': '#036949'
+				'emerald': '#036949',
+				'lightorange': '#F7D29B',
 			},
 			height: {
 				'100vh': '100vh',
 			}
+
+
 		},
 	},
 	plugins: [],

@@ -1,0 +1,165 @@
+---
+import Page from "../../components/Page.astro";
+import Kontakt from "../../components/sections/Kontakt.astro";
+import Team from "../../components/sections/Team.astro";
+
+const dane = [
+    {
+        id: 0,
+        head: 'Rolnik Plus',
+        data: 'NIP 777-020-88-67',
+        data2: 'REGON 510519084',
+        data3: 'KRS 0000000000',
+
+    },
+    {
+        id: 1,
+        head: 'Siedziba',
+        data: 'Jana Matejki 7',
+        data2: '10-557 Warszawa',
+        data3: 'tel. 89 535 18 91',
+    },
+    {
+        id: 2,
+        head: ' Laboratorium',
+        data: '',
+        data2: '',
+        data3: '',
+    },
+
+    {
+        id: 3,
+        head: 'Biuro',
+        data: 'Jana Matejki 7',
+        data2: '10-557 Warszawa',
+        data3: 'tel. 89 535 18 91',
+    },
+
+
+]
+
+const team = [
+    {
+        id: 0,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+    {
+        id: 1,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+    {
+        id: 2,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+    {
+        id: 3,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+    {
+        id: 4,
+        name: 'Natalia Swarbuła',
+        description: 'Manager ds. operacyjnych',
+        image: 'src/assets/IMG/Onas/Rectangle56.png',
+    },
+
+]
+
+---
+<Page>
+    <section class="mx-auto w-full py-20 max-w-[1400px]">
+        <h1 class="text-neutral-900 text-[64px] font-bold font-['Gilroy'] leading-[76.80px]">Relacje i kontakt</h1>
+    </section>
+    <Kontakt />
+    <section class="mx-auto w-full py-20 max-w-[1400px]">
+        <h2 class=" text-neutral-900 text-[40px] font-bold font-['Gilroy'] leading-10">Dane kontaktowe firmy</h2>
+        <div class="py-20 grid grid-cols-4 w-full">
+            {dane.map((slide, index) => (
+                    <div class="">
+                        <div class="">
+                            <div class="w-[329px]  flex-col justify-start items-start gap-8 inline-flex">
+                                <p class="w-64 text-neutral-900 text-2xl font-bold font-['Gilroy'] leading-normal">{slide.head}</p>
+                                <p class="text-neutral-900 text-xl font-normal font-['Gilroy'] leading-tight">{slide.data}</p>
+                                <p class="text-neutral-900 text-xl font-normal font-['Gilroy'] leading-tight">{slide.data2}</p>
+                                <p class="text-neutral-900 text-xl font-normal font-['Gilroy'] leading-tight">{slide.data3}</p>
+
+                            </div>
+                        </div>
+                    </div>
+            ))}
+        </div>
+    </section>
+
+
+
+    <section class=" pb-20 w-full mx-auto">
+        <div class="max-w-[1400px] w-full mx-auto">
+            <div class="  text-black text-5xl font-bold font-['Gilroy'] leading-[52.80px] border-b border-orange ">
+                <h2 class=" w-1/2 pb-10">Skontaktuj się z naszymi handlowcami</h2>
+            </div>
+        </div>
+
+    </section>
+    <section class="w-full mx-auto">
+        <div class="max-w-[1400px] w-full grid grid-cols-4 gap-6 mx-auto">
+
+
+            {team.map((slide, index) => (
+                    <div class="pb-5 ">
+                        <div class="w-[100%] bg-center bg-no-repeat bg-cover	min-h-[40vh]" style={{ backgroundImage: `url(${slide.image})` }}>
+                            {/* Dodatkowa zawartość slajdu */}
+                        </div>
+                        <div>
+                            <div class="w-[329px]">
+                                <h2 class="text-black text-xl pt-[24px] font-bold font-['Gilroy'] leading-normal"> {slide.name}</h2>
+                                <p class=" mb-[35px]text-black text-base pt-[12px]  font-normal font-['Gilroy']">{slide.description}</p>
+                                <div class="mt-[35px]">
+                                    <a  class="text-black text-sm underline  underline-offset-8  decoration-orange font-bold font-['Gilroy'] leading-3 " href="mailto:"> Napisz do mnie</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            ))}
+
+
+        </div>
+
+    </section>
+    <section class="w-full py-20 mx-auto max-w-[1400px]">
+
+        <div class="text-black text-5xl font-bold font-['Gilroy'] leading-[52.80px]  ">
+            <h2 class="">Znajdź nas na mapie</h2>
+        </div>
+
+    </section>
+
+    <div class="mapcontainer w-full h-[80vh]">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.522115893013!2d16.895692877167267!3d52.34281507201522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704500b6effb3fd%3A0xcfb7aad6fff7fb00!2sJachtowa%203%2C%2062-030%20Lubo%C5%84!5e0!3m2!1spl!2spl!4v1704474271011!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+    <section class="w-full py-20 text-center flex flex-wrap justify-center  mx-auto max-w-[1400px]">
+
+        <h3 class="text-center w-full text-neutral-900 text-[32px] font-bold font-['Gilroy'] leading-loose">Lorem Ipsum</h3>
+        <p class="w-[424px] py-[32px] text-center text-neutral-900 text-xl font-normal font-['Gilroy'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <div class="w-full flex flex-wrap justify-center">
+        <svg class="m-5" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M32 0.5C49.3853 0.5 63.5 14.6147 63.5 32C63.5 49.3853 49.3853 63.5 32 63.5C14.6147 63.5 0.5 49.3853 0.5 32C0.5 14.6147 14.6147 0.5 32 0.5ZM50.8649 22.5227C50.4121 20.8284 49.078 19.4945 47.3839 19.0417C44.3129 18.2188 32 18.2188 32 18.2188C32 18.2188 19.6871 18.2188 16.6161 19.0417C14.9223 19.4945 13.5879 20.8284 13.1351 22.5227C12.3125 25.5933 12.3125 32.0002 12.3125 32.0002C12.3125 32.0002 12.3125 38.4069 13.1351 41.4773C13.5879 43.1716 14.9223 44.506 16.6161 44.9587C19.6871 45.7812 32 45.7812 32 45.7812C32 45.7812 44.3129 45.7812 47.3839 44.9587C49.078 44.506 50.4121 43.1716 50.8649 41.4773C51.6875 38.4069 51.6875 32.0002 51.6875 32.0002C51.6875 32.0002 51.6875 25.5933 50.8649 22.5227ZM28.0624 37.9066V26.0939L38.2921 32.0002L28.0624 37.9066Z" fill="#FF9700"/>
+        </svg>
+        <svg class="m-5" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="Vector" d="M32 0.5C14.6034 0.5 0.5 14.6759 0.5 32.1619C0.5 48.036 12.1335 61.1426 27.2922 63.4324V40.5537H19.4988V32.231H27.2922V26.693C27.2922 17.524 31.7365 13.4987 39.318 13.4987C42.9491 13.4987 44.8692 13.7692 45.7784 13.893V21.158H40.6067C37.3879 21.158 36.264 24.2248 36.264 27.6817V32.231H45.6968L44.4167 40.5537H36.264V63.5C51.6388 61.4031 63.5 48.19 63.5 32.1619C63.5 14.6759 49.3966 0.5 32 0.5Z" fill="#FF9700"/>
+        </svg>
+
+
+    </div>
+    </section>
+
+
+</Page>

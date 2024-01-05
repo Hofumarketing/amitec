@@ -2,8 +2,8 @@
 // Tutaj możesz umieścić skrypty JavaScript do obsługi slidera
 
 
-import Button from "./Button.astro";
-import H2 from "./h2.astro";
+import Button from "../ui/Button.astro";
+import H2 from "../ui/h2.astro";
 
 const onas = [
     {
@@ -27,8 +27,8 @@ const onas = [
 
     {onas.map((slide, index) => (
             <div class="w-full max-h-[500px] bg-center bg-no-repeat bg-cover h-100vh" style={{ backgroundImage: `url(${slide.image})` }}>
-                <div class="mx-auto h-full w-full max-w-[1440px] relative">
-                    <div class="absolute p-10 w-1/3 -bottom-16 left-0 bg-orange">
+                <div class="mx-auto h-full w-full max-w-[1400px] relative">
+                    <div class="absolute p-10 lg:w-1/3 -bottom-16 left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-0 bg-orange">
                         <H2 type="onas">{slide.title} </H2>
                         <p class="w-[423px] text-black text-base mt-6 font-normal font-['Gilroy'] leading-snug">{slide.description}</p>
                     </div>
@@ -39,19 +39,17 @@ const onas = [
 
 </section>
 
-<section class="w-full flex mx-auto m-28  max-w-[1440px] ">
-    <div class="w-3/6 relative">
+<section class="w-full flex  flex-wrap lg:flex-nowrap mx-auto m-28  max-w-[1400px] ">
+    <div class="w-full lg:w-3/6 relative">
         <div class="pt-[100%] bg-center bg-no-repeat orelative bg-[url('/src/assets/IMG/onasmain.png')]">
-            <div class="absolute w-[400px] m-auto top-1/2 right-0  -translate-y-1/2 translate-x-1/2" >
+            <div class="absolute w-[400px] m-auto lg:top-1/2 lg:right-0 right-1/2 -translate-y-1/2 translate-x-1/2 lg:translate-x-1/2" >
                 <img src="src/assets/IMG/onassecondary.png">
             </div>
         </div>
     </div>
-    <div class=" w-3/6 m-12 flex justify-end items-center">
+    <div class=" pt-40 lg:pt-0 w-full lg:w-3/6 m-12 flex justify-end items-center">
         <div class="max-w-[500px]">
-
             <H2 type="regular">Łączymy tradycję </H2>
-
             <p class="text-neutral-900 mt-8 text-base font-normal font-['Gilroy'] leading-snug">Nasza misja polega na dostarczaniu jakościowych, indywidualnie dobranych produktów i usług, które wydobywają + uruchamiają potencjał drzemiący
                 w gospodarstwach rolnych. Dzięki nam agrobiznesy rozrastają się niczym optymalnie karmione
                 i utrzymywane stada..</p>

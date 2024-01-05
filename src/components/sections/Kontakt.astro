@@ -2,7 +2,7 @@
 // Tutaj możesz umieścić skrypty JavaScript do obsługi slidera
 
 
-import Button from "./Button.astro";
+import Button from "../ui/Button.astro";
 const inputs = [
     {
         id: 0,
@@ -65,24 +65,26 @@ const inputs = [
 
 
 
-import H2 from "./h2.astro";
-import Paragraph from "./paragraph.astro";---
+import H2 from "../ui/h2.astro";
+import Paragraph from "../ui/Paragraph.astro";
+
+---
 
 
-<section class="p-28 bg-zink  p bg-opacity-20  ">
-    <div class="max-w-[1440px] w-full flex mx-auto" >
-        <div class="w-4/6">
+<section class="p-28 bg-zink  bg-opacity-20  ">
+    <div class="max-w-[1400px] w-full flex flex-wrap lg:flex-nowrap mx-auto" >
+        <div class="w-full lg:w-4/6">
             <div class="pt-[100%] bg-center bg-cover bg-no-repeat  bg-[url('/src/assets/IMG/kontakt.jpg')]">
 
             </div>
         </div>
-        <div class="w-2/5 flex items-stretch pl-32">
+        <div class="w-full lg:w-2/5 flex items-stretch lg:pl-32">
 
             <form className="max-w-md mx-auto mt-7 my-10">
                 <H2 type="small">Skontaktuj się z nami </H2>
                 <Paragraph type="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat</Paragraph>
 
-                <div className="mb-6  flex-wrap">
+                <div className="mb-6 flex-wrap">
                    <div>
                        {inputs.map(input => (
                                <label className=" bg-transparent border mt-4 h-[200px] border-black text-gray-900 h-28 rounded-lg border border-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" htmlFor={input.id}>

@@ -1,8 +1,15 @@
 ---
 import Nav from "./ui/Nav.astro";
 import '../assets/styles/index.css';
+import Footer from "./ui/Footer.astro";
 
+interface Props {
+    title?: string | undefined;
+}
 
+const { title = undefined } = Astro.props;
+
+const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolnik +`;
 
 ---
 
@@ -15,13 +22,14 @@ import '../assets/styles/index.css';
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
         <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
 
-        <title>Astro</title>
+        <title>{finalTitle}</title>
 
 
     </head>
     <body class="body">
         <Nav />
         <slot />
+        <Footer />
     </body>
 
 
@@ -56,7 +64,14 @@ import '../assets/styles/index.css';
                 perPage: 4, // Number of slides per page
                 perMove: 1, // Number of slides moved per arrow click or swipe
                 pagination: false, // Disable pagination dots
-                // Additional configuration options can be added here
+                breakpoints: {
+                    768: { // Tablet breakpoint (e.g., 768px)
+                        perPage: 3,
+                    },
+                    480: { // Mobile breakpoint (e.g., 480px)
+                        perPage: 2,
+                    },
+                },
             });
 
             splide2.mount(); // Mount the slider
@@ -70,7 +85,14 @@ import '../assets/styles/index.css';
                 perPage: 3, // Number of slides per page
                 perMove: 1, // Number of slides moved per arrow click or swipe
                 pagination: false, // Disable pagination dots
-                // Additional configuration options can be added here
+                breakpoints: {
+                    768: { // Tablet breakpoint (e.g., 768px)
+                        perPage: 1,
+                    },
+                    480: { // Mobile breakpoint (e.g., 480px)
+                        perPage: 1,
+                    },
+                },
             });
 
             splide3.mount(); // Mount the slider
@@ -84,13 +106,25 @@ import '../assets/styles/index.css';
                 perPage: 3.5, // Number of slides per page
                 perMove: 1, // Number of slides moved per arrow click or swipe
                 pagination: false, // Disable pagination dots
-                // Additional configuration options can be added here
+                breakpoints: {
+                    768: { // Tablet breakpoint (e.g., 768px)
+                        perPage: 1,
+                    },
+                    480: { // Mobile breakpoint (e.g., 480px)
+                        perPage: 1,
+                    },
+                },
             });
 
             splide4.mount(); // Mount the slider
         });
     </script>
 
+    <script>
+        document.getElementById('hamburgerMenu').addEventListener('click', function() {
+            document.querySelector('.navactive').classList.toggle('hidden');
+        });
+    </script>
 
 
 </html>

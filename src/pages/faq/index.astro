@@ -1,0 +1,56 @@
+---
+
+import Page from "../../components/Page.astro";
+const faqs = [
+    {
+        question: "What is Astro?",
+        answer: "Astro is a modern front-end framework for building fast, content-focused websites."
+    },
+    {
+        question: "Why use Tailwind CSS?",
+        answer: "Tailwind CSS is a utility-first CSS framework that allows for rapid UI development."
+    },
+    {
+        question: "Why use Tailwind CSS?",
+        answer: "Tailwind CSS is a utility-first CSS framework that allows for rapid UI development."
+    },
+    {
+        question: "Why use Tailwind CSS?",
+        answer: "Tailwind CSS is a utility-first CSS framework that allows for rapid UI development."
+    },
+
+    // ... add more FAQs here
+];
+
+
+
+function toggleSign(event) {
+    const summary = event.currentTarget;
+    const details = summary.parentElement;
+    const isExpanded = details.hasAttribute('open');
+    summary.querySelector('.sign').textContent = isExpanded ? '+' : '-';
+}
+
+---
+
+
+
+
+<Page>
+    <section class="py-20 w-full mx-auto max-w-[1400px]">
+        <h1 class="text-neutral-900 text-[64px] font-bold font-['Gilroy'] leading-[76.80px]">FAQ</h1>
+        <div class="py-20">
+            {faqs.map((faq, index) => (
+                    <details key={index} class="group border-b border-black-10 " onToggle={toggleSign}>
+                        <summary class="text-lg py-[24px] 0 cursor-pointer font-semibold group-open:text-blue-600 flex justify-between">
+                            <div class="text-black text-base font-bold font-['Gilroy'] leading-tight">{faq.question}</div><span class="text-[30px] font-normal sign text-orange">+</span>
+                        </summary>
+                        <p class="pt-2 pb-[24px] text-black text-base font-normal font-['Gilroy'] leading-tight">
+                            {faq.answer}
+                        </p>
+                    </details>
+            ))}
+        </div>
+    </section>
+
+</Page>
