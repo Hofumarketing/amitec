@@ -50,7 +50,22 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
                 perMove: 1, // Number of slides moved per arrow click or swipe
                 height: '500px', // Set a fixed height for the slider
                 pagination: false, // Disable pagination dots
-                // Additional configuration options can be added here
+                breakpoints: {
+                    640: { // Mobile devices
+                        perPage: 4, // 4 slides per page on mobile
+                        height: '2000px', // Set a fixed height for the slider
+
+                    },
+                    1024: { // Tablet devices
+                        perPage: 2, // 2 slides per page on tablets
+                        height: '800px', // Set a fixed height for the slider
+
+                    },
+                    1300: { // Tablet devices
+                        height: '1000px', // Set a fixed height for the slider
+
+                    },
+                },
             });
 
             splide1.mount(); // Mount the slider
@@ -107,8 +122,8 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
                 perMove: 1, // Number of slides moved per arrow click or swipe
                 pagination: false, // Disable pagination dots
                 breakpoints: {
-                    768: { // Tablet breakpoint (e.g., 768px)
-                        perPage: 1,
+                    900: { // Tablet breakpoint (e.g., 768px)
+                        perPage: 2,
                     },
                     480: { // Mobile breakpoint (e.g., 480px)
                         perPage: 1,

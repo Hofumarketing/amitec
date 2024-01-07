@@ -5,7 +5,7 @@ import Paragraph from "./Paragraph.astro";
 
 ---
 
-<nav class="w-full max-w-[1400px] h-14  flex items-center  justify-between mx-auto relative">
+<nav class="w-full max-w-[1400px] h-14 pl-12 lg:p-0  flex items-center  justify-between mx-auto relative">
 <a href="/">    <svg width="113" height="28" viewBox="0 0 113 28" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="Group 31">
         <path id="Vector" d="M112.86 12.5604V17.1126H107.659V22.3139H103.108V17.1126H97.9072V12.5604H103.108V7.36133H107.659V12.5604H112.86Z" fill="#FF9700"/>
@@ -44,50 +44,78 @@ import Paragraph from "./Paragraph.astro";
 
 
 </nav>
-<div class=" navactive absolute w-full h-[calc(100%-56px)] z-[50]  top-14 left-0  bg-white hidden">
-    <div class="w-full  h-full  flex max-w-[1400px] mx-auto ">
-        <div class="w-3/5 flex pt-[40px] flex-wrap">
-            <div class="">
-                <a href="/onas " class="mr-10 pb-8">
-                    <div class="w-[291px] h-36 p-5 bg-white hover:bg-amber-500 flex-col justify-start items-start gap-4 inline-flex">
-                        <div class="text-black text-[40px] font-bold font-['Gilroy'] leading-10">O nas</div>
-                        <div class="w-[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+<div class=" navactive absolute w-full lg:h-[calc(100%-56px)] z-[50]  top-14 left-0 bg-white hidden">
+    <div class="w-full  h-full  flex-wrap lg:flex-nowrap flex max-w-[1400px] mx-auto ">
+        <div class=" w-full xl:w-3/5 flex pt-[40px] flex-wrap">
+            <div class=" p-12 pb-0 lg:p-0">
+                <a href="/onas " class=" mr-10 pb-8">
+                    <div class="lg:max-w-[291px] relative border-b-2 border-orange lg:border-0 lg:min-h-36 py-5 lg:p-5 bg-white lg:hover:bg-amber-500 flex-col justify-start items-start gap-4 inline-flex">
+                        <div class="text-black  text-[28px] lg:text-[40px] font-bold font-['Gilroy'] leading-10">O nas</div>
+                        <div class="max-w-[70%] lg:max-w[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+                        <svg  class="lg:hidden absolute bottom-[20px] right-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.5061 23.6371L21.5061 2M21.5061 2L1 2M21.5061 2L1.50585 22.0004" stroke="#FF9700" stroke-width="4"/>
+                        </svg>
                     </div>
+
                 </a>
                 <a href="/blog" class="mr-10 pb-8">
-                    <div class="w-[291px] h-36 p-5 bg-white hover:bg-amber-500 flex-col justify-start items-start gap-4 inline-flex">
-                        <div class="text-black text-[40px] font-bold font-['Gilroy'] leading-10">Blog</div>
-                        <div class="w-[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+                    <div class="lg:max-w-[291px] relative border-b-2 border-orange lg:border-0 lg:min-h-36 py-5 lg:p-5 bg-white lg:hover:bg-amber-500 flex-col justify-start items-start gap-4 inline-flex">
+                        <div class="text-black text-[28px] lg:text-[40px] font-bold font-['Gilroy'] leading-10">Blog</div>
+                        <div class="max-w-[70%] lg:max-w[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+                        <svg  class="lg:hidden absolute bottom-[20px] right-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.5061 23.6371L21.5061 2M21.5061 2L1 2M21.5061 2L1.50585 22.0004" stroke="#FF9700" stroke-width="4"/>
+                        </svg>
                     </div>
+
                 </a>
                 <a href="/doradztwo" class="mr-10 pb-8">
-                    <div class="w-[291px] h-36 p-5 bg-white hover:bg-amber-500 flex-col justify-start items-start gap-4 inline-flex">
-                        <div class="text-black text-[40px] font-bold font-['Gilroy'] leading-10">Doradztwo</div>
-                        <div class="w-[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+                    <div class="lg:max-w-[291px] relative border-b-2 border-orange lg:border-0 lg:min-h-36 py-5 lg:p-5 bg-white lg:hover:bg-amber-500 flex-col justify-start items-start gap-4 inline-flex">
+                        <div class="text-black text-[28px] lg:text-[40px] font-bold font-['Gilroy'] leading-10">Doradztwo</div>
+                        <div class="max-w-[70%] lg:max-w[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+                        <svg  class="lg:hidden absolute bottom-[20px] right-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.5061 23.6371L21.5061 2M21.5061 2L1 2M21.5061 2L1.50585 22.0004" stroke="#FF9700" stroke-width="4"/>
+                        </svg>
                     </div>
+
+
                 </a>
                 <a href="/kontakt" class="mr-10 pb-8">
-                    <div class="w-[291px] h-36 p-5 bg-white hover:bg-amber-500 flex-col justify-start items-start gap-4 inline-flex">
-                        <div class="text-black text-[40px] font-bold font-['Gilroy'] leading-10">Kontakt</div>
-                        <div class="w-[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+                    <div class="lg:max-w-[291px] relative border-b-2 border-orange lg:border-0 lg:min-h-36 py-5 lg:p-5 bg-white lg:hover:bg-amber-500 flex-col justify-start items-start gap-4 inline-flex">
+                        <div class="text-black text-[28px] lg:text-[40px] font-bold font-['Gilroy'] leading-10">Kontakt</div>
+                        <div class="max-w-[70%] lg:max-w[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+                        <svg  class="lg:hidden absolute bottom-[20px] right-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.5061 23.6371L21.5061 2M21.5061 2L1 2M21.5061 2L1.50585 22.0004" stroke="#FF9700" stroke-width="4"/>
+                        </svg>
                     </div>
+
+
                 </a>
                 <a href="/faq" class="mr-10 pb-8">
-                    <div class="w-[291px] h-36 p-5 bg-white hover:bg-amber-500  flex-col justify-start items-start gap-4 inline-flex">
-                        <div class="text-black text-[40px] font-bold font-['Gilroy'] leading-10">FAQ</div>
-                        <div class="w-[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+                    <div class="lg:max-w-[291px] relative border-b-2 border-orange lg:border-0 lg:min-h-36 py-5 lg:p-5 bg-white lg:hover:bg-amber-500 flex-col justify-start items-start gap-4 inline-flex">
+                        <div class="text-black text-[28px] lg:text-[40px] font-bold font-['Gilroy'] leading-10">FAQ</div>
+                        <div class="max-w-[70%] lg:max-w[251px] text-neutral-900 text-base font-normal font-['Gilroy'] leading-none">Zobacz, jakie wartości nam przyświecają + jak wyglądał rozwój firmy krok po kroku.</div>
+                        <svg  class="lg:hidden absolute bottom-[20px] right-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.5061 23.6371L21.5061 2M21.5061 2L1 2M21.5061 2L1.50585 22.0004" stroke="#FF9700" stroke-width="4"/>
+                        </svg>
                     </div>
+
+
                 </a>
             </div>
-            <div class="w-full social">
-                <div class="text-black text-sm font-bold font-['Gilroy'] uppercase">Media</div>
+            <div class="w-full social pt-0 p-6 ">
+                <div class=" p-5 text-black text-sm font-bold font-['Gilroy'] uppercase">Media</div>
+                <div class="flex ">
+                    <img class="p-3 " src="public/img/fb.svg">
+                    <img class="p-3 " src="public/img/fb.svg">
+                </div>
+
             </div>
         </div>
-        <div class="w-3/5 flex flex-wrap items-start bg-zinc-100">
-            <div class="w-full h-3/5 bg-center bg-[url('src/assets/IMG/baner2.jpeg')]  bg-no-repeat h-3/5 bg-cover" >
+        <div class="h-full lg:w-3/5 flex flex-wrap items-start bg-zinc-100">
+            <div class="w-full  bg-center bg-[url('src/assets/IMG/baner2.jpeg')] h-[30vh] bg-no-repeat lg:h-3/5 bg-cover" >
                 {/* Dodatkowa zawartość slajdu */}
             </div>
-            <div class="w-full p-[50px] ">
+            <div class="w-full p-[50px]  ">
                 <p class="w-full  text-neutral-900 text-[30px] font-normal font-['Gilroy']">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula malesuada luctus.</p>
                 <button class=" text-black text-sm font-bold font-['Gilroy'] underline underline-orange decoration-solid"> Czytaj więcej </button>
             </div>

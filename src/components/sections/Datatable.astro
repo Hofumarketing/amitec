@@ -52,25 +52,23 @@ const datatable2 = [
 
 
 
-<div  class="datatable grid  grid-cols-1 md:grid-cols-2 gap-10 lg:grid-flow-col h-1/2 w-full p-20">
+<div  class="datatable grid  grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-5 lg:grid-flow-col h-1/2 w-full p-20">
 
     <div class="shadow-md p-5">
         {datatable.map((slide, index) => (
-                <div class="flex flex-wrap  items-center justify-between  ">
-                    <p class=" 	w-1/4 text-neutral-700  mb-6  font-bold font-['Gilroy'] ">{slide.title}</p>
-                    <p class=" text-center	w-1/4 mb-6 text-neutral-900 text-base font-normal font-['Gilroy'] leading-[17.60px]">{slide.Currrency}</p>
-                    <p class=" text-center	w-1/4 mb-6 text-neutral-900 text-base font-normal font-['Gilroy'] leading-[17.60px]">{slide.Price}</p>
-                    <p class=" text-center	w-1/4 mb-6 text-green text-base font-bold font-['Gilroy']">{slide.Change}</p>
-
-
+                <div class="flex flex-wrap border-b  last:border-b-0  items-center border-lightgrey items-center justify-between  ">
+                    <p class=" 	w-1/4 text-neutral-700 my-5  font-bold font-['Gilroy'] ">{slide.title}</p>
+                    <p class=" text-center	w-1/4 my-5 text-neutral-900 text-base font-normal font-['Gilroy'] leading-[17.60px]">{slide.Currrency}</p>
+                    <p class=" text-center	w-1/4  my-5 text-neutral-900 text-base font-normal font-['Gilroy'] leading-[17.60px]">{slide.Price}</p>
+                    <p class=" text-center	w-1/4  my-5 text-red-600 text-base font-bold font-['Gilroy']">{slide.Change}</p>
                 </div>
         ))}
     </div>
     <div class="shadow-md	p-5 ">
         {datatable2.map((slide, index) => (
-                <div class="flex flex-wrap  items-center justify-between  ">
-                    <p class=" 	w-1/2 text-neutral-700  mb-6  font-bold font-['Gilroy'] ">{slide.title2}</p>
-                    <p class=" text-right text-green text-base font-bold font-['Gilroy'] w-1/2">{slide.Price2}</p>
+                <div class="flex flex-wrap last:border-b-0 border-lightgrey border-b items-center justify-between  ">
+                    <p class=" 	w-1/2 text-neutral-700   my-5  font-bold font-['Gilroy'] ">{slide.title2}</p>
+                    <p class=" text-right  my-5  text-green text-base font-bold font-['Gilroy'] w-1/2">{slide.Price2}</p>
                 </div>
         ))}
     </div>

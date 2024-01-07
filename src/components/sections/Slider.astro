@@ -41,19 +41,19 @@ const slides2 = [
 
 
 
-<div id="slider" class="splide">
+<div id="slider" class=" splide">
     <div class="splide__track">
         <ul class="splide__list">
             {slides2.map((slide, index) => (
-                    <div class="splide__slide  flex flex-wrap">
-                        <div class={` order-1 md:order-0 flex  items-center  justify-center w-full min-h-[50vh] lg:h-100vh lg:w-2/5 p-12 bg-${slide.bgcolor ?? 'white'}`}>
-                            <div class="wrapper lg:absolute left-0  text-cneter lg:text-left right-0 mx-auto max-w-[1400px] w-full">
-                                <h1 class={`lg:w-[400px] text-neutral-900  mb-6 text-[64px] font-bold font-['Gilroy']  text-${slide.textcolor}`}>{slide.title}</h1>
+                    <div class="splide__slide h-[calc(100%-56px)]  flex flex-wrap">
+                        <div class={` order-1 md:order-0 flex  items-center  justify-center w-full min-h-[50%] md:w-1/2 lg:h-100vh xl:w-2/5 p-12 bg-${slide.bgcolor ?? 'white'}`}>
+                            <div class="wrapper lg:absolute pl-10 xl:pl-0 left-0  text-cneter lg:text-left right-0 mx-auto max-w-[1400px] w-full">
+                                <h1 class={`lg:w-[400px] text-neutral-900  mb-6 text-[40px] lg:text-[64px] font-bold font-['Gilroy']  text-${slide.textcolor}`}>{slide.title}</h1>
                                 <p class={` lg:w-[400px] mb-6 text-neutral-900 text-base font-normal font-['Gilroy'] leading-[17.60px]  text-${slide.textcolor}`}> {slide.description}</p>
                                 <Button type="white"> Sprawdź</Button>
                             </div>
                         </div>
-                        <div class="order-0 md:order-1 w-full lg:w-3/5 bg-center	  bg-no-repeat	 bg-cover	h-[50vh] lg:h-100vh" style={{ backgroundImage: `url(${slide.image})` }}>
+                        <div class="order-0 md:order-1 w-full md:w-1/2 xl:w-3/5 bg-center  bg-no-repeat	 bg-cover h-[50vh] lg:h-100vh" style={{ backgroundImage: `url(${slide.image})` }}>
                             {/* Dodatkowa zawartość slajdu */}
                         </div>
                     </div>

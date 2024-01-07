@@ -49,10 +49,10 @@ const blogpost = [
 ---
 
 
-<section class="pt-28 bg-zink  p bg-opacity-20  ">
+<section class="p-12 pt-28 bg-zink  p bg-opacity-20  ">
     <div class="max-w-[1400px] w-full flex mx-auto" >
         <div class="w-full lg:w-1/3">
-            <h2 class="text-neutral-900 text-[40px] font-bold font-['Gilroy'] leading-10" > Usługi doradcze</h2>
+            <h2 class="text-neutral-900 text-[32px] xl:text-[40px] font-bold font-['Gilroy'] leading-10" > Usługi doradcze</h2>
             <p class="mt-8 text-neutral-900 text-base font-normal font-['Gilroy'] leading-snug">Zawsze chętnie dzielimy się wiedzą. Biznes „nakarmiony” sprawdzonymi informacjami rośnierównie zdrowo i efektywnie, jak zwierzęta mające dostęp do naszych dodatków paszowych.</p>
         </div>
 
@@ -81,15 +81,15 @@ const blogpost = [
                 </div>
                 <ul class="splide__list">
                     {blogpost.map((slide, index) => (
-                            <div class="splide__slide flex flex-wrap w-full lg:w-3/4 mb-4 ">
-                                  <div class="image-container w-full lg:w-2/3">
-                                      <div class="w-full bg-center	 h-full  bg-no-repeat bg-cover  " style={{ backgroundImage: `url(${slide.image})` }}>
+                            <div class="splide__slide flex flex-wrap w-full xl:w-3/4 mb-4 ">
+                                  <div class="image-container w-full xl:w-2/3">
+                                      <div class="w-full bg-center h-[200px] md:h-[300px] lg:h-[400px] xl:h-full  bg-no-repeat bg-cover  " style={{ backgroundImage: `url(${slide.image})` }}>
                                           {/* Dodatkowa zawartość slajdu */}
                                       </div>
                                   </div>
-                                  <div class="w-full lg:w-1/3 flex justify-center items-center">
+                                  <div class="w-full xl:w-1/3 flex justify-center items-center">
                                       <div class="lg:pl-20">
-                                          <h3 class="text-neutral-900 text-xl font-bold font-['Gilroy'] leading-tight"> {slide.title}</h3>
+                                          <h3 class="text-neutral-900   xl:text-xl font-bold font-['Gilroy'] leading-tight"> {slide.title}</h3>
                                           <p class="text-neutral-900 mt-4 text-base font-normal font-['Gilroy'] leading-tight"> {slide.description}</p>
                                           <Button type="orange"> Więcej</Button>
                                       </div>

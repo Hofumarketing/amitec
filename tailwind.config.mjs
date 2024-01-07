@@ -13,6 +13,7 @@ export default {
 				'zink' : '#D9D9D9',
 				'emerald': '#036949',
 				'lightorange': '#F7D29B',
+				'lightgrey'  : '#C9C9C9'
 			},
 			height: {
 				'100vh': '100vh',
