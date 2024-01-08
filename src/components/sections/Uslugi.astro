@@ -49,7 +49,7 @@ const blogpost = [
 ---
 
 
-<section class="p-12 pt-28 bg-zink  p bg-opacity-20  ">
+<section class="p-12 pb-0 pt-28 bg-zink  p bg-opacity-20  ">
     <div class="max-w-[1400px] w-full flex mx-auto" >
         <div class="w-full lg:w-1/3">
             <h2 class="text-neutral-900 text-[32px] xl:text-[40px] font-bold font-['Gilroy'] leading-10" > Usługi doradcze</h2>
@@ -59,8 +59,10 @@ const blogpost = [
     </div>
     <div class="wrapper  max-w-[1400px] w-full mx-auto mt-16">
 
-        <div class="splide relative" id="splide1">
-            <div class="splide__track">
+        <div class="splide relative relative" id="splide1">
+            <div class="hidden lg:block lg:z-10  lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:h-48 lg:bg-gradient-to-b-transparent-f2f2f2"></div>
+
+            <div class="splide__track ">
                 <div class="splide__arrows absolute right-20 top-1/2 ">
                     <button class="splide__arrow bg-transparent splide__arrow--next ">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="35" viewBox="0 0 38 35" fill="none">
@@ -79,7 +81,8 @@ const blogpost = [
                     </button>
 
                 </div>
-                <ul class="splide__list">
+                <ul class="splide__list ">
+
                     {blogpost.map((slide, index) => (
                             <div class="splide__slide flex flex-wrap w-full xl:w-3/4 mb-4 ">
                                   <div class="image-container w-full xl:w-2/3">
