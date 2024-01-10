@@ -40,21 +40,21 @@ const hist = [
 
 
 <section class="bg-emerald p-20">
-    <div class="text-center text-white text-5xl font-bold font-['Gilroy'] leading-[52.80px] border-b border-b-white ">
-        <h2 class="p-10">Rok po roku</h2>
+    <div class="text-center text-white text-[32px] text-5xl font-bold font-['Gilroy'] leading-[52.80px] border-b border-b-white ">
+        <h2 class="md:p-10">Rok po roku</h2>
     </div>
 
-    <section class="max-w-[1400px] p-20 w-full mx-auto relative">
+    <section class="max-w-[1400px] pt-10 md:p-20 w-full mx-auto relative">
         <div class="absolute h-full w-[1px] left-0 right-0 mx-auto  "></div>
         {hist.map((slide, index) => (
-                <div className={` flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                    <div class="w-[50%] bg-center  bg-no-repeat	-20 bg-cover	h-[40vh]">
+                <div className={` flex ${index % 2 === 0 ? 'flex-row' : 'md:flex-row-reverse'}`}>
+                    <div class="md:w-[50%] bg-center  bg-no-repeat	-20 bg-cover	h-[40vh]">
                         {/* Dodatkowa zawartość slajdu */}
                     </div>
-                    <div className={`w-[50%] ${index % 2 === 0 ? 'border-dotted border-t-orange border-t-2 border-dotted border-orange border-l-2' : 'border-dotted border-orange  border-r-2 border-dotted border-t-orange border-t-2'}`}>
-                        <div className={`blur-sm absolute rounded-full bg-orange w-[40px] h-[40px] ${index % 2 === 0 ? 'right-1/2 translate-x-1/2 -translate-y-1/2' : 'right-1/2 translate-x-1/2 -translate-y-1/2'}`}>
+                    <div className={`md:w-[50%] ${index % 2 === 0 ? 'border-dotted border-t-orange border-t-2 border-dotted border-orange border-l-2' : 'border-dotted border-orange border-l-2 md:border-l-0 md:border-r-2 border-dotted border-t-orange border-t-2'}`}>
+                        <div className={`blur-sm absolute rounded-full bg-orange w-[40px] h-[40px] ${index % 2 === 0 ? ' -translate-x-1/2 md:right-1/2  md:translate-x-1/2 -translate-y-1/2' : '-translate-x-1/2 md:right-1/2 md:right-1/2 md:translate-x-1/2 -translate-y-1/2'}`}>
                         </div>
-                        <div class="w-[500px] p-20 flex-col justify-start items-start gap-8 inline-flex">
+                        <div class="md:w-[500px] p-10 md:p-20 flex-col justify-start items-start gap-8 inline-flex">
                             <h3 class="text-black text-5xl  text-white font-bold font-['Gilroy'] leading-[52.80px]"> {slide.year}</h2>
                             <p class="text-black text-base text-white font-normal font-['Gilroy']">{slide.description}</p>
                         </div>

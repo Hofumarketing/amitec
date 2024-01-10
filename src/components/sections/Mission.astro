@@ -32,15 +32,21 @@ const about = [
 
 
 <section class="max-w-[1400px] pt-20 pb-20 w-full mx-auto">
+    <div class="w-full flex justify-center">
+        <div class=" pb-20 md:pb-[100px] text-center">
+            <h2 class="p-10 text-black text-[32px] font-['Gilroy']  font-bold  leading-9 ">Misja i wartości </h2>
+            <p class="max-w-[400px] font-['Gilroy']  text-black text-xl font-normal leading-7"> Stawiamy na skuteczność + zaangażowanie, ale nie zapominamy  o szacunku do tradycji, rodzinności  i relacyjności. Przyświeca nam ambitny cel, jakim jest dynamiczny rozwój  polskich gospodarstw. </p>
+        </div>
+    </div>
     {about.map((slide, index) => (
-            <div className={`mb-28 flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                <div class="w-[33%] bg-center	  bg-no-repeat	 bg-cover	h-[40vh]" style={{ backgroundImage: `url(${slide.image})` }}>
+            <div className={` md:mb-28 flex flex-wrap  ${index % 2 === 0 ? 'flex-row' : 'md:flex-row-reverse'}`}>
+                <div class="w-full md:w-[33%] bg-center	  bg-no-repeat	 bg-cover	h-[40vh]" style={{ backgroundImage: `url(${slide.image})` }}>
                     {/* Dodatkowa zawartość slajdu */}
                 </div>
-                <div className={`w-[33%] pl-10 flex items-center justify-start  ${index % 2 === 0 ? ' ' : '  -order-1 '}`}>
-                   <div class="w-[329px]  flex-col justify-start items-start gap-8 inline-flex">
+                <div className={`py-10 md:py-10 w-full p-5   md:w-[33%]  md:pl-10 flex items-center justify-start  ${index % 2 === 0 ? ' ' : '  md:-order-1 '}`}>
+                   <div class="md:w-[329px]  flex-col justify-start items-start gap-2 md:gap-8 inline-flex">
                        <p class="text-orange text-[32px] font-normal font-['Gilroy'] uppercase leading-loose">{String(index + 1).padStart(2, '0')}</p>
-                       <p class="text-black text-base font-normal font-['Gilroy']">{slide.description}</p>
+                       <p class="text-black text-xl md:text-base font-normal font-['Gilroy']">{slide.description}</p>
                    </div>
                 </div>
             </div>
