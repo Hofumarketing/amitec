@@ -37,9 +37,9 @@ function toggleSign(event) {
 
 
 <Page>
-    <section class="py-20 w-full mx-auto max-w-[1400px]">
-        <h1 class="text-neutral-900 text-[64px] font-bold font-['Gilroy'] leading-[76.80px]">FAQ</h1>
-        <div class="py-20">
+    <section class=" py-10 xl:py-20 w-full p-5 xl:p-0 mx-auto max-w-[1400px]">
+        <h1 class="text-neutral-900 text-4xl lg:text-[64px] font-bold font-['Gilroy'] leading-[76.80px]">FAQ</h1>
+        <div class="py-10 xl:py-20 ">
             {faqs.map((faq, index) => (
                     <details key={index} class="group border-b border-black-10 " onToggle={toggleSign}>
                         <summary class="text-lg py-[24px] 0 cursor-pointer font-semibold group-open:text-blue-600 flex justify-between">

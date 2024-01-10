@@ -10,7 +10,7 @@ const inputs = [
         placeholder: 'Imię',
         type: 'text',
         name:'name',
-        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
+        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 rounded-none text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
         required: 'required'
     },
     {
@@ -19,7 +19,7 @@ const inputs = [
         placeholder: 'Nazwisko',
         type: 'text',
         name:'name',
-        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
+        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 rounded-none text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
         required: 'required'
     },
     {
@@ -28,7 +28,7 @@ const inputs = [
         placeholder: 'Adres e-mail',
         type: 'email',
         name:'name',
-        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
+        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 rounded-none text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
         required: 'required'
     },
     {
@@ -37,7 +37,7 @@ const inputs = [
         placeholder: 'Kategoria wiadomości',
         type: 'select',
         name:'name',
-        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
+        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 rounded-none text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
         required: 'required'
     },
     {
@@ -46,7 +46,7 @@ const inputs = [
         placeholder:'Temat wiadomości',
         type: 'text',
         name:'name',
-        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
+        class: 'bg-transparent border-b pl-0 mb-4 border-black text-neutral-500 rounded-none text-sm font-normal font-[Gilroy] leading-none  focus:ring-orange focus:border-orange w-full p-2.5',
         required: 'required'
     },
     {
@@ -71,9 +71,9 @@ import Paragraph from "../ui/Paragraph.astro";
 ---
 
 
-<section class=" p-12 lg:p-28 bg-zink  bg-opacity-20  ">
+<section class=" p-5 lg:p-28 bg-zink  bg-opacity-20  ">
     <div class="max-w-[1400px] w-full flex flex-wrap lg:flex-nowrap mx-auto" >
-        <div class="w-full lg:w-4/6">
+        <div class="w-full lg:w-4/6 py-5 xl:py-0">
             <div class="pt-[100%] bg-center bg-cover bg-no-repeat  bg-[url('/src/assets/IMG/kontakt.jpg')]">
 
             </div>
@@ -110,7 +110,7 @@ import Paragraph from "../ui/Paragraph.astro";
                       <label> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius interdum quam nec feugiat.</label>
                   </div>
 
-                   <Button type="fullorange-f-w" > Dodaj załącznik</Button>
+                   <Button type="fullorange-f-w" > Wyślij</Button>
                </div>
 
             </form>

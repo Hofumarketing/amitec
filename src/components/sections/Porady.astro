@@ -76,23 +76,23 @@ const porady = [
 
 
 <section class=" split-gradient2to3  pt-32  pb-20 w-full mx-auto">
-    <div class="flex w-full flex-wrap justify-center pb-20">
-        <h2 class="text-center w-full text-black text-5xl font-bold font-['Gilroy'] leading-[52.80px]"> Praktyczne porady </h2>
+    <div class="flex w-full flex-wrap p-5 xl:p-0 justify-center pb-10 lg:pb-20">
+        <h2 class="text-center w-full text-black text-[40px] lg:text-5xl font-bold font-['Gilroy'] leading-[52.80px]"> Praktyczne porady </h2>
         <div class="max-w-[424px] mt-8 text-black text-center text-base font-normal font-['Gilroy'] leading-[17.60px]">
             Przygotowaliśmy zbiór sugestii, które sprawdzą się także w Twoim gospodarstwie
 
         </div>
     </div>
-    <div class="flex w-full flex-wrap justify-center pb-20">
-        <p class="m-5 hover:underline hover:underline-solid cursor-pointer decoration-2	underline-offset-4	"> Lorem Ipsum</p>
-        <p class="m-5 hover:underline hover:underline-solid cursor-pointer decoration-2 underline-offset-4	"> Lorem Ipsum</p>
-        <p class="m-5 hover:underline hover:underline-solid cursor-pointer decoration-2	underline-offset-4	"> Lorem Ipsum</p>
+    <div class="flex w-full flex-wrap justify-center pb-10 lg:pb-20">
+        <p class="m-5 hover:underline hover:underline-solid hover:font-bold cursor-pointer decoration-2	underline-offset-4	"> Lorem Ipsum</p>
+        <p class="m-5 hover:underline hover:underline-solid hover:font-bold cursor-pointer decoration-2 underline-offset-4	"> Lorem Ipsum</p>
+        <p class="m-5 hover:underline hover:underline-solid hover:font-bold cursor-pointer decoration-2	underline-offset-4	"> Lorem Ipsum</p>
     </div>
-    <div class="mx-auto w-full max-w-[1400px] grid grid-cols-4">
+    <div class="mx-auto w-full max-w-[1400px] grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-2.5">
 
         {porady.map((slide, index) => (
                 <div class="pb-10">
-                    <div class="image-container  mr-5">
+                    <div class="image-container  p-5 xl:p-0 lg:mr-5">
 
                         <div class="w-full bg-center   bg-center bg-no-repeat bg-cover pt-[75%]" style={{ backgroundImage: `url(${slide.image})` }}>
                             {/* Dodatkowa zawartość slajdu */}
@@ -112,7 +112,7 @@ const porady = [
         ))}
 
     </div>
-    <div class="flex w-full justify-center">
+    <div class="flex w-full p-5 xl:p-0 justify-center">
         <Button type="orange"> Zobacz więcej </Button>
     </div>
 </section>

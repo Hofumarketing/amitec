@@ -15,15 +15,15 @@ const dane = [
     {
         id: 1,
         head: 'Siedziba',
-        data: 'Jana Matejki 7',
-        data2: '10-557 Warszawa',
+        data: 'Wólka Krzykowska 8',
+        data2: '97-225 Ujazd',
         data3: 'tel. 89 535 18 91',
     },
     {
         id: 2,
-        head: ' Laboratorium',
-        data: '',
-        data2: '',
+        head: 'Laboratorium',
+        data: 'Wólka Krzykowska 8',
+        data2: '97-225 Ujazd',
         data3: '',
     },
 
@@ -74,21 +74,21 @@ const team = [
 
 ---
 <Page>
-    <section class="mx-auto w-full py-20 max-w-[1400px]">
-        <h1 class="text-neutral-900 text-[64px] font-bold font-['Gilroy'] leading-[76.80px]">Relacje i kontakt</h1>
+    <section class="mx-auto w-full py-10 xl:py-20 p-5 xl:p-0 max-w-[1400px]">
+        <h1 class="text-neutral-900 text-4xl xl:text-[64px] font-bold font-['Gilroy'] leading-[43.20px] xl:leading-[76.80px]">Relacje i kontakt</h1>
     </section>
     <Kontakt />
-    <section class="mx-auto w-full py-20 max-w-[1400px]">
-        <h2 class=" text-neutral-900 text-[40px] font-bold font-['Gilroy'] leading-10">Dane kontaktowe firmy</h2>
-        <div class="py-20 grid grid-cols-4 w-full">
+    <section class="p-5 xl:p-0  mx-auto w-full py-10 xl:py-20 max-w-[1400px] ">
+        <h2 class=" text-neutral-900 text-4xl xl:text-[40px] font-bold font-['Gilroy'] leading-10">Dane kontaktowe firmy</h2>
+        <div class="py-10 xl:py-20 grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4  w-full">
             {dane.map((slide, index) => (
-                    <div class="">
-                        <div class="">
-                            <div class="w-[329px]  flex-col justify-start items-start gap-8 inline-flex">
-                                <p class="w-64 text-neutral-900 text-2xl font-bold font-['Gilroy'] leading-normal">{slide.head}</p>
-                                <p class="text-neutral-900 text-xl font-normal font-['Gilroy'] leading-tight">{slide.data}</p>
-                                <p class="text-neutral-900 text-xl font-normal font-['Gilroy'] leading-tight">{slide.data2}</p>
-                                <p class="text-neutral-900 text-xl font-normal font-['Gilroy'] leading-tight">{slide.data3}</p>
+                    <div class="w-full">
+                        <div class="w-full">
+                            <div class="md:w-[329px] mb-6 flex-col justify-start items-start gap-3 xl:gap-8 inline-flex">
+                                <p class="md:w-64 mb-3 text-neutral-900 text-2xl font-bold font-['Gilroy'] leading-normal">{slide.head}</p>
+                                <p class="text-neutral-900 text-base xl:text-xl font-normal font-['Gilroy'] leading-tight">{slide.data}</p>
+                                <p class="text-neutral-900 text-base xl:text-xl font-['Gilroy'] leading-normal">{slide.data2}</p>
+                                <p class="text-neutral-900 text-base xl:text-xl font-['Gilroy'] leading-tight">{slide.data3}</p>
 
                             </div>
                         </div>
@@ -98,26 +98,26 @@ const team = [
     </section>
 
 
-
-    <section class=" pb-20 w-full mx-auto">
+    <section class="p-5 xl:p-0 pb-20 w-full mx-auto">
         <div class="max-w-[1400px] w-full mx-auto">
-            <div class="  text-black text-5xl font-bold font-['Gilroy'] leading-[52.80px] border-b border-orange ">
-                <h2 class=" w-1/2 pb-10">Skontaktuj się z naszymi handlowcami</h2>
+            <div class="  text-black text-4xl xl:text-5xl font-bold font-['Gilroy'] leading-[52.80px] border-b border-orange ">
+                <h2 class="w-2/3 md:w-1/2 pb-10">Skontaktuj się z naszymi handlowcami</h2>
             </div>
         </div>
 
     </section>
+
     <section class="w-full mx-auto">
-        <div class="max-w-[1400px] w-full grid grid-cols-4 gap-6 mx-auto">
+        <div class="max-w-[1400px] p-5 lg:p-0 w-full grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-2.5  mx-auto">
 
 
             {team.map((slide, index) => (
-                    <div class="pb-5 ">
-                        <div class="w-[100%] bg-center bg-no-repeat bg-cover	min-h-[40vh]" style={{ backgroundImage: `url(${slide.image})` }}>
-                            {/* Dodatkowa zawartość slajdu */}
+                    <div class="pb-12 w-full">
+                        <div class="">
+                            <img class="object-cover min-h-[40vh] w-full" src={slide.image} alt="Slide Image">
                         </div>
                         <div>
-                            <div class="w-[329px]">
+                            <div class="md:max-w-[329px]">
                                 <h2 class="text-black text-xl pt-[24px] font-bold font-['Gilroy'] leading-normal"> {slide.name}</h2>
                                 <p class=" mb-[35px]text-black text-base pt-[12px]  font-normal font-['Gilroy']">{slide.description}</p>
                                 <div class="mt-[35px]">
@@ -132,23 +132,23 @@ const team = [
         </div>
 
     </section>
-    <section class="w-full py-20 mx-auto max-w-[1400px]">
+    <section class="w-full xl:py-20 mx-auto max-w-[1400px]">
 
         <div class="text-black text-5xl font-bold font-['Gilroy'] leading-[52.80px]  ">
-            <h2 class="">Znajdź nas na mapie</h2>
+            <h2 class="hidden md:block">Znajdź nas na mapie</h2>
         </div>
 
     </section>
 
-    <div class="mapcontainer w-full h-[80vh]">
+    <div class="mapcontainer w-full w-full h-[80vh]">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.522115893013!2d16.895692877167267!3d52.34281507201522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704500b6effb3fd%3A0xcfb7aad6fff7fb00!2sJachtowa%203%2C%2062-030%20Lubo%C5%84!5e0!3m2!1spl!2spl!4v1704474271011!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </div>
 
     <section class="w-full py-20 text-center flex flex-wrap justify-center  mx-auto max-w-[1400px]">
 
-        <h3 class="text-center w-full text-neutral-900 text-[32px] font-bold font-['Gilroy'] leading-loose">Lorem Ipsum</h3>
-        <p class="w-[424px] py-[32px] text-center text-neutral-900 text-xl font-normal font-['Gilroy'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        <h3 class="text-center w-full text-neutral-900 text-2xl xl:text-[32px] font-bold font-['Gilroy'] leading-loose">Lorem Ipsum</h3>
+        <p class="max-w-[424px] py-[32px] text-center text-neutral-900 text-xl font-normal font-['Gilroy'] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
     <div class="w-full flex flex-wrap justify-center">
         <svg class="m-5" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M32 0.5C49.3853 0.5 63.5 14.6147 63.5 32C63.5 49.3853 49.3853 63.5 32 63.5C14.6147 63.5 0.5 49.3853 0.5 32C0.5 14.6147 14.6147 0.5 32 0.5ZM50.8649 22.5227C50.4121 20.8284 49.078 19.4945 47.3839 19.0417C44.3129 18.2188 32 18.2188 32 18.2188C32 18.2188 19.6871 18.2188 16.6161 19.0417C14.9223 19.4945 13.5879 20.8284 13.1351 22.5227C12.3125 25.5933 12.3125 32.0002 12.3125 32.0002C12.3125 32.0002 12.3125 38.4069 13.1351 41.4773C13.5879 43.1716 14.9223 44.506 16.6161 44.9587C19.6871 45.7812 32 45.7812 32 45.7812C32 45.7812 44.3129 45.7812 47.3839 44.9587C49.078 44.506 50.4121 43.1716 50.8649 41.4773C51.6875 38.4069 51.6875 32.0002 51.6875 32.0002C51.6875 32.0002 51.6875 25.5933 50.8649 22.5227ZM28.0624 37.9066V26.0939L38.2921 32.0002L28.0624 37.9066Z" fill="#FF9700"/>

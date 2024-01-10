@@ -9,20 +9,20 @@ const { type } = Astro.props
 function btnClasses(type) {
     switch (type) {
         case 'white':
-            return 'bg-white hover:bg-black font-bold text-black hover:text-white';
+            return 'w-full md:max-w-fit bg-white hover:bg-black font-bold text-black hover:text-white';
         case 'orange':
-            return 'border mt-8 border-orange hover:bg-orange hover:text-black text-sm font-bold ';
+            return 'w-full md:max-w-fit  border mt-8 border-orange hover:bg-orange hover:text-black text-sm font-bold ';
         case 'orange-f-w':
-            return 'border group w-full mt-8 border-orange hover:bg-orange hover:text-black text-sm font-bold ';
+            return 'w-full md:max-w-fit border group  mt-8 border-orange hover:bg-orange hover:text-black text-sm font-bold ';
         case 'fullorange-f-w':
-            return 'border w-full mt-8 border-orange bg-orange hover:bg-white hover:text-black text-sm font-bold ';
+            return 'w-full md:max-w-fit border w-full mt-8 border-orange bg-orange hover:bg-white hover:text-black text-sm font-bold ';
         case 'black':
-            return 'bg-transparent text-black border mt-8 border-black hover:bg-black hover:text-white';
+            return 'w-full md:max-w-fit bg-transparent text-black border mt-8 border-black hover:bg-black hover:text-white';
 
     }
 }
 
-const classes = ['transition-all font-[Gilroy] h-11  ease-in-out duration-300 px-12 py-2 rounded-full', btnClasses(type)];
+const classes = [' transition-all font-[Gilroy] h-11  ease-in-out duration-300 px-12 py-2 rounded-full', btnClasses(type)];
 ---
 
 <button class:list={classes}>
