@@ -34,7 +34,10 @@
     background-image: linear-gradient(to bottom, #F7D29B 50%, #fff 50%);
 
 }
+.bg-gradient-lab{
+    background: linear-gradient(180deg, rgba(247, 210, 155, 0.00) 0%, #FCE1BC 100%);
 
+}
 summary {
     list-style: none;
     position: relative;
