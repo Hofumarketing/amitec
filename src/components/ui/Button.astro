@@ -19,11 +19,13 @@ function btnClasses(type) {
         case 'black':
             return 'w-full md:max-w-fit bg-transparent text-black border mt-8 border-black hover:bg-black hover:text-white';
         case 'fullorange-f-w-100':
-            return 'w-full  border w-full mt-8 border-orange bg-orange hover:bg-white hover:text-vlack text-black text-sm font-bold ';
+            return 'w-full  border w-full mt-8 border-orange bg-orange hover:bg-white hover:text-vlack text-black text-sm font-normal ';
+        case 'fullblackoutline-f-w-100':
+            return 'w-full  border w-full mt-2 border-black bg-transparent hover:bg-orange hover:text-vlack text-black text-sm font-normal flex items-center';
         case 'black-consent':
-            return 'w-full md:max-w-fit bg-transparent mt-3  font-[12px] h-11 px-6 py-1 text-black border  border-black hover:bg-black hover:text-white';
+            return 'w-full md:max-w-fit bg-white mt-3  font-[12px] h-11 px-6 py-1 text-black border  border-white hover:border-black hover:bg-black hover:text-white ';
         case 'green-consent':
-            return 'w-full md:max-w-fit bg-transparent text-black border mt-3 font-[12px] h-11 px-6 py-1 border-black hover:bg-black hover:text-white';
+            return 'w-full md:max-w-fit bg-black text-white border mt-3 font-[12px] h-11 px-6 py-1 border-black hover:bg-transparent hover:text-black h';
 
     }
 }
