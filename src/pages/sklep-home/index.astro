@@ -1,0 +1,175 @@
+---
+
+import Page from "../../components/Page.astro";
+import Button from "../../components/ui/Button.astro";
+import H2 from "../../components/ui/h2.astro";
+import Paragraph from "../../components/ui/Paragraph.astro";
+import PostsOddEven from "../../components/sections/PostsOddEven.astro";
+
+
+
+
+
+
+---
+
+
+
+
+<Page>
+    <section class="bg-[#FF9700] text-white">
+        <div class="mx-auto ">
+            <div class=" flex flex-wrap  w-full">
+                <div class="order-1 md:order-0 flex  items-center  lg:justify-center w-full min-h-[50%] md:w-5/12 lg:h-[60vh]  p-12 bg-red">
+                    <div class="lg:absolute lg:pl-10 xl:pl-0 left-0 text-center lg:text-left right-0 mx-auto max-w-[1400px] w-full lg:pr-72">
+                        <h1 class=" w-full leading-tight lg:w-2/6 text-neutral-900 text-black mb-6 text-[20px] lg:text-[32px] font-bold ">
+                            Odkryj nową erę w hodowli bydła mlecznego z HEPAWIT!
+                        </h1>
+                        <p class="  lg:w-2/6 mb-6 text-neutral-900  text-black  font-normal  leading-[17.60px]">
+                            <b>Hepawit</b> to innowacyjny dodatek paszowy zaprojektowany z myślą o optymalizacji zdrowia
+                            i produktywności Twoich krów. <br><br>Bazując na zaawansowanych badaniach i składnikach najwyższej jakości, Hepawit oferuje natychmiastowe zwiększenie wydajności mlecznej, jednocześnie dbając
+                            o dobrostan zwierząt.
+                        </p>
+                        <Button type="black-bold">Kup teraz</Button>
+
+                    </div>
+
+                </div>
+                <div class="order-0 relative md:order-1 w-full h-auto md:w-7/12 bg-center relative bg-no-repeat bg-cover h-fit  lg:h-[60vh]" style="background-image: url('public/img/333.jpg')">
+                    <div class="order-0 md:order-1 lg:absolute flex items-center justify-center bg-cover lg:left:1/2 lg:transform lg:-translate-x-1/2   lg:translate-y-1/2  h-[60vh]  w-50 md:w-1/2 xl:w-2/5 bg-center bg-no-repeat bg-cover  lg:h-1/2" style="background-image: url('')">
+                        <img class="h-[60vh] md:h-auto " src="public/img/hepavit.png" >
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section  class=" mx-auto  w-full text-white px-12 lg:px-0 py-12">
+        <div class="mx-auto max-w-[1400px]  w-full ">
+            <div class="md:w-2/6">
+                <H2 type="big">Nasza oferta. </H2>
+                <Paragraph type="light">Sprzedajemy produkty, które łączą w sobie jakość surowców oraz gwarancję bezpieczeństwa. Wybierz optymalne dodatki paszowe do produkcji zwierzęcej oraz inne środki produkcji rolnej. Przygotuj się na żniwa
+                    w postaci lepszych wyników.</Paragraph>
+            </div>
+            <div class=" flex flex-wrap  w-full">
+                <div class="order-0 md:order-0  w-full min-h-[50%] md:w-3/12  lg:py-12 ">
+                 <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Żywienie zwierząt</a>
+                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Nasiona</a>
+                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Środki ochrony roślin</a>
+                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Nawozy mineralne i wpaniowe</a>
+                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Nawozy dolistne</a>
+                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Biostymulanty</a>
+                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Pakowanie plonów</a>
+                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Genetyka Bydła</a>
+                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Dezynfekcja i deratyzacja</a>
+
+                </div>
+                <div class="order-0 relative md:order-1 justify-between flex flex-wrap justify-center w-full md:w-9/12 bg-center relative bg-no-repeat bg-cover items-center">
+                    <div class="product-wrapper w-full md:w-[49%]  lg:w-[32%] justify-center group bg-[#F3f3f3] hover:bg-[#FF9700] ease-in duration-300 cursor-pointer">
+                        <img class="max-h-[300px] relative mx-auto" src="public/img/hepavit.png">
+                        <div class="name p-6">
+                            <h3 class="text-black font-bold text-xl"> Previcur</h3>
+                            <p class="text-black font-normal text-base py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="w-full md:max-w-fit bg-transparent text-black font-bold   underline underline-offset-4 underline-2"> Kup teraz</button>
+                        </div>
+                    </div>
+                    <div class="product-wrapper w-full md:w-[49%]  lg:w-[32%] my-d-flex justify-center my-[1%] group bg-[#F3f3f3] hover:bg-[#FF9700] ease-in duration-300 cursor-pointer">
+                        <img class="max-h-[300px] relative mx-auto" src="public/img/hepavit.png">
+                        <div class="name p-6">
+                            <h3 class="text-black font-bold text-xl"> Previcur</h3>
+                            <p class="text-black font-normal text-base py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="w-full md:max-w-fit bg-transparent text-black font-bold   underline underline-offset-4 underline-2"> Kup teraz</button>
+                        </div>
+                    </div>
+                    <div class="product-wrapper w-full md:w-[49%]  lg:w-[32%] my-d-flex justify-center my-[1%] group bg-[#F3f3f3] hover:bg-[#FF9700] ease-in duration-300 cursor-pointer">
+                        <img class="max-h-[300px] relative mx-auto" src="public/img/hepavit.png">
+                        <div class="name p-6">
+                            <h3 class="text-black font-bold text-xl"> Previcur</h3>
+                            <p class="text-black font-normal text-base py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="w-full md:max-w-fit bg-transparent text-black font-bold   underline underline-offset-4 underline-2"> Kup teraz</button>
+                        </div>
+                    </div>
+                    <div class="product-wrapper w-full md:w-[49%]  lg:w-[32%] justify-center group bg-[#F3f3f3] hover:bg-[#FF9700] ease-in duration-300 cursor-pointer">
+                        <img class="max-h-[300px] relative mx-auto" src="public/img/hepavit.png">
+                        <div class="name p-6">
+                            <h3 class="text-black font-bold text-xl"> Previcur</h3>
+                            <p class="text-black font-normal text-base py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="w-full md:max-w-fit bg-transparent text-black font-bold   underline underline-offset-4 underline-2"> Kup teraz</button>
+                        </div>
+                    </div>
+                    <div class="product-wrapper w-full md:w-[49%]  lg:w-[32%] my-d-flex justify-center my-[1%] group bg-[#F3f3f3] hover:bg-[#FF9700] ease-in duration-300 cursor-pointer">
+                        <img class="max-h-[300px] relative mx-auto" src="public/img/hepavit.png">
+                        <div class="name p-6">
+                            <h3 class="text-black font-bold text-xl"> Previcur</h3>
+                            <p class="text-black font-normal text-base py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="w-full md:max-w-fit bg-transparent text-black font-bold   underline underline-offset-4 underline-2"> Kup teraz</button>
+                        </div>
+                    </div>
+                    <div class="product-wrapper w-full md:w-[49%]  lg:w-[32%] my-d-flex justify-center my-[1%] group bg-[#F3f3f3] hover:bg-[#FF9700] ease-in duration-300 cursor-pointer">
+                        <img class="max-h-[300px] w-auto relative mx-auto" src="public/img/hepavit.png">
+                        <div class="name p-6">
+                            <h3 class="text-black font-bold text-xl"> Previcur</h3>
+                            <p class="text-black font-normal text-base py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="w-full md:max-w-fit bg-transparent text-black font-bold   underline underline-offset-4 underline-2"> Kup teraz</button>
+                        </div>
+                    </div>
+                    <div class="product-wrapper w-full md:w-[49%]  lg:w-[32%] justify-center group bg-[#F3f3f3] hover:bg-[#FF9700] ease-in duration-300 cursor-pointer">
+                        <img class="max-h-[300px] relative mx-auto" src="public/img/hepavit.png">
+                        <div class="name p-6">
+                            <h3 class="text-black font-bold text-xl"> Previcur</h3>
+                            <p class="text-black font-normal text-base py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="w-full md:max-w-fit bg-transparent text-black font-bold   underline underline-offset-4 underline-2"> Kup teraz</button>
+                        </div>
+                    </div>
+                    <div class="product-wrapper w-full md:w-[49%]  lg:w-[32%] my-d-flex justify-center my-[1%] group bg-[#F3f3f3] hover:bg-[#FF9700] ease-in duration-300 cursor-pointer">
+                        <img class="max-h-[300px] relative mx-auto" src="public/img/hepavit.png">
+                        <div class="name p-6">
+                            <h3 class="text-black font-bold text-xl"> Previcur</h3>
+                            <p class="text-black font-normal text-base py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="w-full md:max-w-fit bg-transparent text-black font-bold   underline underline-offset-4 underline-2"> Kup teraz</button>
+                        </div>
+                    </div>
+                    <div class="product-wrapper w-full md:w-[49%]  lg:w-[32%] my-d-flex justify-center my-[1%] group bg-[#F3f3f3] hover:bg-[#FF9700] ease-in duration-300 cursor-pointer">
+                        <img class="max-h-[300px] relative mx-auto" src="public/img/hepavit.png">
+                        <div class="name p-6">
+                            <h3 class="text-black font-bold text-xl"> Previcur</h3>
+                            <p class="text-black font-normal text-base py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button class="w-full md:max-w-fit bg-transparent text-black font-bold   underline underline-offset-4 underline-2"> Kup teraz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-12">
+        <div class="mx-auto ">
+            <div class=" flex flex-wrap  w-full">
+                <div class=" flex  items-center bg-center justify-center w-full h-[60vh] md:w-5/5  bg-cover	 p-12 " style="background-image: url('public/img/333.jpg')">
+                    <div class="mx-auto max-w-[1400px]  w-full">
+                       <div class="w-full md:w-1/2 lg:w-5/12">
+                           <h2 class=" text-neutral-900 text-white mb-6 text-[20px] lg:text-[44px] font-bold  leading-tight">
+                               Z pasją łączymy tradycję
+                               i nowoczesność
+                           </h2>
+                           <p class="mb-6 text-neutral-900 w-5/6 text-white font-normal  ">
+                               Od ponad 25 lat dystrybuujemy środki produkcji rolnej. Bazujemy na rodzinnych doświadczeniach, które uzupełniamy o najnowsze zdobycze nauki i technologii.
+                           </p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <PostsOddEven />
+
+
+
+
+
+
+</Page>
