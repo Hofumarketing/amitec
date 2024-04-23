@@ -3,6 +3,7 @@ import Nav from "./ui/Nav.astro";
 import '../assets/styles/index.css';
 import Footer from "./ui/Footer.astro";
 import Navcommerce from "./ui/navcommerce.astro";
+import Navcommerceresults from "./ui/navcommerceresults.astro";
 
 interface Props {
     title?: string | undefined;
@@ -28,7 +29,8 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
 
     </head>
     <body class="body font-['Gilroy']">
-        <Navcommerce />
+        <!--<Navcommerce />-->
+        <Navcommerceresults />
         <slot />
         <Footer />
     </body>
@@ -143,26 +145,6 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
     </script>
 
 
-    <script>
-        const searchOpen = document.getElementById('search-open');
-        const searchClose = document.getElementById('search-close');
-        const searchResult = document.getElementById('search_result');
 
-        document.getElementById('search-toggle').addEventListener('click', function(event) {
-            event.preventDefault();
-            searchOpen.style.display = searchOpen.style.display === 'none' ? 'inline-block' : 'none';
-            searchClose.style.display = searchClose.style.display === 'none' ? 'inline-block' : 'none';
 
-            // Toggle class for animation
-            if (searchResult.classList.contains('search-open')) {
-                searchResult.style.height = '0';
-                setTimeout(() => {
-                    searchResult.classList.remove('search-open');
-                }, 300); // Wait for the transition to finish
-            } else {
-                searchResult.classList.add('search-open');
-                searchResult.style.height = '30vh';
-            }
-        });
-    </script>
 </html>

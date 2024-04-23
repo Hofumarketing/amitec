@@ -69,20 +69,40 @@ import Paragraph from "./Paragraph.astro";
 
 </nav>
 
-<div id="search_result" class="bg-white h-[0] flex items-center overflow-hidden transition-all duration-300">
+<div id="search_result" class=" absolute w-full z-50 bg-white h-[0] flex items-center overflow-hidden transition-all duration-300">
     <div class="mx-auto max-w-[1400px] w-full relative"> <!-- Added 'relative' class here -->
         <div class="flex items-center justify-between">
-            <input type="search" class="w-full text-2xl font-bold text-[#9f9f9f] border-b-2 py-2 border-[#9f9f9f] px-4" placeholder="| Szukam ...">
-            <svg class="ml-4" id="search-open" width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <input id="search_trigger" type="search" class="focus:outline-none focus:ring-0 w-full text-2xl font-bold text-black placeholder-[#9f9f9f] border-b-2 py-2 border-[#9f9f9f] px-4" placeholder="Szukam ...">
+            <svg class="transform -translate-x-full" id="search-open" width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="8.26953" cy="8.62402" r="6.92285" stroke="black" stroke-width="2"/>
                 <line x1="12.2385" y1="14.3609" x2="16.9922" y2="20.6992" stroke="black" stroke-width="2"/>
             </svg>
         </div>
-
         <p class="py-12">Popularne wyszukiwania: <b>Hipowit Premiks Trzoda</b></p>
     </div>
 </div>
 
-
 </div>
+<script>
+    const searchOpen = document.getElementById('search-open');
+    const searchClose = document.getElementById('search-close');
+    const searchResult = document.getElementById('search_result');
+
+    document.getElementById('search-toggle').addEventListener('click', function(event) {
+        event.preventDefault();
+        searchOpen.style.display = searchOpen.style.display === 'none' ? 'inline-block' : 'none';
+        searchClose.style.display = searchClose.style.display === 'none' ? 'inline-block' : 'none';
+
+        // Toggle class for animation
+        if (searchResult.classList.contains('search-open')) {
+            searchResult.style.height = '0';
+            setTimeout(() => {
+                searchResult.classList.remove('search-open');
+            }, 300); // Wait for the transition to finish
+        } else {
+            searchResult.classList.add('search-open');
+            searchResult.style.height = '30vh';
+        }
+    });
+</script>
 
