@@ -10,6 +10,8 @@ import Add from "../../components/ui/add.astro";
 import Buttonunderline from "../../components/ui/Buttonunderline.astro";
 import Similarproduct from "../../components/ui/similarproduct.astro";
 import Catitem from "../../components/ui/catitem.astro";
+import Filterbycategory from "../../components/ui/filterbycategory.astro";
+import Filterbyprice from "../../components/ui/filterbyprice.astro";
 
 
 let quantity = 1;
@@ -59,17 +61,11 @@ function handleQuantityChange(event) {
     <section  class=" mx-auto  w-full text-white px-12 lg:px-0 ">
         <div class="mx-auto max-w-[1400px]  w-full ">
 
-            <div class=" flex flex-wrap  w-full">
-                <div class="order-0 md:order-0  w-full min-h-[50%] md:w-3/12  lg:py-12 ">
-                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Żywienie zwierząt</a>
-                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Nasiona</a>
-                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Środki ochrony roślin</a>
-                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Nawozy mineralne i wpaniowe</a>
-                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Nawozy dolistne</a>
-                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Biostymulanty</a>
-                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Pakowanie plonów</a>
-                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Genetyka Bydła</a>
-                    <a class="text-xl w-full flex flex-wrap text-[#999999] py-2 font-bold hover:text-black ease-in duration-300" href="">Dezynfekcja i deratyzacja</a>
+            <div class=" flex flex-wrap  w-full ">
+                <div class="order-0 md:order-0  w-full min-h-[50%] md:w-3/12  lg:py-12 pr-12">
+                    <Filterbycategory />
+                    <Filterbyprice />
+
 
                 </div>
                 <div class="order-0 relative md:order-1 justify-between flex flex-wrap justify-center w-full md:w-9/12 bg-center relative bg-no-repeat bg-cover items-center">
