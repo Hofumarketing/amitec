@@ -32,8 +32,8 @@ function handleQuantityChange(event) {
         <div class="mx-auto ">
             <div class=" flex flex-wrap  w-full">
                 <div class="order-1 md:order-0 flex  items-center  lg:justify-center w-full min-h-[50%] md:w-6/12 lg:h-[60vh]  p-12 bg-red">
-                    <div class="lg:absolute lg:pl-10 xl:pl-0 left-0 text-center lg:text-left right-0 mx-auto max-w-[1400px] w-full lg:pr-72">
-                        <h1 class=" w-full leading-tight lg:w-3/6  mb-6 text-[20px]   lg:text-[42px] font-bold ">
+                    <div class="lg:absolute lg:pl-10 xl:pl-0 left-0 text-left right-0 mx-auto max-w-[1400px] w-full lg:pr-72">
+                        <h1 class=" w-full leading-tight lg:w-3/6  mb-6 text-[33px]   lg:text-[42px] font-bold ">
                             Odkryj nową erę w hodowli bydła mlecznego z HEPAWIT!
                         </h1>
                         <p class="  lg:w-2/6 mb-6     font-normal  leading-[17.60px]">
@@ -62,27 +62,37 @@ function handleQuantityChange(event) {
         <div class="mx-auto max-w-[1400px]  w-full ">
 
             <div class=" flex flex-wrap  w-full ">
-                <div class="order-0 md:order-0  w-full min-h-[50%] md:w-3/12  lg:py-12 pr-12">
+                <div class="order-0 md:order-0  w-full min-h-[50%] md:w-3/12  lg:py-12 lg:pr-12">
+                    <button class="md:hidden font-bold text-[#000] text-center w-full border-2 border-[#000] py-2 rounded-full flex justify-center items-center">
+                        Filtry
+                        <svg class="ml-3" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.388916" y1="2.55542" x2="14.6111" y2="2.55542" stroke="black" stroke-width="2"/>
+                            <line x1="0.388916" y1="7.88916" x2="14.6111" y2="7.88916" stroke="black" stroke-width="2"/>
+                            <line x1="4.72168" y1="10.6665" x2="4.72168" y2="5.33317" stroke="black" stroke-width="2"/>
+                            <line x1="10.0562" y1="5.3335" x2="10.0562" y2="0.000163122" stroke="black" stroke-width="2"/>
+                            <line x1="10.0562" y1="16" x2="10.0562" y2="10.6667" stroke="black" stroke-width="2"/>
+                            <line x1="0.388916" y1="13.2219" x2="14.6111" y2="13.2219" stroke="black" stroke-width="2"/>
+                        </svg>
+
+                    </button>
                     <Filterbycategory />
                     <Filterbyprice />
-
-
                 </div>
                 <div class="order-0 relative md:order-1 justify-between flex flex-wrap justify-center w-full md:w-9/12 bg-center relative bg-no-repeat bg-cover items-center">
-                    <div id="sorting-options" class="py-6 flex w-full justify-between">
-                        <div class="w-[40%]">
+                    <div id="sorting-options" class="py-6 flex flex-wrap items-center w-full justify-between">
+                        <div class="order-3 md:order-1 mt-6 lg:mt-0 w-full lg:w-[40%]">
                             <H2 type="big">Żywienie zwierząt </H2>
                         </div>
-                        <div class="w-[30%] flex justify-end  items-center">
-                            <button type="button" class="ease-in duration-300 inline-flex w-[90%] justify-center items-center px-4 py-2 border border-[#A3A3A3] shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu" aria-expanded="true" aria-haspopup="true">
+                        <div class="order-1 md:order-2 w-full md:w-6/12 lg:w-[30%] flex justify-end  items-center">
+                            <button type="button" class="ease-in duration-300 inline-flex w-full lg:w-[90%] justify-center items-center px-4 py-2 border border-[#A3A3A3] shadow-sm text-sm font-medium rounded-full md:rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu" aria-expanded="true" aria-haspopup="true">
                                 Ilość produktów na stronie: <b class="ml-2">50</b>
                                 <svg class="ml-3 " width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.5 1L7.5 8L14.5 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
                         </div>
-                        <div class="w-[30%] flex justify-end items-center">
-                            <button type="button" class="ease-in duration-300 inline-flex w-[90%] justify-center items-center px-4 py-2 border border-[#A3A3A3] shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu" aria-expanded="true" aria-haspopup="true">
+                        <div class="order-2 md:order-3 w-full md:w-5/12 lg:w-[30%] flex justify-end items-center mt-6 md:mt-0">
+                            <button type="button" class="ease-in duration-300 inline-flex w-full  lg:w-[90%]  justify-center items-center px-4 py-2 border border-[#A3A3A3]  shadow-sm text-sm font-medium rounded-full md:rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu" aria-expanded="true" aria-haspopup="true">
                                 Sortuj od najnowszych
                                 <svg class="ml-3 " width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.5 1L7.5 8L14.5 1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
@@ -97,9 +107,9 @@ function handleQuantityChange(event) {
                         <Catitem />
                         <Catitem />
                         <Catitem />
-                        <div class="w-[50%] p-4">
+                        <div class="w-full h-fit lg:w-[50%] p-4">
                             <div class="h-3/6 relative">
-                                <img class="absolute object-cover bg-center  overflow-hidden" src="public/img/slide1.jpg" >
+                                <img class="lg:absolute object-cover bg-center  overflow-hidden" src="public/img/slide1.jpg" >
                             </div>
                             <div class="h-3/6 relative bg-[#FFEACC] text-[#000] p-6 flex items-center flex-wrap">
                                 <p class="text-xl font-bold">Lorem ipsum </p>
