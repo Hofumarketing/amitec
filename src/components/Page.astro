@@ -172,6 +172,24 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
             openButton.style.display = 'block';
         });
     </script>
+    <script>
+        // Pobierz przycisk otwierający i zamykający filtry oraz div z filtrami
+        const openButton = document.getElementById('openfilters');
+        const closeButton = document.getElementById('closefilters');
+        const filters = document.getElementById('filters');
+
+        // Dodaj obsługę zdarzenia kliknięcia na przycisku otwierającym filtry
+        openButton.addEventListener('click', function() {
+            // Pokaż filtry
+            filters.classList.remove('hidden');
+        });
+
+        // Dodaj obsługę zdarzenia kliknięcia na przycisku zamykającym filtry
+        closeButton.addEventListener('click', function() {
+            // Ukryj filtry
+            filters.classList.add('hidden');
+        });
+    </script>
 
 
 </html>
