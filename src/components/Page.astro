@@ -137,14 +137,41 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
             splide4.mount(); // Mount the slider
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide4 = new Splide('#splide5', {
+                type: 'loop', // Enables looping
+                autoplay: false,
+                perPage: 2, // Number of slides per page
+                perMove: 1, // Number of slides moved per arrow click or swipe
+                pagination: false, // Disable pagination dots
 
+            });
+
+            splide4.mount(); // Mount the slider
+        });
+    </script>
     <script>
         document.getElementById('search-toggle').addEventListener('click', function() {
             document.querySelector('.navactive').classList.toggle('hidden');
         });
     </script>
 
+    <script>
+        const openButton = document.getElementById('open-advisor');
+        const closeButton = document.getElementById('close-advisor');
+        const advisorDiv = document.getElementById('advisor');
 
+        openButton.addEventListener('click', () => {
+            advisorDiv.style.display = 'block';
+            openButton.style.display = 'none';
+        });
+
+        closeButton.addEventListener('click', () => {
+            advisorDiv.style.display = 'none';
+            openButton.style.display = 'block';
+        });
+    </script>
 
 
 </html>
