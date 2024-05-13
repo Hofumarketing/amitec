@@ -190,6 +190,26 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
             filters.classList.add('hidden');
         });
     </script>
+    <script>
+        // Pobranie przycisku i elementu, który ma być pokazywany/ukrywany
+        const button = document.querySelector('.toggle-button');
+        const orderDetails = document.getElementById('orderdetails');
+
+        // Dodanie nasłuchiwacza na kliknięcie przycisku
+        button.addEventListener('click', function() {
+            // Sprawdzenie, czy element jest aktualnie widoczny
+            const isVisible = orderDetails.classList.contains('hidden');
+
+            // Jeśli jest widoczny, ukryj go i zmień tekst przycisku na "Zobacz"
+            if (isVisible) {
+                orderDetails.classList.remove('hidden');
+                button.textContent = 'Zamknij';
+            } else { // Jeśli nie jest widoczny, pokaż go i zmień tekst przycisku na "Zamknij"
+                orderDetails.classList.add('hidden');
+                button.textContent = 'Zobacz';
+            }
+        });
+    </script>
 
 
 </html>
