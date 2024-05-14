@@ -1,0 +1,88 @@
+---
+
+import Page from "../../components/Page.astro";
+import Button from "../../components/ui/Button.astro";
+import H2 from "../../components/ui/h2.astro";
+import Paragraph from "../../components/ui/Paragraph.astro";
+import PostsOddEven from "../../components/sections/PostsOddEven.astro";
+import Added from "../../components/ui/added.astro";
+import Add from "../../components/ui/add.astro";
+import Buttonunderline from "../../components/ui/Buttonunderline.astro";
+import Similarproduct from "../../components/ui/similarproduct.astro";
+import Cartitemdesktop from "../../components/ui/cartitemdesktop.astro";
+import Cartitemdashboard from "../../components/ui/cartitemdashboard.astro";
+import Panelmenu from "../../components/ui/panelmenu.astro";
+
+
+let quantity = 1;
+
+function handleQuantityChange(event) {
+    quantity = parseInt(event.target.value, 10);
+}
+---
+
+
+<Page>
+<Panelmenu />
+    <section  id="productcart-details" class=" mx-auto p-6 lg:pt-12 lg:pb-12 w-full ">
+        <div class="mx-auto max-w-[1400px]  w-full ">
+            <div class=" w-full lg:w-5/6 py-12 border-b ">
+                <H2 type="big">Witaj w panelu klienta </H2>
+                <div class="flex items-center mt-12">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 18V6C14 5.46957 13.7893 4.96086 13.4142 4.58579C13.0391 4.21071 12.5304 4 12 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V17C2 17.2652 2.10536 17.5196 2.29289 17.7071C2.48043 17.8946 2.73478 18 3 18H5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 18H9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19 18H21C21.2652 18 21.5196 17.8946 21.7071 17.7071C21.8946 17.5196 22 17.2652 22 17V13.35C21.9996 13.1231 21.922 12.903 21.78 12.726L18.3 8.376C18.2065 8.25888 18.0878 8.16428 17.9528 8.0992C17.8178 8.03412 17.6699 8.00021 17.52 8H14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 20C8.10457 20 9 19.1046 9 18C9 16.8954 8.10457 16 7 16C5.89543 16 5 16.8954 5 18C5 19.1046 5.89543 20 7 20Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="font-bold ml-3 text-xl"> Śledź swoje zamówienie</p>
+                </div>
+            </div>
+            <div class="w-full mt-12 flex flex-wrap  ">
+                <h3 class="font-bold text-2xl w-full "> Zamówienie <span class="font-light">#76888</span></h3>
+                <p class="text-xl font-bold mt-6 w-full "> Przewidywany czas dostawy</p>
+                <p class="text-xl mt-2  w-full "> 20 maja 2024r.</p>
+                <p class="text-xl mt-2  w-full font-bold"> Nr przesyłki: <span class="font-light">AW34234324576888</span></p>
+
+
+                <div class="w-full py-12 ">
+                    <div class="h-[10px] relative w-full bg-[#DDDDDD] line">
+                        <div class="bg-[#FF9700] h-[10px] w-7/12 rounded-full orange_progress"></div>
+                        <div class="start left-0 absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-[30px] w-[30px] rounded-full bg-[#FF9700] flex justify-center z-10 items-center">
+                            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.654646 3.3955C1.10224 3.09997 1.70466 3.22325 2.00019 3.67084L4.71739 7.78623L11.7484 0.514625C12.1212 0.129038 12.736 0.118695 13.1216 0.491524C13.5072 0.864352 13.5175 1.47917 13.1447 1.86476L5.27217 10.0067C5.06741 10.2185 4.7776 10.3259 4.48429 10.2986C4.19098 10.2714 3.92587 10.1126 3.76356 9.86674L0.379301 4.74104C0.083774 4.29345 0.20705 3.69103 0.654646 3.3955Z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div class="center left-1/2 absolute  top-1/2 -translate-y-1/2 -translate-x-1/2 h-[30px] w-[30px] rounded-full bg-[#FF9700] flex justify-center z-10 items-center">
+                            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.654646 3.3955C1.10224 3.09997 1.70466 3.22325 2.00019 3.67084L4.71739 7.78623L11.7484 0.514625C12.1212 0.129038 12.736 0.118695 13.1216 0.491524C13.5072 0.864352 13.5175 1.47917 13.1447 1.86476L5.27217 10.0067C5.06741 10.2185 4.7776 10.3259 4.48429 10.2986C4.19098 10.2714 3.92587 10.1126 3.76356 9.86674L0.379301 4.74104C0.083774 4.29345 0.20705 3.69103 0.654646 3.3955Z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div class="end  absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 h-[30px] w-[30px] rounded-full bg-[#DDDDDD] flex justify-center z-10 items-center">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex">
+                    <div class="w-1/3 flex justify-center flex-wrap">
+                        <p class="w-full text-center font-bold">Przygotowanie zamówienia</p>
+                        <p class="w-full text-center mt-3 text-[#898989] font-bold">Wtorek</p>
+                        <p class="w-full text-center text-[#898989] font-bold">15.06.2024</p>
+                    </div>
+                    <div class="w-1/3 flex justify-center flex-wrap">
+                        <p class="w-full text-center font-bold">Wysłanie produktu</p>
+                        <p class="w-full text-center mt-3 text-[#898989] font-bold">Wtorek</p>
+                        <p class="w-full text-center text-[#898989] font-bold">15.06.2024</p>
+                    </div>
+                    <div class="w-1/3 flex justify-center flex-wrap">
+                        <p class="w-full text-center font-bold">Przewidywany czas doręczenia:</p>
+                        <p class="w-full text-center mt-3 text-[#FF9700] font-bold">Wtorek</p>
+                        <p class="w-full text-center text-[#FF9700] font-bold">15.06.2024</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</Page>
