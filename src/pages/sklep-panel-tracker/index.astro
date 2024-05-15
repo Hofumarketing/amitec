@@ -12,6 +12,7 @@ import Similarproduct from "../../components/ui/similarproduct.astro";
 import Cartitemdesktop from "../../components/ui/cartitemdesktop.astro";
 import Cartitemdashboard from "../../components/ui/cartitemdashboard.astro";
 import Panelmenu from "../../components/ui/panelmenu.astro";
+import Trackeritem from "../../components/ui/trackeritem.astro";
 
 
 let quantity = 1;
@@ -39,80 +40,266 @@ function handleQuantityChange(event) {
                     <p class="font-bold ml-3 text-xl"> Śledź swoje zamówienie</p>
                 </div>
             </div>
-            <div class="w-full mt-12 flex flex-wrap  ">
-                <div class="flex w-full">
-                    <div class="w-1/3">
-                        <h3 class="font-bold text-2xl w-full "> Zamówienie</h3>
-                        <p class="font-light mt-3">#76888</p>
-                    </div>
-                    <div class="w-1/3">
-                        <h3 class="font-bold text-2xl w-full "> Przewidywany czas dostawy</h3>
-                        <p class="font-light mt-3">20 maja 2024r.</p>
-                    </div>
-                    <div class="w-1/3">
-                        <h3 class="font-bold text-2xl w-full "> Nr listu przewozowego</h3>
-                        <p class="font-light mt-4 w-full">AW34234324576888</p><br>
-                        <button class="px-4  border border-2 border-[#000] font-bold py-2 rounded-full"> skopiuj </button>
-                    </div>
-                </div>
-                <table class="table-auto mt-6 w-full">
-                    <thead class="">
-                    <tr class="hidden md:table-row border-b-2 border-[#000]">
-                        <th class="px-4 py-2 "></th>
-                        <th class="px-4 py-2 text-left">Numer</th>
-                        <th class="px-4 py-2 text-left">Nazwa</th>
-                        <th class="px-4 py-2 text-left">Cena netto</th>
-                        <th class="px-4 py-2 text-left">Ilość</th>
-                        <th class="px-4 py-2 text-left">Rabat</th>
-                        <th class="px-4 py-2 text-left">Razem</th>
-                    </tr>
-                    </thead>
-                    <tbody>
 
-                    <Cartitemdashboard/>
-                    <Cartitemdashboard/>
-                    <Cartitemdashboard/>
 
-                    </tbody>
-                </table>
-
-                <div class="w-full py-12 ">
-                    <div class="h-[10px] relative w-full bg-[#DDDDDD] line">
-                        <div class="bg-[#FF9700] h-[10px] w-7/12 rounded-full orange_progress"></div>
-                        <div class="start left-0 absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-[30px] w-[30px] rounded-full bg-[#FF9700] flex justify-center z-10 items-center">
-                            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.654646 3.3955C1.10224 3.09997 1.70466 3.22325 2.00019 3.67084L4.71739 7.78623L11.7484 0.514625C12.1212 0.129038 12.736 0.118695 13.1216 0.491524C13.5072 0.864352 13.5175 1.47917 13.1447 1.86476L5.27217 10.0067C5.06741 10.2185 4.7776 10.3259 4.48429 10.2986C4.19098 10.2714 3.92587 10.1126 3.76356 9.86674L0.379301 4.74104C0.083774 4.29345 0.20705 3.69103 0.654646 3.3955Z" fill="black"/>
-                            </svg>
+            <div id="trackers" class="accordion">
+                <details class="accordion__item  border-b-2 relative border-t-2 border-[#000]" open>
+                    <summary class="accordion__item-btn py-6 cursor-pointer">
+                        <div class="flex w-full">
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Zamówienie</h3>
+                                <p class="font-light mt-3">#76888</p>
+                            </div>
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Przewidywany czas dostawy</h3>
+                                <p class="font-light mt-3">20 maja 2024r.</p>
+                            </div>
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Nr listu przewozowego</h3>
+                                <p class="font-light mt-4 w-full">AW34234324576888</p><br>
+                                <button class="px-4  border border-2 border-[#000] font-bold py-2 rounded-full"> skopiuj </button>
+                            </div>
                         </div>
-                        <div class="center left-1/2 absolute  top-1/2 -translate-y-1/2 -translate-x-1/2 h-[30px] w-[30px] rounded-full bg-[#FF9700] flex justify-center z-10 items-center">
-                            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.654646 3.3955C1.10224 3.09997 1.70466 3.22325 2.00019 3.67084L4.71739 7.78623L11.7484 0.514625C12.1212 0.129038 12.736 0.118695 13.1216 0.491524C13.5072 0.864352 13.5175 1.47917 13.1447 1.86476L5.27217 10.0067C5.06741 10.2185 4.7776 10.3259 4.48429 10.2986C4.19098 10.2714 3.92587 10.1126 3.76356 9.86674L0.379301 4.74104C0.083774 4.29345 0.20705 3.69103 0.654646 3.3955Z" fill="black"/>
-                            </svg>
+                    </summary>
+                    <div class="accordion__item-desc">
+                        <Trackeritem/>
+                    </div>
+                </details>
+                <details class="accordion__item border-b-2 border-[#000]">
+                    <summary class="accordion__item-btn py-6 cursor-pointer">
+                        <div class="flex w-full">
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Zamówienie</h3>
+                                <p class="font-light mt-3">#76888</p>
+                            </div>
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Przewidywany czas dostawy</h3>
+                                <p class="font-light mt-3">20 maja 2024r.</p>
+                            </div>
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Nr listu przewozowego</h3>
+                                <p class="font-light mt-4 w-full">AW34234324576888</p><br>
+                                <button class="px-4  border border-2 border-[#000] font-bold py-2 rounded-full"> skopiuj </button>
+                            </div>
                         </div>
-                        <div class="end  absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 h-[30px] w-[30px] rounded-full bg-[#DDDDDD] flex justify-center z-10 items-center">
-
+                    </summary>
+                    <div class="accordion__item-desc">
+                        <Trackeritem/>
+                    </div>
+                </details>
+                <details class="accordion__item border-b-2 border-[#000]">
+                    <summary class="accordion__item-btn py-6  cursor-pointer">
+                        <div class="flex w-full">
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Zamówienie</h3>
+                                <p class="font-light mt-3">#76888</p>
+                            </div>
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Przewidywany czas dostawy</h3>
+                                <p class="font-light mt-3">20 maja 2024r.</p>
+                            </div>
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Nr listu przewozowego</h3>
+                                <p class="font-light mt-4 w-full">AW34234324576888</p><br>
+                                <button class="px-4  border border-2 border-[#000] font-bold py-2 rounded-full"> skopiuj </button>
+                            </div>
                         </div>
+                    </summary>
+                    <div class="accordion__item-desc">
+                        <Trackeritem/>
                     </div>
-                </div>
-                <div class="w-full flex">
-                    <div class="w-1/3 flex justify-center flex-wrap">
-                        <p class="w-full text-center font-bold">Przygotowanie zamówienia</p>
-                        <p class="w-full text-center mt-3 text-[#898989] font-bold">Wtorek</p>
-                        <p class="w-full text-center text-[#898989] font-bold">15.06.2024</p>
+                </details>
+                <details class="accordion__item border-b-2 border-[#000]">
+                    <summary class="accordion__item-btn py-6  cursor-pointer">
+                        <div class="flex w-full">
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Zamówienie</h3>
+                                <p class="font-light mt-3">#76888</p>
+                            </div>
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Przewidywany czas dostawy</h3>
+                                <p class="font-light mt-3">20 maja 2024r.</p>
+                            </div>
+                            <div class="w-1/3">
+                                <h3 class="font-bold text-2xl w-full "> Nr listu przewozowego</h3>
+                                <p class="font-light mt-4 w-full">AW34234324576888</p><br>
+                                <button class="px-4  border border-2 border-[#000] font-bold py-2 rounded-full"> skopiuj </button>
+                            </div>
+                        </div>
+                    </summary>
+                    <div class="accordion__item-desc bg-white">
+                        <Trackeritem/>
                     </div>
-                    <div class="w-1/3 flex justify-center flex-wrap">
-                        <p class="w-full text-center font-bold">Wysłanie produktu</p>
-                        <p class="w-full text-center mt-3 text-[#898989] font-bold">Wtorek</p>
-                        <p class="w-full text-center text-[#898989] font-bold">15.06.2024</p>
-                    </div>
-                    <div class="w-1/3 flex justify-center flex-wrap">
-                        <p class="w-full text-center font-bold">Przewidywany czas doręczenia:</p>
-                        <p class="w-full text-center mt-3 text-[#FF9700] font-bold">Wtorek</p>
-                        <p class="w-full text-center text-[#FF9700] font-bold">15.06.2024</p>
-                    </div>
-                </div>
+                </details>
             </div>
+
+            <script>
+                window.addEventListener("DOMContentLoaded",() => {
+                    const menu = new Accordion("#menu");
+                });
+
+                class Accordion {
+                    /** Element used for this accordion */
+                    el: HTMLElement | null;
+                    /** Accordion item array */
+                    items: AccordionItem[] = [];
+                    /**
+                     * @param el CSS selector of the accordion
+                     */
+                    constructor(el: string) {
+                        this.el = document.querySelector(el);
+
+                        const itemEls = Array.from(this.el?.querySelectorAll("details") || []);
+
+                        itemEls.forEach((itemEl,i) => {
+                            const id = `${i}`;
+                            itemEl.setAttribute("data-item",id)
+                            this.items.push(new AccordionItem(id,this));
+                        });
+                    }
+                }
+                class AccordionItem {
+                    /** Accordion object to which the item belongs */
+                    parent: Accordion;
+                    /** `<details>` used for the accordion item */
+                    el: HTMLDetailsElement | null | undefined;
+                    /** `<summary>` of the `<details>` */
+                    summary: HTMLElement | null | undefined;
+                    /** Content element succeeding the `<summary>` */
+                    content: HTMLElement | null | undefined;
+                    /** Element is collapsing */
+                    isCollapsing = false;
+                    /** Element is expanding */
+                    isExpanding = false;
+                    /** Animation object */
+                    animation?: Animation | null;
+                    /** Animation duration and easing */
+                    animParams: AnimParams = {
+                        duration: 100,
+                        easing: "cubic-bezier(0.33,1,0.68,1)"
+                    };
+                    /** Actions to run after expanding the item. */
+                    animActionsExpand: AnimActions = {
+                        onfinish: this.onAnimationFinish.bind(this,true),
+                        oncancel: () => { this.isExpanding = false; }
+                    };
+                    /** Actions to run after collapsing the item. */
+                    animActionsCollapse: AnimActions = {
+                        onfinish: this.onAnimationFinish.bind(this,false),
+                        oncancel: () => { this.isCollapsing = false; }
+                    };
+                    /** Close any open items. */
+                    closePrevious(): void {
+                        const openItems = this.parent.items.filter(item => item.isExpanding || item.el?.open);
+                        openItems?.forEach(item => item.collapse());
+                    }
+                    /**
+                     * @param id ID of the accordion item
+                     * @param parent Accordion object to which the item belongs
+                     */
+                    constructor(id: string, parent: Accordion) {
+                        this.parent = parent;
+                        this.el = this.parent.el?.querySelector(`[data-item="${id}"]`);
+                        this.summary = this.el?.querySelector("summary");
+                        this.summary?.addEventListener("click", this.toggle.bind(this));
+                        this.content = this.summary?.nextElementSibling as HTMLElement;
+                    }
+                    /**
+                     * Open or close the accordion.
+                     * @param e Click event whose default behavior should be prevented
+                     */
+                    toggle(e?: Event) {
+                        e?.preventDefault();
+                        this.el?.classList.remove("collapsing","expanding");
+
+                        const detailsClicked = (e?.target as HTMLElement).parentElement;
+                        const dataItemClicked = detailsClicked?.getAttribute("data-item");
+                        const detailsOpen = this.el?.parentElement?.querySelector("[open]");
+                        const dataItemOpen = detailsOpen?.getAttribute("data-item");
+
+                        if (dataItemClicked !== dataItemOpen) {
+                            // run the pre-toggle action only if a different item is clicked
+                            this.closePrevious();
+                        }
+                        if (this.isCollapsing || !this.el?.open) {
+                            this.open();
+                        } else if (this.isExpanding || this.el?.open) {
+                            this.collapse();
+                        }
+                    }
+                    /** Open the item and run the animation for expanding. */
+                    open(): void {
+                        if (this.el) {
+                            this.el.style.height = `${this.el.offsetHeight}px`;
+                            this.el.open = true;
+
+                            this.expand();
+                        }
+                    }
+                    /** Expansion animation */
+                    expand(): void {
+                        this.el?.classList.add("expanding");
+                        this.isExpanding = true;
+
+                        const startHeight = this.el?.offsetHeight || 0;
+                        const summaryHeight = this.summary?.offsetHeight ||10;
+                        const contentHeight = this.content?.offsetHeight || 10;
+                        const endHeight = summaryHeight + contentHeight;
+
+                        this.animation?.cancel();
+                        this.animation = this.el?.animate(
+                            { height: [`${startHeight}px`, `${endHeight}px`] },
+                            this.animParams
+                        );
+                        if (this.animation) {
+                            this.animation.onfinish = this.animActionsExpand.onfinish;
+                            this.animation.oncancel = this.animActionsExpand.oncancel;
+                        }
+                    }
+                    /** Close the item and run the animation for collapsing. */
+                    collapse(): void {
+                        this.el?.classList.add("collapsing");
+                        this.isCollapsing = true;
+
+                        const startHeight = this.el?.offsetHeight || 0;
+                        const endHeight = this.summary?.offsetHeight || 0;
+
+                        this.animation?.cancel();
+                        this.animation = this.el?.animate(
+                            { height: [`${startHeight}px`, `${endHeight}px`] },
+                            this.animParams
+                        );
+                        if (this.animation) {
+                            this.animation.onfinish = this.animActionsCollapse.onfinish;
+                            this.animation.oncancel = this.animActionsCollapse.oncancel;
+                        }
+                    }
+                    /** Actions to run when the animation is finished */
+                    onAnimationFinish(open: boolean): void {
+                        if (this.el) {
+                            this.el.open = open;
+
+                            if (this.animation) {
+                                this.animation = null;
+                            }
+                            this.isCollapsing = false;
+                            this.isExpanding = false;
+                            this.el.style.height = "";
+                            this.el.classList.remove("collapsing","expanding");
+                        }
+                    }
+                }
+                type AnimActions = {
+                    onfinish: () => void,
+                    oncancel: () => void
+                }
+                type AnimParams = {
+                    duration: number,
+                    easing: string
+                }
+            </script>
 
         </div>
     </section>
+
 </Page>
