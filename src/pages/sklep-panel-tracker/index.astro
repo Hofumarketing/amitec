@@ -40,11 +40,41 @@ function handleQuantityChange(event) {
                 </div>
             </div>
             <div class="w-full mt-12 flex flex-wrap  ">
-                <h3 class="font-bold text-2xl w-full "> Zamówienie <span class="font-light">#76888</span></h3>
-                <p class="text-xl font-bold mt-6 w-full "> Przewidywany czas dostawy</p>
-                <p class="text-xl mt-2  w-full "> 20 maja 2024r.</p>
-                <p class="text-xl mt-2  w-full font-bold"> Nr przesyłki: <span class="font-light">AW34234324576888</span></p>
+                <div class="flex w-full">
+                    <div class="w-1/3">
+                        <h3 class="font-bold text-2xl w-full "> Zamówienie</h3>
+                        <p class="font-light mt-3">#76888</p>
+                    </div>
+                    <div class="w-1/3">
+                        <h3 class="font-bold text-2xl w-full "> Przewidywany czas dostawy</h3>
+                        <p class="font-light mt-3">20 maja 2024r.</p>
+                    </div>
+                    <div class="w-1/3">
+                        <h3 class="font-bold text-2xl w-full "> Nr listu przewozowego</h3>
+                        <p class="font-light mt-4 w-full">AW34234324576888</p><br>
+                        <button class="px-4  border border-2 border-[#000] font-bold py-2 rounded-full"> skopiuj </button>
+                    </div>
+                </div>
+                <table class="table-auto mt-6 w-full">
+                    <thead class="">
+                    <tr class="hidden md:table-row border-b-2 border-[#000]">
+                        <th class="px-4 py-2 "></th>
+                        <th class="px-4 py-2 text-left">Numer</th>
+                        <th class="px-4 py-2 text-left">Nazwa</th>
+                        <th class="px-4 py-2 text-left">Cena netto</th>
+                        <th class="px-4 py-2 text-left">Ilość</th>
+                        <th class="px-4 py-2 text-left">Rabat</th>
+                        <th class="px-4 py-2 text-left">Razem</th>
+                    </tr>
+                    </thead>
+                    <tbody>
 
+                    <Cartitemdashboard/>
+                    <Cartitemdashboard/>
+                    <Cartitemdashboard/>
+
+                    </tbody>
+                </table>
 
                 <div class="w-full py-12 ">
                     <div class="h-[10px] relative w-full bg-[#DDDDDD] line">

@@ -210,6 +210,33 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
             }
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Pobierz elementy po identyfikatorach
+            const couponOpen = document.getElementById("coupon-open");
+            const couponClose = document.getElementById("coupon-close");
+            const couponWrapper = document.getElementById("coupon-wrapp");
+            const placeOrderBtn = document.getElementById("place-order");
+            const goPaymentBtn = document.getElementById("go-payment");
 
+            // Funkcja do obsługi kliknięcia na przycisk otwierający kupon
+            couponOpen.addEventListener("click", function() {
+                // Ukryj przyciski place-order i go-payment
+                placeOrderBtn.style.display = "none";
+                goPaymentBtn.style.display = "none";
+                // Usuń klasę "hidden" z wrappera kuponu
+                couponWrapper.classList.remove("hidden");
+            });
+
+            // Funkcja do obsługi kliknięcia na przycisk zamykający kupon
+            couponClose.addEventListener("click", function() {
+                // Dodaj klasę "hidden" do wrappera kuponu
+                couponWrapper.classList.add("hidden");
+                // Przywróć widoczność przycisków place-order i go-payment
+                placeOrderBtn.style.display = "block";
+                goPaymentBtn.style.display = "block";
+            });
+        });
+    </script>
 
 </html>
