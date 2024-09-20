@@ -5,56 +5,48 @@ import Whitebutton from "./Whitebutton.astro";
 import Button from "../ui/Button.astro";
 let activeSlide = 0;
 const slides = [
-    'image1.jpg', // Zmień na swoje obrazy
-    'image2.jpg',
-    'image3.jpg'
+    'a1.jpg', // Zmień na swoje obrazy
+    'a2.jpg',
 ];
 
 const slides2 = [
     {
         id: 0,
-        title: 'Wszystko co najlepsze dla Twojego gospodarstwa',
-        description: 'Skorzystaj z szerokiej oferty wysokiej jakości środków produkcji rolnej oraz usług doradczych. Wznieś swój agrobiznes na poziom Plus+, na którym pięknie rosną stada, zbiory i dochody.',
-        image: '/src/assets/img/slide1.jpg',
+        title: 'Polski producent styropianu',
+        description: 'Innowacja. Oszczędność. Komfort.',
+        image: 'public/img/a2.jpg',
         bgcolor: 'orange',
 
     },
     {
         id: 1,
-        title: 'Wszystko co najlepsze dla Twojego gospodarstwa',
-        description: 'Skorzystaj z szerokiej oferty wysokiej jakości środków produkcji rolnej oraz usług doradczych. Wznieś swój agrobiznes na poziom Plus+, na którym pięknie rosną stada, zbiory i dochody.',
-        image: '/src/assets/IMG/slide2.jpg',
+        title: 'Formujemy się do Twoich potrzeb',
+        description: 'Sprostamy każdemu zamówieniu',
+        image: 'public/img/a1.jpg',
 
 
     },
-    {
-        id: 2,
-        title: 'Wszystko co najlepsze dla Twojego gospodarstwa',
-        description: 'Skorzystaj z szerokiej oferty wysokiej jakości środków produkcji rolnej oraz usług doradczych. Wznieś swój agrobiznes na poziom Plus+, na którym pięknie rosną stada, zbiory i dochody.',
-        image: '/src/assets/IMG/slide3.jpg',
-        bgcolor: 'black',
-        textcolor: 'white',
-    }
+
 ];
 
 ---
 
 
 
-<div id="slider" class=" splide">
+<div id="slider" class=" splide ">
     <div class="splide__track">
         <ul class="splide__list">
             {slides2.map((slide, index) => (
-                    <div class="splide__slide h-[calc(100%-56px)]  flex flex-wrap">
-                        <div class={` order-1 md:order-0 flex  items-center  justify-center w-full min-h-[50%] md:w-1/2 lg:h-100vh xl:w-2/5 p-12 bg-${slide.bgcolor ?? 'white'}`}>
-                            <div class="wrapper lg:absolute pl-10 xl:pl-0 left-0  text-cneter lg:text-left right-0 mx-auto max-w-[1400px] w-full">
-                                <h1 class={`lg:w-[400px] text-neutral-900  mb-6 text-[40px] lg:text-[64px] font-bold font-['Gilroy']  text-${slide.textcolor}`}>{slide.title}</h1>
-                                <p class={` lg:w-[400px] mb-6 text-neutral-900 text-base font-normal font-['Gilroy'] leading-[17.60px]  text-${slide.textcolor}`}> {slide.description}</p>
-                                <Button type="white"> Sprawdź</Button>
+                    <div class="splide__slide h-full lg:h-[calc(100%-56px)]  bg-no-repeat	 bg-cover  flex flex-wrap" style={{ backgroundImage: `url(${slide.image})` }}>
+                        <div class={` order-1 md:order-0 flex bg-black/50 items-end   justify-center w-full h-[90vh] md:w-full lg:h-100vh xl:w-full p-6 lg:p-12 `}>
+                            <div class="wrapper lg:absolute lg:pl-10 xl:pl-0 left-0 mb-12 lg:mb-60 text-cneter lg:text-left right-0 mx-auto max-w-[1400px] w-full">
+                                <h1 class={`lg:w-[400px] text-neutral-900  mb-6 text-[30px] lg:text-[42px] text-white font-medium leading-tight `}>{slide.title}</h1>
+                                <p class={` lg:w-[400px] mb-6 text-neutral-900 text-white  font-light  leading-tight  text-${slide.textcolor}`}> {slide.description}</p>
+                                <div class="flex flex-col md:flex-row flex-wrap">
+                                    <button class="w-fit mb-4 md:mr-3 lg:mb-0 h-12 px-6 py-4 bg-[#ed1c24] text-white text-base font-light font-['Objectivity'] rounded justify-start items-center gap-2.5 inline-flex">Skontaktuj się z nami</button>
+                                    <button class="w-fit  h-12 px-6 py-4 rounded border border-white justify-start items-center gap-2.5 inline-flex text-white text-base font-light font-['Objectivity']">O firmie</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="order-0 md:order-1 w-full md:w-1/2 xl:w-3/5 bg-center  bg-no-repeat	 bg-cover h-[50vh] lg:h-100vh" style={{ backgroundImage: `url(${slide.image})` }}>
-                            {/* Dodatkowa zawartość slajdu */}
                         </div>
                     </div>
             ))}

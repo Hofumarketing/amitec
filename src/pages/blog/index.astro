@@ -1,9 +1,181 @@
 ---
 import Page from "../../components/Page.astro";
-import Blogheader from "../../components/sections/Blogheader.astro";
+const postywrzesien = [
+    {
+        id: 0,
+        title: 'Temat 01',
+        image: 'public/img/a1.jpg',
+        short: '24.08.2024',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię',
+        miesiac: 'wrzesien',
+    },
+    {
+        id: 1,
+        title: 'Temat 03',
+        image: 'public/img/a4.jpg',
+        short: '24.08.2024',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię',
+        miesiac: 'wrzesien',
+    },
+    {
+        id: 2,
+        title: 'Temat 03',
+        image: 'public/img/a12.jpg',
+        short: '24.08.2024',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię',
+        miesiac: 'sierpien',
+    },
+    {
+        id: 3,
+        title: 'Temat 04',
+        image: 'public/img/a1.jpg',
+        short: '24.08.2024',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię.',
+        miesiac: 'sierpien',
+    },
+];
 ---
-
 <Page>
-<Blogheader />
+    <style>
+        .accordion__input:checked ~ .accordion__content {
+            display: grid;
+        }
+        .accordion__input:nth-child(1):checked ~ .accordion__content {
+            display: grid;
+        }
+    </style>
+    <div id="blog_header" class=" ">
 
+        <div class="splide__slide h-full lg:h-[calc(100%-)]  bg-no-repeat	relative  bg-cover  flex flex-wrap" style="background-image: url('public/img/a15.jpg')">
+            <div class={` order-1 md:order-0 flex bg-black/50  items-center justify-center w-full h-[90vh] md:w-full lg:h-100vh xl:w-full p-6 lg:p-12 `}>
+                <div class="text-center">
+                    <h1 class="lg:w-[700px] text-neutral-900  mb-6 text-[30px] lg:text-5xl text-white font-medium leading-tight">Blog</h1>
+                    <h2 class="lg:w-[700px] text-neutral-900  mb-6 text-[20px] lg:text-[32px] text-white font-medium leading-tigh">Witamy na naszym blogu!</h2>
+                    <p class="lg:w-[700px] mb-6 text-neutral-900 text-white text-justify font-light  leading-tight"> Dołącz do naszej społeczności i bądź na bieżąco z najnowszymi trendami w branży. Odkrywaj wpływ styropianu na komfort codziennego życia, środowisko i przyszłość budownictwa.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="w-full h-full mx-auto bg-gray-200 ">
+        <div class="mx-auto w-full lg:w-3/4  rounded-lg  overflow-hidden pt-24 p-6">
+            <div>
+                <input type="radio" name="tailwind_accordion" id="tab1" class="accordion__input px-2 py-4 hidden" checked>
+                <label for="tab1" class="accordion__label py-6 block w-full flex justify-between items-center">
+                    <h2 class="text-[#2e2e2e] text-2xl lg:text-5xl font-medium ">Wrzesień</h2>
+                    <div class="h-12 px-6 py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
+                        <div class="text-right text-[#2e2e2e] text-sm lg:text-base font-medium ">Rozwiń</div>
+                    </div>
+                </label>
+                <div class="accordion__content grid w-full lg:grid-cols-2 hidden">
+                    {postywrzesien.map((slide, index) => (
+                            <div
+                                    class={`w-full flex items-center ${index % 2 === 1 ? '' : ''} relative`}
+                            >
+                                <div class="w-full py-6">
+                                    <div class="w-full flex flex-wrap  ">
+                                        <div class={`w-full ${index % 2 === 0 ? 'order-0 lg:pr-6' : 'order-1 lg:pl-6'}`}>
+                                            <p class="text-[#707070] text-base font-light  leading-tight">24.08.2024</p>
+                                            <h3 class="text-black text-2xl lg:text-3xl font-medium  leading-loose">{slide.title}</h3>
+                                            <div class="w-full bg-center bg-no-repeat w-full bg-cover pt-[20vh] lg:pt-[40vh]"  style={{ backgroundImage: `url(${slide.image})` }} >
+                                            </div>
+                                            <div>
+                                                <p class="py-6 text-[#707070] text-[#707070] text-base font-light leading-tight">
+                                                    {slide.description}
+                                                </p>
+                                            </div>
+                                            <button class="px-2.5 py-2 rounded-sm border border-[#d1d1d1] justify-start items-center gap-2.5 inline-flex">
+                                                <div class="text-[#2e2e2e] text-xs font-normal  leading-3">Zobacz cały artykuł</div>
+                                            </button>
+                                        </div>
+                                        <div class={`w-full lg:h-[40vh] ${index % 2 === 0 ? 'order-1 ' : 'order-0'}`}>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    ))}
+                </div>
+            </div>
+
+            <div>
+                <input type="radio" name="tailwind_accordion" id="tab2" class="accordion__input px-2 py-4 hidden">
+                <label for="tab2" class="accordion__label py-6 block w-full flex justify-between">
+                    <h2 class="text-[#2e2e2e] text-2xl lg:text-5xl font-medium ">Sierpień</h2>
+                    <div class="h-12 px-6 py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
+                        <div class="text-right text-[#2e2e2e] text-sm lg:text-base font-medium ">Rozwiń</div>
+                    </div>
+                </label>
+                <div class="accordion__content grid w-full lg:grid-cols-2 hidden">
+                    {postywrzesien.map((slide, index) => (
+                            <div
+                                    class={`w-full flex items-center ${index % 2 === 1 ? '' : ''} relative`}
+                            >
+                                <div class="w-full py-6">
+                                    <div class="w-full flex flex-wrap  ">
+                                        <div class={`w-full ${index % 2 === 0 ? 'order-0 lg:pr-6' : 'order-1 lg:pl-6'}`}>
+                                            <p class="text-[#707070] text-base font-light  leading-tight">24.08.2024</p>
+                                            <h3 class="text-black text-2xl lg:text-3xl font-medium  leading-loose">{slide.title}</h3>
+                                            <div class="w-full bg-center bg-no-repeat w-full bg-cover pt-[20vh] lg:pt-[40vh]"  style={{ backgroundImage: `url(${slide.image})` }} >
+                                            </div>
+                                            <div>
+                                                <p class="py-6 text-[#707070] text-[#707070] text-base font-light leading-tight">
+                                                    {slide.description}
+                                                </p>
+                                            </div>
+                                            <button class="px-2.5 py-2 rounded-sm border border-[#d1d1d1] justify-start items-center gap-2.5 inline-flex">
+                                                <div class="text-[#2e2e2e] text-xs font-normal  leading-3">Zobacz cały artykuł</div>
+                                            </button>
+                                        </div>
+                                        <div class={`w-full lg:h-[40vh] ${index % 2 === 0 ? 'order-1 ' : 'order-0'}`}>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    ))}
+                </div>
+            </div>
+            <div>
+                <input type="radio" name="tailwind_accordion" id="tab3" class="accordion__input px-2 py-4 hidden">
+                <label for="tab3" class="accordion__label py-6 block w-full flex justify-between">
+                    <h2 class="text-[#2e2e2e] text-2xl lg:text-5xl font-medium ">Lipiec</h2>
+                    <div class="h-12 px-6 py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
+                        <div class="text-right text-[#2e2e2e] text-sm lg:text-base font-medium ">Rozwiń</div>
+                    </div>
+                </label>
+                <div class="accordion__content grid w-full lg:grid-cols-2 hidden">
+                    {postywrzesien.map((slide, index) => (
+                            <div
+                                    class={`w-full flex items-center ${index % 2 === 1 ? '' : ''} relative`}
+                            >
+                                <div class="w-full py-6">
+                                    <div class="w-full flex flex-wrap  ">
+                                        <div class={`w-full ${index % 2 === 0 ? 'order-0 lg:pr-6' : 'order-1 lg:pl-6'}`}>
+                                            <p class="text-[#707070] text-base font-light  leading-tight">24.08.2024</p>
+                                            <h3 class="text-black text-2xl lg:text-3xl font-medium  leading-loose">{slide.title}</h3>
+                                            <div class="w-full bg-center bg-no-repeat w-full bg-cover pt-[20vh] lg:pt-[40vh]"  style={{ backgroundImage: `url(${slide.image})` }} >
+                                            </div>
+                                            <div>
+                                                <p class="py-6 text-[#707070] text-[#707070] text-base font-light leading-tight">
+                                                    {slide.description}
+                                                </p>
+                                            </div>
+                                            <button class="px-2.5 py-2 rounded-sm border border-[#d1d1d1] justify-start items-center gap-2.5 inline-flex">
+                                                <div class="text-[#2e2e2e] text-xs font-normal  leading-3">Zobacz cały artykuł</div>
+                                            </button>
+                                        </div>
+                                        <div class={`w-full lg:h-[40vh] ${index % 2 === 0 ? 'order-1 ' : 'order-0'}`}>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
 </Page>

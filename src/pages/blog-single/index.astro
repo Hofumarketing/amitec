@@ -1,0 +1,138 @@
+---
+import Page from "../../components/Page.astro";
+const postywrzesien = [
+    {
+        id: 0,
+        title: 'Temat 01',
+        image: 'public/img/a14.jpg',
+        image2: 'public/img/a12.jpg',
+        short: '24.08.2024',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię oraz surowce. Korzystamy w odnawialnych źródeł energii, a nasze produkty w pełni nadają się do recyklingu. Ponadto, oferujemy materiały izolacyjne, które znacząco przyczyniają się do zmniejszenia zużycia energii, a tym samym emisji C02. Wybierając nasz styropian, inwestujesz nie tylko w doskonałą izolację termiczną, ale również w ochronę planety.',
+        description2: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię oraz surowce. Korzystamy w odnawialnych źródeł energii, a nasze produkty w pełni nadają się do recyklingu. Ponadto, oferujemy materiały izolacyjne, które znacząco przyczyniają się do zmniejszenia zużycia energii, a tym samym emisji C02. Wybierając nasz styropian, inwestujesz nie tylko w doskonałą izolację termiczną, ale również w ochronę planety.',
+
+        miesiac: 'wrzesien',
+
+    },
+
+];
+const realizacje = [
+    {
+        id: 0,
+        title: 'Ściany / Fasada',
+        image: 'public/img/a1.jpg',
+        short: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum lacusa rhoncus sagittis.',
+
+
+    },
+    {
+        id: 1,
+        title: 'Dach',
+        image: 'public/img/a2.jpg',
+        short: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum lacusa rhoncus sagittis.',
+
+    },
+    {
+        id: 2,
+        title: 'Piwnica',
+        image: 'public/img/a5.jpg',
+        short: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum lacusa rhoncus sagittis.',
+
+
+    },
+    {
+        id: 3,
+        title: 'Wypełnienia',
+        image: 'public/img/a6.jpg',
+        short: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum lacusa rhoncus sagittis.',
+
+    },
+    {
+        id: 4,
+        title: 'Inne',
+        image: 'public/img/a6.jpg',
+        short: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum lacusa rhoncus sagittis.',
+
+    },
+
+];
+
+---
+<Page>
+    <section class="w-full">
+        <div class="w-full bg-center bg-no-repeat w-full bg-cover h-[50vh] lg:h-[80vh]"  style="background-image: url('public/img/a1.jpg')">
+        </div>
+        <div class="p-6">
+            <p class="w-full text-[#2e2e2e] text-base lg:px-24 font-light font-['Objectivity'] leading-tight">24.08.2024</p>
+            <h1 class="text-[#2e2e2e] text-2xl lg:px-24 lg:text-5xl py-3 font-medium font-['Objectivity'] leading-10">Temat 01</h1>
+            <p class="w-full lg:columns-2 lg:px-24 text-[#707070] py-3  text-base font-light font-['Objectivity'] leading-tight">Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię oraz surowce. Korzystamy w odnawialnych źródeł energii, a nasze produkty w pełni nadają się do recyklingu. Ponadto, oferujemy materiały izolacyjne, które znacząco przyczyniają się do zmniejszenia zużycia energii, a tym samym emisji C02. Wybierając nasz styropian, inwestujesz nie tylko w doskonałą izolację termiczną, ale również w ochronę planety.Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię oraz surowce. Korzystamy w odnawialnych źródeł energii, a nasze produkty w pełni nadają się do recyklingu. Ponadto, oferujemy materiały izolacyjne, które znacząco przyczyniają się do zmniejszenia zużycia energii, a tym samym emisji C02. Wybierając nasz styropian, inwestujesz nie tylko w doskonałą izolację termiczną, ale również w ochronę planety</p>
+            <div class="w-full bg-center bg-no-repeat w-full bg-cover my-12  h-[30vh] lg:h-[80vh]"  style="background-image: url('public/img/a12.jpg')">
+            </div>
+            <p class="w-full lg:w-1/2 lg:pl-24 text-[#707070] py-3  text-base font-light font-['Objectivity'] leading-tight">Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię oraz surowce. Korzystamy w odnawialnych źródeł energii, a nasze produkty w pełni nadają się do recyklingu. Ponadto, oferujemy materiały izolacyjne, które znacząco przyczyniają się do zmniejszenia zużycia energii, a tym samym emisji C02. </p>
+        </div>
+    </section>
+
+    <section class="w-full justify-center py-12 flex">
+        <div class="h-12 px-6 py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
+            <div class="text-right text-[#2e2e2e] text-base font-medium font-['Objectivity']">Powrót do listy</div>
+        </div>
+    </section>
+
+
+    <section class="">
+        <h2 class="text-[#2e2e2e] lg:my-12 lg:px-24 text-3xl lg:text-5xl font-medium  leading-tight">Więcej podobnych</h2>
+        <div class="w-full justify-center p-6 lg:p-12 mx-auto relative bg-[#1e1e1e]">
+            <div id="splide2" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list ">
+                        {realizacje.map((slide, index) => (
+                                <div class="splide__slide group bg-no-repeat bg-center bg-cover h-[100vw] lg:h-fit lg:aspect-square" style={{ backgroundImage: `url(${slide.image})` }}>
+                                    <div class="bg-black/50  flex items-end group-hover:bg-black/40 group-hover:cursor-pointer transition-all duration-300 ease-in h-full w-full justify-center p-12">
+                                        <div class=" ">
+                                            <h1 class="lg:w-[400px] text-neutral-900 mb-6 text-[40px] lg:text-[34px] text-white font-medium leading-tight">
+                                                {slide.title}</h1>
+                                            <p class=" lg:w-[400px] mb-6 text-neutral-900 text-white font-light leading-tight">
+                                                {slide.short}</p>
+                                            <div class="">
+                                                <p class="lg:opacity-0 lg:h-0 lg:w-[400px] mt-12 mb-6 text-neutral-900 text-white font-light leading-tight group-hover:opacity-100 group-hover:h-auto transition-all duration-300 ease-in">
+                                                    {slide.description}
+                                                </p>
+                                            </div>
+                                            <button class="lg:opacity-0 h-0 group-hover:opacity-100 group-hover:h-6 text-white text-base font-medium font-['Objectivity'] leading-normal transition-all duration-400 ease-in">Zobacz więcej</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#e9e9e9] lg:py-24">
+        <div class="w-full  p-12 mx-auto max-w-[1400px] relative">
+            <!-- Progress Text -->
+            <div class="progress-bar">
+                <div class="progress-bar__fill"></div>
+            </div>
+            <div class="custom-controls">
+                <div class="progress-text">
+                    <span class="current-slide">1</span> / <span class="total-slides">5</span>
+                </div>
+                <button class="splide-next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <path id="Vector" d="M3.33789 7C5.06694 4.01099 8.29866 2 12.0001 2C17.5229 2 22.0001 6.47715 22.0001 12C22.0001 17.5228 17.5229 22 12.0001 22C8.29866 22 5.06694 19.989 3.33789 17M12 16L16 12M16 12L12 8M16 12H2" stroke="#A3A3A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+</Page>
+
+

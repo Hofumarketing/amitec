@@ -3,12 +3,13 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			width: {
+				'custom-width': 'calc((100% - 1440px)/2)',
+			},
 			backgroundImage: {
 				'gradient-to-b-transparent-f2f2f2': 'linear-gradient(to bottom, transparent, #F2F2F2)'
 			},
-			fontFamily: {
-				'gilory': ['Gilory', 'sans-serif'], // Dodaj 'Gilory' jako dostępną czcionkę
-			},
+
 			colors: {
 				'blue123': '#1fb8ff',
 				'orange' : '#FF9700',

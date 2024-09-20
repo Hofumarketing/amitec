@@ -1,55 +1,37 @@
 ---
 import Button from "../ui/Button.astro";
 
-const about = [
-    {
-        id: 0,
-        description: 'Odpowiadamy na potrzeby rolników, udostępniając im szeroką ofertę produktów i usług z najwyższej półki.',
-        image: 'src/assets/IMG/Onas/Rectangle70.jpg',
-    },
-    {
-        id: 1,
-        description: 'Wdrażamy zindywidualizowane rozwiązania, które są pieczołowicie dobierane do specyfiki konkretnego agrobiznesu..',
-        image: 'src/assets/IMG/Onas/Rectangle74.jpg',
-    },
-    {
-        id: 2,
-        description: 'Łączymy najwyższą jakość surowców z aktualną wiedzą naukową i najnowszymi zdobyczami techniki..',
-        image: 'src/assets/IMG/Onas/Rectangle75.jpg',
-    },
 
-    {
-        id: 3,
-        description: 'Stwarzamy nowe możliwości dla agrobiznesu, by w pełni wykorzystać potencjał każdego ambitnego właściciela gospodarstwa rolnego.',
-        image: 'src/assets/IMG/Onas/Rectangle76.jpg',
-    },
-
-
-]
 ---
 
 
 
 
-<section class="max-w-[1400px] pt-20 pb-20 w-full mx-auto">
-    <div class="w-full flex justify-center">
-        <div class=" pb-20 md:pb-[100px] text-center">
-            <h2 class="p-10 text-black text-[32px] font-['Gilroy']  font-bold  leading-9 ">Misja i wartości </h2>
-            <p class="max-w-[400px] font-['Gilroy']  text-black text-xl font-normal leading-7"> Stawiamy na skuteczność + zaangażowanie, ale nie zapominamy  o szacunku do tradycji, rodzinności  i relacyjności. Przyświeca nam ambitny cel, jakim jest dynamiczny rozwój  polskich gospodarstw. </p>
-        </div>
-    </div>
-    {about.map((slide, index) => (
-            <div className={` md:mb-28 flex flex-wrap  ${index % 2 === 0 ? 'flex-row' : 'md:flex-row-reverse'}`}>
-                <div class="w-full md:w-[33%] bg-center	  bg-no-repeat	 bg-cover	h-[40vh]" style={{ backgroundImage: `url(${slide.image})` }}>
-                    {/* Dodatkowa zawartość slajdu */}
-                </div>
-                <div className={`py-10 md:py-10 w-full p-5   md:w-[33%]  md:pl-10 flex items-center justify-start  ${index % 2 === 0 ? ' ' : '  md:-order-1 '}`}>
-                   <div class="md:w-[329px]  flex-col justify-start items-start gap-2 md:gap-8 inline-flex">
-                       <p class="text-orange text-[32px] font-normal font-['Gilroy'] uppercase leading-loose">{String(index + 1).padStart(2, '0')}</p>
-                       <p class="text-black text-xl md:text-base font-normal font-['Gilroy']">{slide.description}</p>
-                   </div>
-                </div>
-            </div>
-    ))}
 
+<section class="bg-[#e9e9e9] ">
+    <div class="w-full flex flex-wrap   mx-auto relative">
+        <div class="flex w-full lg:w-1/2 lg:pr-4 justify-end items-end  relative">
+            <img class="h-full relative z-30 w-full" src="public/img/a6.jpg">
+            <svg class="hidden lg:block lg:absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 " width="208" height="208" viewBox="0 0 208 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="104" cy="104" r="90" stroke="#D9D9D9" stroke-width="28"/>
+            </svg>
+        </div>
+
+        <div class="w-full lg:w-1/2 p-6 pb-6 flex flex-wrap justify-center items-center">
+           <div class="w-full lg:w-1/2">
+               <div class="relative">
+                   <h2 class="text-[#2e2e2e] text-3xl font-medium font-['Objectivity'] leading-tight">Klient nasz <br> Partner</h2>
+               </div>
+               <h3 class="text-[#2e2e2e] text-xl font-medium font-['Objectivity'] my-12 leading-tight">Zapewniamy profesjonalne wsparcie na każdym etapie inwestycji.</h3>
+               <div class="w-80 my-12 text-[#707070] text-base font-light font-['Objectivity'] leading-tight">Nasi Opiekunowie Klienta pomogą dobrać odpowiednie materiały termoizolacyjne, przygotują najlepszą ofertę handlową oraz zajmą się kwestiami logistycznymi</div>
+               <div class="h-12 px-5 bg-[#ED1C24] rounded justify-start items-center gap-2.5 inline-flex">
+                   <div class="text-white text-base font-medium font-['Objectivity']">Skontaktuj się z nami</div>
+               </div>
+           </div>
+
+        </div>
+
+    </div>
 </section>
+
+

@@ -1,0 +1,241 @@
+---
+import Page from "../../components/Page.astro";
+import Calc from "../../components/sections/Calc.astro";
+import Newsletter from "../../components/sections/newsletter.astro";
+const kategorie = [
+    {
+        id: 0,
+        title: 'Styropian fasadowy',
+
+    },
+    {
+        id: 1,
+        title: 'Styropian akustyczny',
+
+    },
+    {
+        id: 2,
+        title: 'Styropian dach/podłoga Aqua',
+
+    },
+    {
+        id: 3,
+        title: 'Granulat styropianowy',
+
+    },
+    {
+        id: 4,
+        title: 'Płyty izolacyjne PIR',
+
+    },
+];
+
+const produkty = [
+    {
+        id: 0,
+        title: 'AMITEC FASADA 120',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię',
+        miesiac: 'wrzesien',
+        promocja: '',
+
+    },
+    {
+        id: 1,
+        title: 'AMITEC FASADA 040',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię',
+        miesiac: 'wrzesien',
+        promocja: '',
+
+    },
+    {
+        id: 2,
+        title: 'AMITEC FASADA 080',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię',
+        miesiac: 'sierpien',
+        promocja: 'Promocja - 10%',
+
+    },
+    {
+        id: 3,
+        title: 'AMITEC FASADA 045',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię.',
+        miesiac: 'sierpien',
+        promocja: 'Polecany',
+
+    },
+    {
+        id: 4,
+        title: 'AMITEC FASADA 045',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię.',
+        miesiac: 'sierpien',
+        promocja: 'Wyprzedaż',
+
+    },
+    {
+        id: 5,
+        title: 'AMITEC FASADA 045',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię.',
+        miesiac: 'sierpien',
+        promocja: 'Polecany',
+
+    },
+];
+---
+<Page>
+    <style>
+        .accordion__input:checked ~ .accordion__content {
+            display: grid;
+        }
+        .accordion__input:nth-child(1):checked ~ .accordion__content {
+            display: grid;
+        }
+    </style>
+    <section>
+        <div id="" class=" ">
+            <div class=" h-[100vh] lg:h-[calc(100%)]  bg-no-repeat	relative  bg-cover  flex flex-wrap" style="background-image: url('public/img/a17.jpg')">
+                <div class={` order-1 md:order-0 flex bg-black/50  items-center justify-center w-full h-[100vh] md:w-full lg:h-100vh xl:w-full p-6 lg:p-12 `}>
+                    <div class="text-center w-full flex flex-wrap justify-center">
+                        <h1 class="w-full text-center text-white text-3xl lg:text-5xl font-medium leading-10">Nasze produkty</h1>
+                        <div class=" py-6 lg:py-12 w-8/12 relative ">
+                            <input class="bg-transparent lg:p-4  w-full placeholder-white border-b rounded-none  border-white text-white text-sm lg:text-sm  font-normal leading-loose"
+                                   type="text"
+                                   placeholder="Wpisz czego szukasz"
+                                   class="w-80 lg:p-3   shadow-sm focus:outline-none  focus:border-transparent"
+                            />
+                            <svg class="absolute right-0 top-1/2 -translate-y-1/2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Frame">
+                                    <g id="Vector">
+                                        <path d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4953 13.4953 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4953 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4953 2.5 16.6667 5.67132 16.6667 9.58333Z" stroke="white" stroke-linecap="square" stroke-linejoin="round" style="mix-blend-mode:difference"/>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="w-full flex justify-center  py-4 lg:py-12 ">
+                            <div class="w-full lg:w-7/12 flex flex-wrap justify-center gap-4">
+
+                                {kategorie.map((slide, index) => (
+                                        <button class="lg:h-14 px-2 py-2 lg:px-6 lg:py-4 text-white rounded border border-[#cdcdcd] justify-start items-center gap-2.5 inline-flex hover:bg-white hover:text-black transition-all ease-in duration-200">
+                                            <div class=" text-sm lg:text-xl font-medium ">{slide.title}</div>
+                                        </button>
+                                ))}
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <div class="w-full h-full mx-auto  ">
+        <div class="mx-auto w-full lg:w-3/4  rounded-lg  overflow-hidden pt-24 p-6">
+            <div>
+                <input type="radio" name="tailwind_accordion" id="tab1" class="accordion__input px-2 py-4 hidden" checked>
+                <label for="tab1" class="accordion__label py-6 block w-full flex justify-between items-center">
+                    <h2 class="text-[#2e2e2e] text-2xl lg:text-5xl font-medium ">Styropian fasadowy</h2>
+                    <div class="h-fit lg:h-12 w-fit px-2 py-2 lg:px-6 lg:py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
+                        <div class="text-center text-[#2e2e2e] text-sm font-medium ">Zwiń listę</div>
+                    </div>
+                </label>
+                <div class="cat_summary lg:w-1/2">
+
+                   <div class="w-full flex justify-between items-center">
+                       <p class="text-[#707070] py-12 text-sm lg:text-base  font-medium leading-tight">Doskonała izolacja i oszczędność</p>
+                       <div class="flex">
+                           <div class="w-5 h-5 bg-white border border-[#cdcdcd] mr-3"></div>
+                           <p class="text-[#707070] text-sm lg:text-base  font-light leading-tight">biały</p>
+                       </div>
+                       <div class="flex ml-3">
+                           <div class="w-5 h-5 bg-[#2e2e2e] border border-[#2e2e2e] mr-3"></div>
+                           <p class="text-[#707070]  text-sm lg:text-base font-light leading-tight">grafitowy</p>
+                       </div>
+                   </div>
+
+                    <p class="text-[#707070] text-sm lg:text-base  font-light leading-tight">Styropian fasada marki Amitec to synonim efektywnej i wydajnej termoizolacji. Niski współczynnik przewodzenia ciepła, odporność na wilgoć, lekkość i wytrzymałość to wyjątkowe cechy naszych produktów, które pozwalają oszczędzać energię i zwiększyć komfort budynku. Przeznaczony zarówno do budownictwa mieszkaniowego, jak i użytku publicznego</p>                </div>
+
+                <div class="accordion__content grid w-full lg:grid-cols-2 gap-10 hidden">
+                    {produkty.map((slide, index) => (
+                            <div class="w-full flex items-center mt-2 bg-none hover:bg-[#F0F0F0] transition-all ease-in duration-300  hover:cursor-pointer">
+                                <div class="w-full ">
+                                    <div class="w-full flex flex-wrap p-2 lg:p-4  border-b border-[#d1d1d1]">
+                                        <div class="w-8/12 pr-4 flex items-center ">
+                                            <div>
+                                                <p class={`text-xs font-medium leading-none ${
+                                                    slide.promocja === 'Polecany'
+                                                        ? 'text-[#4bcd0e]'
+                                                        : slide.promocja ? 'text-[#ff7a01]' : ''
+                                                }`}>
+                                                    {slide.promocja}
+                                                </p>
+                                                <h3  class="text-[#2e2e2e] py-3 text-2xl font-medium leading-relaxed">{slide.title}</h3>
+                                                <p class="text-[#2e2e2e] py-3 text-xs font-medium leading-3">  {slide.short}</p>
+                                                <p class="text-[#a2a2a2]  py-3 text-xs font-light leading-none">{slide.description}</p>
+                                                <button class="px-2.5 py-2 rounded-sm border border-[#d1d1d1] justify-start items-center gap-2.5 inline-flex">
+                                                    <div class="text-[#2e2e2e] text-xs font-normal  leading-3">Zobacz cały artykuł</div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="w-4/12 flex items-center justify-center">
+                                            <img src={slide.image}>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    ))}
+                </div>
+            </div>
+
+            <div class="py-6 lg:py-12">
+                <input type="radio" name="tailwind_accordion" id="tab2" class="accordion__input px-2 py-4 hidden">
+                <label for="tab1" class="accordion__label py-6 block w-full flex justify-between items-center">
+                    <h2 class="text-[#2e2e2e] text-2xl lg:text-5xl font-medium ">Styropian fasadowy</h2>
+                    <div class="h-fit lg:h-12 w-fit px-2 py-2 lg:px-6 lg:py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
+                        <div class="text-center text-[#2e2e2e] text-sm font-medium ">Zwiń listę</div>
+                    </div>
+                </label>
+                <div class="accordion__content grid w-full grid-cols-2 hidden">
+
+                </div>
+            </div>
+            <div class="py-6 lg:py-12">
+                <input type="radio" name="tailwind_accordion" id="tab3" class="accordion__input px-2 py-4 hidden">
+                <label for="tab1" class="accordion__label py-6 block w-full flex justify-between items-center">
+                    <h2 class="text-[#2e2e2e] text-2xl lg:text-5xl font-medium ">Styropian fasadowy</h2>
+                    <div class="h-fit lg:h-12 w-fit px-2 py-2 lg:px-6 lg:py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
+                        <div class="text-center text-[#2e2e2e] text-sm font-medium ">Zwiń listę</div>
+                    </div>
+                </label>
+                <div class="accordion__content grid w-full grid-cols-2 hidden">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <section>
+            <div class="w-full flex justify-center py-6">
+                <button class="h-12 px-6 py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
+                    <div class="text-right text-[#2e2e2e] text-sm lg:text-base font-medium font-['Objectivity']">Powrót do początku listy</div>
+                </button>
+            </div>
+        </section>
+        <Calc/>
+        <Newsletter/>
+</Page>

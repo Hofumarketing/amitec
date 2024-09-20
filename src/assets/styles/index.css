@@ -1,28 +1,81 @@
 @font-face {
-    font-family: 'Gilroy';
-    src: url('/src/assets/fonts/Gilroy-ExtraBold.eot');
-    src: url('/src/assets/fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
-    url('/src/assets/fonts/Gilroy-ExtraBold.woff2') format('woff2'),
-    url('/src/assets/fonts/Gilroy-ExtraBold.woff') format('woff'),
-    url('/src/assets/fonts/Gilroy-ExtraBold.ttf') format('truetype'),
-    url('/src/assets/fonts/Gilroy-ExtraBold.svg#Gilroy-ExtraBold') format('svg');
-    font-weight: bold;
+    font-family: 'Objectivity';
+    src: url('/src/assets/fonts/Objectivity-Regular.eot');
+    src: url('/src/assets/fonts/Objectivity-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Objectivity-Regular.woff2') format('woff2'),
+    url('/src/assets/fonts/Objectivity-Regular.woff') format('woff'),
+    url('/src/assets/fonts/Objectivity-Regular.ttf') format('truetype'),
+    url('/src/assets/fonts/Objectivity-Regular.svg#Objectivity-Regular') format('svg');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    src: url('/src/assets/fonts/Gilroy-Light.eot');
-    src: url('/src/assets/fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
-    url('/src/assets/fonts/Gilroy-Light.woff2') format('woff2'),
-    url('/src/assets/fonts/Gilroy-Light.woff') format('woff'),
-    url('/src/assets/fonts/Gilroy-Light.ttf') format('truetype'),
-    url('/src/assets/fonts/Gilroy-Light.svg#Gilroy-Light') format('svg');
+    font-family: 'Objectivity';
+    src: url('/src/assets/fonts/Objectivity-Thin.eot');
+    src: url('/src/assets/fonts/Objectivity-Thin.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Objectivity-Thin.woff2') format('woff2'),
+    url('/src/assets/fonts/Objectivity-Thin.woff') format('woff'),
+    url('/src/assets/fonts/Objectivity-Thin.ttf') format('truetype'),
+    url('/src/assets/fonts/Objectivity-Thin.svg#Objectivity-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('/src/assets/fonts/Objectivity-Light.eot');
+    src: url('/src/assets/fonts/Objectivity-Light.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Objectivity-Light.woff2') format('woff2'),
+    url('/src/assets/fonts/Objectivity-Light.woff') format('woff'),
+    url('/src/assets/fonts/Objectivity-Light.ttf') format('truetype'),
+    url('/src/assets/fonts/Objectivity-Light.svg#Objectivity-Light') format('svg');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('/src/assets/fonts/Objectivity-Medium.eot');
+    src: url('/src/assets/fonts/Objectivity-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Objectivity-Medium.woff2') format('woff2'),
+    url('/src/assets/fonts/Objectivity-Medium.woff') format('woff'),
+    url('/src/assets/fonts/Objectivity-Medium.ttf') format('truetype'),
+    url('/src/assets/fonts/Objectivity-Medium.svg#Objectivity-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('/src/assets/fonts/Objectivity-Black.eot');
+    src: url('/src/assets/fonts/Objectivity-Black.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Objectivity-Black.woff2') format('woff2'),
+    url('/src/assets/fonts/Objectivity-Black.woff') format('woff'),
+    url('/src/assets/fonts/Objectivity-Black.ttf') format('truetype'),
+    url('/src/assets/fonts/Objectivity-Black.svg#Objectivity-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('/src/assets/fonts/Objectivity-Super.eot');
+    src: url('/src/assets/fonts/Objectivity-Super.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Objectivity-Super.woff2') format('woff2'),
+    url('/src/assets/fonts/Objectivity-Super.woff') format('woff'),
+    url('/src/assets/fonts/Objectivity-Super.ttf') format('truetype'),
+    url('/src/assets/fonts/Objectivity-Super.svg#Objectivity-Super') format('svg');
+    font-weight: 1000;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 
@@ -47,4 +100,98 @@ summary::-webkit-details-marker {
 }
 .sign {
     float: right;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.rtl > * {
+    direction: ltr;
+}
+
+
+/* Progress Bar Container */
+.progress-bar {
+    height: 8px;
+    background-color: none;
+    margin: 20px 0;
+    border-radius: 0px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+.progress-bar2 {
+    height: 8px;
+    background-color: none;
+    margin: 20px 0;
+    border-radius: 0px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+@media (max-width: 576px) {
+    .progress-bar, .progress-bar2, .custom-controls2{
+        width: 70%;
+    }
+}
+
+@media (min-width: 576px) {
+    .progress-bar, .progress-bar2, .custom-controls2 {
+        width: 30%;
+    }
+}
+/* Progress Bar Fill */
+.progress-bar__fill {
+    height: 100%;
+    background-color: black;
+    transition: width 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress-bar__fill2 {
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Progress Text */
+.progress-text {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 16px;
+    color:#a2a2a2;
+}
+.progress-text2 {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 16px;
+    color:white;
+}
+/* Custom Controls */
+.custom-controls {
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+}
+/* Custom Controls */
+
+.splide-prev,
+.splide-next {
+    padding: 10px 20px;
+    background-color: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.nav-scrolled {
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcjonalnie, aby dodać cień */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }

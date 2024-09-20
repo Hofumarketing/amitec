@@ -137,3 +137,14 @@ import Paragraph from "./Paragraph.astro";
         }
     });
 </script>
+<script>
+    document.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+
+        if (window.scrollY > 100) {
+            nav.classList.add('nav-scrolled');
+        } else {
+            nav.classList.remove('nav-scrolled');
+        }
+    });
+</script>

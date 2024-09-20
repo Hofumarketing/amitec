@@ -1,0 +1,52 @@
+---
+import Button from "../ui/Button.astro";
+import Buttonunderline from "../ui/Buttonunderline.astro";
+
+
+
+---
+
+
+<section class="bg-[#e9e9e9]">
+    <div class="w-full flex flex-wrap   mx-auto relative">
+        <div class="flex w-full lg:w-1/2 pr-4 justify-end items-end  overflow-hidden relative">
+            <img class="h-full w-full" src="public/img/a9.jpg">
+        </div>
+        <div class="w-full lg:w-1/2 p-6 pb-6 flex flex-wrap justify-center items-center">
+            <div class="text-[#2e2e2e] text-3xl font-medium  leading-tight">
+                <h2>Bądźmy w kontakcie!</h2>
+                <div class="w-1/2 my-12 text-[#707070] text-sm font-light font-['Objectivity'] leading-tight">Zapisz się do naszego newslettera i otrzymuj informacje na temat nowych produktów i specjalnych promocji.</div>
+                <input
+                        type="text"
+                        placeholder="email"
+                        class="w-full lg:w-2/3 bg-transparent text-[#1e1e1e]/40 text-base font-light font-['Objectivity'] leading-none border p-2 rounded-xl border-gray-300 focus:border-black focus:outline-none"
+                />
+                <div class="flex items-center py-6 space-x-2">
+                    <input
+                            type="checkbox"
+                            id="agreement"
+                            class="form-checkbox text-blue-600 focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label for="agreement" class="text-[#1e1e1e]/60 text-sm  font-light font-['Objectivity'] leading-none">
+                        Zgadzam się na przetwarzanie <a href="#" class="text-red-300 underline">danych osobowych</a>.
+                    </label>
+                </div>
+                <div class="flex items-center py-6 space-x-2">
+                    <input
+                            type="checkbox"
+                            id="agreement"
+                            class="form-checkbox text-blue-600 focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label for="agreement" class="text-[#1e1e1e]/60 text-sm  font-light font-['Objectivity'] leading-none">
+                        Oznajmiam, iż zapoznałem się z  <a href="#" class="text-red-300 underline">regulaminem</a>.
+                    </label>
+                </div>
+                <div class="w-full py-6">
+                    <button class="h-12 px-3 py-2.5 bg-[#ed1c24] rounded justify-start items-center gap-2.5 inline-flex text-white text-base font-medium font-['Objectivity']">Zapisz się</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>

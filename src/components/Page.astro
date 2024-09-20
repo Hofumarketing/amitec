@@ -11,7 +11,7 @@ interface Props {
 
 const { title = undefined } = Astro.props;
 
-const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolnik +`;
+const finalTitle = typeof title === 'undefined' ? 'Amitec' : `${title} | Amitec`;
 
 ---
 
@@ -28,7 +28,7 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
 
 
     </head>
-    <body class="body font-['Gilroy']">
+    <body class="body font-['Objectivity'] overflow-x-hidden">
     <!--<Navcommerce />-->
         <Navcommerceresults />
         <slot />
@@ -36,37 +36,23 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
     </body>
 
 
-<script>
 
-    document.addEventListener('DOMContentLoaded', function () {
-        new Splide('#slider').mount();
-    });
-
-
-</script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var splide1 = new Splide('#splide1', {
-                type: 'slide', // Enables looping
-                direction: 'ttb', // Top-to-bottom vertical orientation
-                perPage: 1.5, // Number of slides per page
+            var splide1 = new Splide('#slider', {
+                type: 'loop', // Enables looping
+                autoplay: true,
+                gap: 10,
+                perPage: 1, // Number of slides per page
                 perMove: 1, // Number of slides moved per arrow click or swipe
-                height: '500px', // Set a fixed height for the slider
-                pagination: false, // Disable pagination dots
+                pagination: true, // Disable default pagination dots
+                arrows: false, // Disable default arrows
                 breakpoints: {
-                    640: { // Mobile devices
-                        perPage: 4, // 4 slides per page on mobile
-                        height: '2000px', // Set a fixed height for the slider
-
+                    768: { // Tablet breakpoint
+                        perPage: 3,
                     },
-                    1024: { // Tablet devices
-                        perPage: 2, // 2 slides per page on tablets
-                        height: '800px', // Set a fixed height for the slider
-
-                    },
-                    1300: { // Tablet devices
-                        height: '1000px', // Set a fixed height for the slider
-
+                    480: { // Mobile breakpoint
+                        perPage: 1,
                     },
                 },
             });
@@ -79,41 +65,113 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
             var splide2 = new Splide('#splide2', {
                 type: 'loop', // Enables looping
                 autoplay: true,
-                perPage: 4, // Number of slides per page
+                gap: 10,
+                perPage: 3, // Number of slides per page
                 perMove: 1, // Number of slides moved per arrow click or swipe
-                pagination: false, // Disable pagination dots
+                pagination: false, // Disable default pagination dots
+                arrows: false, // Disable default arrows
                 breakpoints: {
-                    768: { // Tablet breakpoint (e.g., 768px)
+                    768: { // Tablet breakpoint
                         perPage: 3,
                     },
-                    480: { // Mobile breakpoint (e.g., 480px)
-                        perPage: 2,
+                    480: { // Mobile breakpoint
+                        perPage: 1,
                     },
                 },
             });
 
-            splide2.mount(); // Mount the slider
+            splide2.mount();
+
+
+
+            document.querySelector('.splide-next').addEventListener('click', function () {
+                splide2.go('>');
+            });
+
+            // Update progress bar and text
+            var progressBar = document.querySelector('.progress-bar__fill');
+            var currentSlideText = document.querySelector('.current-slide');
+            var totalSlidesText = document.querySelector('.total-slides');
+
+            splide2.on('mounted', function () {
+                var totalSlides = splide2.Components.Slides.getLength();
+                totalSlidesText.textContent = totalSlides;
+                updateProgress();
+            });
+
+            splide2.on('move', function () {
+                updateProgress();
+            });
+
+            function updateProgress() {
+                var totalSlides = splide2.Components.Slides.getLength();
+                var currentSlide = splide2.index + 1; // index is zero-based
+                var progress = ((currentSlide % totalSlides) / 5) * 100;
+                progressBar.style.width = progress + '%';
+                currentSlideText.textContent = currentSlide;
+            }
         });
+
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var splide3 = new Splide('#splide3', {
                 type: 'loop', // Enables looping
                 autoplay: true,
-                perPage: 3, // Number of slides per page
+                gap: 30,
+                perPage: 2, // Number of slides per page
                 perMove: 1, // Number of slides moved per arrow click or swipe
-                pagination: false, // Disable pagination dots
+                pagination: false, // Disable default pagination dots
+                arrows: false, // Disable default arrows
                 breakpoints: {
-                    768: { // Tablet breakpoint (e.g., 768px)
-                        perPage: 1,
+                    768: { // Tablet breakpoint
+                        perPage: 2,
                     },
-                    480: { // Mobile breakpoint (e.g., 480px)
+                    480: { // Mobile breakpoint
                         perPage: 1,
                     },
                 },
             });
 
             splide3.mount(); // Mount the slider
+
+            // Add event listener for custom next button
+            var nextButton = document.querySelector('.splide-next2');
+            if (nextButton) {
+                nextButton.addEventListener('click', function () {
+                    splide3.go('>');
+                });
+            }
+
+            // Update progress bar and text
+            var progressBar2 = document.querySelector('.progress-bar__fill2');
+            var currentSlideText2 = document.querySelector('.current-slide2');
+            var totalSlidesText2 = document.querySelector('.total-slides2');
+
+            splide3.on('mounted', function () {
+                updateProgress();
+            });
+
+            splide3.on('move', function () {
+                updateProgress();
+            });
+
+            function updateProgress() {
+                var slides = document.querySelectorAll('#splide3 .splide__slide');
+                var totalSlides = Array.from(slides).filter(slide => !slide.classList.contains('splide__slide--clone')).length;
+                var currentSlide = splide3.index + 1; // index is zero-based
+                var progress = (currentSlide / totalSlides) * 100;
+
+                if (progressBar2) {
+                    progressBar2.style.width = progress + '%';
+                }
+                if (currentSlideText2) {
+                    currentSlideText2.textContent = currentSlide;
+                }
+                if (totalSlidesText2) {
+                    totalSlidesText2.textContent = totalSlides;
+                }
+            }
         });
     </script>
     <script>
@@ -121,14 +179,16 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
             var splide4 = new Splide('#splide4', {
                 type: 'loop', // Enables looping
                 autoplay: true,
-                perPage: 3.5, // Number of slides per page
+                gap: 10,
+                perPage: 5, // Number of slides per page
                 perMove: 1, // Number of slides moved per arrow click or swipe
-                pagination: false, // Disable pagination dots
+                pagination: true, // Disable default pagination dots
+                arrows: false, // Disable default arrows
                 breakpoints: {
-                    900: { // Tablet breakpoint (e.g., 768px)
-                        perPage: 2,
+                    768: { // Tablet breakpoint
+                        perPage: 5,
                     },
-                    480: { // Mobile breakpoint (e.g., 480px)
+                    480: { // Mobile breakpoint
                         perPage: 1,
                     },
                 },
@@ -137,106 +197,3 @@ const finalTitle = typeof title === 'undefined' ? 'Rolnik +' : `${title} | Rolni
             splide4.mount(); // Mount the slider
         });
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var splide4 = new Splide('#splide5', {
-                type: 'loop', // Enables looping
-                autoplay: false,
-                perPage: 2, // Number of slides per page
-                perMove: 1, // Number of slides moved per arrow click or swipe
-                pagination: false, // Disable pagination dots
-
-            });
-
-            splide4.mount(); // Mount the slider
-        });
-    </script>
-    <script>
-        document.getElementById('search-toggle').addEventListener('click', function() {
-            document.querySelector('.navactive').classList.toggle('hidden');
-        });
-    </script>
-
-    <script>
-        const openButton = document.getElementById('open-advisor');
-        const closeButton = document.getElementById('close-advisor');
-        const advisorDiv = document.getElementById('advisor');
-
-        openButton.addEventListener('click', () => {
-            advisorDiv.style.display = 'block';
-            openButton.style.display = 'none';
-        });
-
-        closeButton.addEventListener('click', () => {
-            advisorDiv.style.display = 'none';
-            openButton.style.display = 'block';
-        });
-    </script>
-    <script>
-        // Pobierz przycisk otwierający i zamykający filtry oraz div z filtrami
-        const openButton = document.getElementById('openfilters');
-        const closeButton = document.getElementById('closefilters');
-        const filters = document.getElementById('filters');
-
-        // Dodaj obsługę zdarzenia kliknięcia na przycisku otwierającym filtry
-        openButton.addEventListener('click', function() {
-            // Pokaż filtry
-            filters.classList.remove('hidden');
-        });
-
-        // Dodaj obsługę zdarzenia kliknięcia na przycisku zamykającym filtry
-        closeButton.addEventListener('click', function() {
-            // Ukryj filtry
-            filters.classList.add('hidden');
-        });
-    </script>
-    <script>
-        // Pobranie przycisku i elementu, który ma być pokazywany/ukrywany
-        const button = document.querySelector('.toggle-button');
-        const orderDetails = document.getElementById('orderdetails');
-
-        // Dodanie nasłuchiwacza na kliknięcie przycisku
-        button.addEventListener('click', function() {
-            // Sprawdzenie, czy element jest aktualnie widoczny
-            const isVisible = orderDetails.classList.contains('hidden');
-
-            // Jeśli jest widoczny, ukryj go i zmień tekst przycisku na "Zobacz"
-            if (isVisible) {
-                orderDetails.classList.remove('hidden');
-                button.textContent = 'Zamknij';
-            } else { // Jeśli nie jest widoczny, pokaż go i zmień tekst przycisku na "Zamknij"
-                orderDetails.classList.add('hidden');
-                button.textContent = 'Zobacz';
-            }
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Pobierz elementy po identyfikatorach
-            const couponOpen = document.getElementById("coupon-open");
-            const couponClose = document.getElementById("coupon-close");
-            const couponWrapper = document.getElementById("coupon-wrapp");
-            const placeOrderBtn = document.getElementById("place-order");
-            const goPaymentBtn = document.getElementById("go-payment");
-
-            // Funkcja do obsługi kliknięcia na przycisk otwierający kupon
-            couponOpen.addEventListener("click", function() {
-                // Ukryj przyciski place-order i go-payment
-                placeOrderBtn.style.display = "none";
-                goPaymentBtn.style.display = "none";
-                // Usuń klasę "hidden" z wrappera kuponu
-                couponWrapper.classList.remove("hidden");
-            });
-
-            // Funkcja do obsługi kliknięcia na przycisk zamykający kupon
-            couponClose.addEventListener("click", function() {
-                // Dodaj klasę "hidden" do wrappera kuponu
-                couponWrapper.classList.add("hidden");
-                // Przywróć widoczność przycisków place-order i go-payment
-                placeOrderBtn.style.display = "block";
-                goPaymentBtn.style.display = "block";
-            });
-        });
-    </script>
-
-</html>
