@@ -543,17 +543,20 @@ const realizacje = [
     });
 </script>
 
-<script>
-    document.addEventListener('scroll', function() {
-        const nav = document.querySelector('nav');
+        <script>
+            if (!window.location.pathname.includes('/produkty-single')) {
+                document.addEventListener('scroll', function() {
+                    const nav = document.querySelector('nav');
 
-        if (window.scrollY > 100) {
-            nav.classList.add('nav-scrolled');
-        } else {
-            nav.classList.remove('nav-scrolled');
-        }
-    });
-</script>
+                    if (window.scrollY > 100) {
+                        nav.classList.add('nav-scrolled');
+                    } else {
+                        nav.classList.remove('nav-scrolled');
+                    }
+                });
+            }
+        </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var trigger = document.getElementById('Nasze produkty');

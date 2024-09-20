@@ -1,0 +1,181 @@
+---
+import Page from "../../components/Page.astro";
+import Calc from "../../components/sections/Calc.astro";
+import Newsletter from "../../components/sections/newsletter.astro";
+const kategorie = [
+    {
+        id: 0,
+        title: 'ocieplenie ścian zewnętrznych\n' +
+            ' w bezspoinowych systemach ociepleń\n' +
+            ' (BSO, ETICS, metoda lekka- mokra)\n',
+        parametry: 'współczynnik przewodzenia ciepła',
+        wartosc:'≤ 0,045 W/ (mK)',
+    },
+    {
+        id: 1,
+        title: 'ocieplenie ścian zewnętrznych\n',
+        parametry: 'Współczynnik przewodzenia ciepła',
+        wartosc:'≤ 0,045 W/ (mK)',
+    },
+    {
+        id: 2,
+        title: 'w metodzie lekkiej- suchej\n',
+        parametry: 'Kształt krawędzi',
+        wartosc:'prostokątny',
+    },
+    {
+        id: 3,
+        title: 'ocieplenie murowanych ścian trójwarstwowych\n',
+        parametry: 'Wymiary – krawędzie prostokątne',
+        wartosc:'1000 x 500 mm (max wym.: 4000 x 1200 mm)',
+    },
+    {
+        id: 4,
+        title: 'ocieplenie loggii balkonowych',
+        parametry: 'Klasa reakcji na ogień',
+        wartosc:'E - samogasnący',
+    },
+    {
+        id: 5,
+        title: 'ocieplenie szkieletowych ścian działowych\n',
+        parametry: 'Wytrzymałość na zginanie',
+        wartosc:'BS 100 (≥ 100) kPa',
+    },
+    {
+        id: 6,
+        title: 'ocieplenie wieńców, nadproży\n' +
+            ' i innych mostków termicznych\n',
+        parametry: 'Wytrzymałość na rozciąganie',
+        wartosc:'TR 100 (≥ 100) kPa',
+    },
+];
+
+const produkty = [
+    {
+        id: 0,
+        title: 'AMITEC FASADA 120',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię',
+        miesiac: 'wrzesien',
+        promocja: '',
+
+    },
+    {
+        id: 1,
+        title: 'AMITEC FASADA 040',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię',
+        miesiac: 'wrzesien',
+        promocja: '',
+
+    },
+    {
+        id: 2,
+        title: 'AMITEC FASADA 080',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię',
+        miesiac: 'sierpien',
+        promocja: 'Promocja - 10%',
+
+    },
+    {
+        id: 3,
+        title: 'AMITEC FASADA 045',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię.',
+        miesiac: 'sierpien',
+        promocja: 'Polecany',
+
+    },
+    {
+        id: 4,
+        title: 'AMITEC FASADA 045',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię.',
+        miesiac: 'sierpien',
+        promocja: 'Wyprzedaż',
+
+    },
+    {
+        id: 5,
+        title: 'AMITEC FASADA 045',
+        image: 'public/img/s1.png',
+        short: 'EN 13163:2012+A1:2015-03',
+        description: 'Jako producent styropianu odpowiedzialnie podchodzimy do spraw związanych z ochroną środowiska naturalnego. Nasz proces produkcyjny opieramy na technologiach oszczędzających energię.',
+        miesiac: 'sierpien',
+        promocja: 'Polecany',
+
+    },
+];
+---
+<Page>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.add('nav-scrolled');
+        });
+    </script>
+
+
+
+    <section class="pt-24">
+        <div id="product_header" class="py-24 flex flex-wrap mx-auto w-full max-w-[1440px]">
+            <div class="w-full lg:w-1/2 flex items-center">
+               <div class="p-6">
+                   <h1 class="text-[#2e2e2e] break-all py-2 text-3xl lg:text-5xl font-medium font-['Objectivity'] leading-10">AMITEC FASADA 045</h1>
+                   <p class="text-[#2e2e2e] py-2 text-base font-medium font-['Objectivity']">EN 13163 : 2012 + A1 : 2015 - 03</p>
+                   <p class="text-[#2e2e2e] py-2 break-words text-base font-light font-['Objectivity']">EPS-EN 13163 T2-L3-W3-Sb 5-P15-BS50-DS(N)5-DS(70,-)3-TR80</p>
+                   <img class="py-2" src="public/img/ico23.svg">
+                   <div class="flex py-12 justify-start gap-x-2 lg:gap-x-10">
+                       <div class="h-12 lg:px-6 px-2 py-4 bg-[#ff0009] rounded justify-start items-center lg:gap-2.5 inline-flex">
+                           <div class="text-white text-sm lg:text-base font-medium font-['Objectivity']">Zamów produkt</div>
+                       </div>
+                       <div class="h-12 lg:px-6 px-2 py-4 rounded border border-[#2e2e2e] justify-start items-center lg:gap-2.5 inline-flex">
+                           <div class="text-right text-[#2e2e2e] text-sm lg:text-base font-medium font-['Objectivity']">Złóż zapytanie</div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+                <img src="public/img/s1.png">
+
+            </div>
+        </div>
+    </section>
+
+    <!--zastosowanie-->
+    <section class="p-6">
+        <div class="mx-auto w-full max-w-[1440px] border-b border-[#d1d1d1] pb-6">
+            <h2 class="text-[#2e2e2e] text-2xl font-medium font-['Objectivity']">Zastosowanie</h2>
+            <div class="lg:columns-2 w-full lg:w-3/4">
+                {kategorie.map((slide, index) => (
+                        <li  class="text-[#707070] max-w-3/4 text-base py-3 font-light font-['Objectivity'] leading-none">{slide.title}</li>
+                ))}
+            </div>
+        </div>
+    </section>
+    <!--parametry-->
+    <section class="py-12 p-6">
+        <div class="mx-auto w-full max-w-[1440px]">
+            <h2 class="text-[#2e2e2e] text-2xl font-medium font-['Objectivity']">Parametry</h2>
+            <div class="columns-1 w-full lg:w-3/4">
+                {kategorie.map((slide, index) => (
+                        <div class="w-full flex justify-between border-b border-[#d1d1d1] py-2" >
+                            <ol  class="w-1/2 text-[#707070] max-w-3/4 text-base py-3 font-light font-['Objectivity'] leading-none">{slide.parametry}</ol>
+
+                            <ol  class="w-1/2 text-right text-[#242424] max-w-3/4 text-base py-3 font-light font-['Objectivity'] leading-none">{slide.wartosc}</ol>
+                        </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+        <Calc/>
+        <Newsletter/>
+</Page>
