@@ -128,16 +128,16 @@ const produkty = [
         <div id="product_header" class="py-24 flex flex-wrap mx-auto w-full max-w-[1440px]">
             <div class="w-full lg:w-1/2 flex items-center">
                <div class="p-6">
-                   <h1 class="text-[#2e2e2e] break-all py-2 text-3xl lg:text-5xl font-medium font-['Objectivity'] leading-10">AMITEC FASADA 045</h1>
-                   <p class="text-[#2e2e2e] py-2 text-base font-medium font-['Objectivity']">EN 13163 : 2012 + A1 : 2015 - 03</p>
-                   <p class="text-[#2e2e2e] py-2 break-words text-base font-light font-['Objectivity']">EPS-EN 13163 T2-L3-W3-Sb 5-P15-BS50-DS(N)5-DS(70,-)3-TR80</p>
+                   <h1 class="text-[#2e2e2e] break-all py-2 text-3xl lg:text-5xl font-medium  leading-10">AMITEC FASADA 045</h1>
+                   <p class="text-[#2e2e2e] py-2 text-base font-medium ">EN 13163 : 2012 + A1 : 2015 - 03</p>
+                   <p class="text-[#2e2e2e] py-2 break-words text-base font-light ">EPS-EN 13163 T2-L3-W3-Sb 5-P15-BS50-DS(N)5-DS(70,-)3-TR80</p>
                    <img class="py-2" src="public/img/ico23.svg">
                    <div class="flex py-12 justify-start gap-x-2 lg:gap-x-10">
                        <div class="h-12 lg:px-6 px-2 py-4 bg-[#ff0009] rounded justify-start items-center lg:gap-2.5 inline-flex">
-                           <div class="text-white text-sm lg:text-base font-medium font-['Objectivity']">Zamów produkt</div>
+                           <div class="text-white text-sm lg:text-base font-medium ">Zamów produkt</div>
                        </div>
                        <div class="h-12 lg:px-6 px-2 py-4 rounded border border-[#2e2e2e] justify-start items-center lg:gap-2.5 inline-flex">
-                           <div class="text-right text-[#2e2e2e] text-sm lg:text-base font-medium font-['Objectivity']">Złóż zapytanie</div>
+                           <div class="text-right text-[#2e2e2e] text-sm lg:text-base font-medium ">Złóż zapytanie</div>
                        </div>
                    </div>
                </div>
@@ -152,10 +152,10 @@ const produkty = [
     <!--zastosowanie-->
     <section class="p-6">
         <div class="mx-auto w-full max-w-[1440px] border-b border-[#d1d1d1] pb-6">
-            <h2 class="text-[#2e2e2e] text-2xl font-medium font-['Objectivity']">Zastosowanie</h2>
+            <h2 class="text-[#2e2e2e] text-2xl font-medium ">Zastosowanie</h2>
             <div class="lg:columns-2 w-full lg:w-3/4">
                 {kategorie.map((slide, index) => (
-                        <li  class="text-[#707070] max-w-3/4 text-base py-3 font-light font-['Objectivity'] leading-none">{slide.title}</li>
+                        <li  class="text-[#707070] max-w-3/4 text-base py-3 font-light  leading-none">{slide.title}</li>
                 ))}
             </div>
         </div>
@@ -163,17 +163,38 @@ const produkty = [
     <!--parametry-->
     <section class="py-12 p-6">
         <div class="mx-auto w-full max-w-[1440px]">
-            <h2 class="text-[#2e2e2e] text-2xl font-medium font-['Objectivity']">Parametry</h2>
+            <h2 class="text-[#2e2e2e] text-2xl font-medium ">Parametry</h2>
             <div class="columns-1 w-full lg:w-3/4">
                 {kategorie.map((slide, index) => (
                         <div class="w-full flex justify-between border-b border-[#d1d1d1] py-2" >
-                            <ol  class="w-1/2 text-[#707070] max-w-3/4 text-base py-3 font-light font-['Objectivity'] leading-none">{slide.parametry}</ol>
-
-                            <ol  class="w-1/2 text-right text-[#242424] max-w-3/4 text-base py-3 font-light font-['Objectivity'] leading-none">{slide.wartosc}</ol>
+                            <ol  class="w-1/2 text-[#707070] max-w-3/4 text-base py-3 font-light  leading-none">{slide.parametry}</ol>
+                            <ol  class="w-1/2 text-right text-[#242424] max-w-3/4 text-base py-3 font-light  leading-none">{slide.wartosc}</ol>
                         </div>
                 ))}
             </div>
         </div>
+    </section>
+
+    <section>
+        <div class="mx-auto w-full flex gap-x-10 py-6  max-w-[1440px]">
+            <button class="h-14 px-6 py-4 rounded border border-[#2e2e2e] hover:border-white group hover:bg-black justify-start items-center gap-4 inline-flex">
+                <div class="text-right text-[#2e2e2e] text-base font-medium group-hover:text-white  ">Pobierz kartę techniczną produktu</div>
+                <div class="w-4 h-4 group-hover:text-white  relative">
+                    <svg class=" duration-300 ease-in transition-all stroke-black group-hover:stroke-amber-50" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.75 10.25V11.15C14.75 12.4102 14.75 13.0401 14.5048 13.5215C14.2891 13.9449 13.9449 14.2891 13.5215 14.5048C13.0401 14.75 12.4102 14.75 11.15 14.75H4.85C3.58988 14.75 2.95982 14.75 2.47852 14.5048C2.05516 14.2891 1.71095 13.9449 1.49524 13.5215C1.25 13.0401 1.25 12.4102 1.25 11.15V10.25M11.75 6.5L8 10.25M8 10.25L4.25 6.5M8 10.25V1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </buton>
+                <button class="h-14 px-6 py-4 rounded border border-[#2e2e2e] hover:border-white group hover:bg-black justify-start items-center gap-4 inline-flex">
+                <div class="text-right text-[#2e2e2e] text-base font-medium group-hover:text-white  ">Pobierz deklarację Amitec</div>
+                <div class="w-4 h-4 relative">
+                    <svg class=" duration-300 ease-in transition-all stroke-black group-hover:stroke-amber-50" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.75 10.25V11.15C14.75 12.4102 14.75 13.0401 14.5048 13.5215C14.2891 13.9449 13.9449 14.2891 13.5215 14.5048C13.0401 14.75 12.4102 14.75 11.15 14.75H4.85C3.58988 14.75 2.95982 14.75 2.47852 14.5048C2.05516 14.2891 1.71095 13.9449 1.49524 13.5215C1.25 13.0401 1.25 12.4102 1.25 11.15V10.25M11.75 6.5L8 10.25M8 10.25L4.25 6.5M8 10.25V1.25"  stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                </buton>
+        </div>
+
     </section>
 
         <Calc/>
