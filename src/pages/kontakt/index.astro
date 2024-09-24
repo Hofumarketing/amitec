@@ -36,146 +36,98 @@ const postywrzesien = [
 ];
 ---
 <Page>
-    <style>
-        .accordion__input:checked ~ .accordion__content {
-            display: grid;
-        }
-        .accordion__input:nth-child(1):checked ~ .accordion__content {
-            display: grid;
-        }
-    </style>
-    <div id="onas_header" class=" ">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.add('nav-scrolled');
+        });
+    </script>
+    <div id="onas_header" class="h-[90vh] relative filter-grey  ">
+        <svg  class="w-full opacity-70 h-full absolute top-0 left-0 z-50"  viewBox="0 0 100% 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="url(#paint0_radial_533_791)" style="mix-blend-mode:color-burn"/>
+            <defs>
+                <radialGradient id="paint0_radial_533_791" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(554.405 971.593) rotate(8.08117) scale(928.241 1024.07)">
+                    <stop stop-color="#ED1C24"/>
+                    <stop offset="0.87" stop-color="#ED1C24" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+        </svg>
 
-        <div class="splide__slide h-full lg:h-[calc(100%-)]  bg-no-repeat	relative  bg-cover  flex flex-wrap" style="background-image: url('public/img/a15.jpg')">
-            <div class={` order-1 md:order-0 flex bg-black/50  items-center justify-center w-full h-[90vh] md:w-full lg:h-100vh xl:w-full p-6 lg:p-12 `}>
-                <div class="text-center">
-                    <h1 class="lg:w-[700px] text-neutral-900  mb-6 text-[30px] lg:text-5xl text-white font-medium leading-tight">Blog</h1>
-                    <h2 class="lg:w-[700px] text-neutral-900  mb-6 text-[20px] lg:text-[32px] text-white font-medium leading-tigh">Witamy na naszym blogu!</h2>
-                    <p class="lg:w-[700px] mb-6 text-neutral-900 text-white text-justify font-light  leading-tight"> Dołącz do naszej społeczności i bądź na bieżąco z najnowszymi trendami w branży. Odkrywaj wpływ styropianu na komfort codziennego życia, środowisko i przyszłość budownictwa.</p>
+        <div class=" bg-gradient-to-r from-red-500 to-stone-400 "></div>
+        <iframe  class="filter grayscale " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2305.811572295145!2d18.282575792885066!3d51.34469237314628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a9ca6103bbeb1%3A0xad26e4e2648c23af!2sAmitec%20Agnieszka%20Misiek!5e0!3m2!1spl!2spl!4v1727169405469!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section>
+        <div class="mx-auto py-12 w-full max-w-[1440px]">
+            <div class="w-full flex justify-between">
+                <div class="w-2/6">
+                    <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Amitec Sp. z o. o</h2>
+                    <p class="text-[#999999] py-1 text-sm font-light ">NIP 9970160909 </p>
+                    <p class="text-[#999999] py-1 text-sm font-light ">KRS 0000852064</p>
+                    <p class="text-[#999999] py-1 text-sm font-light ">REGON 386631402</p>
+                </div>
+                <div class="w-2/6">
+                    <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Biuro</h2>
+                    <p class="text-[#999999] py-1 text-sm font-light ">+48 531 581 109</p>
+                    <p class="text-[#999999] py-1 text-sm font-light ">biuro@amitec.com.pl</p>
+                    <p class="text-[#999999] py-1 text-sm font-light ">ul. Stefana Żeromskiego 1A</p>
+                    <p class="text-[#999999] py-1 text-sm font-light ">98-405 Galewice | Poland</p>
+                </div>
+            </div>
+            <div class="w-full flex justify-between py-12">
+                <div class="w-2/6">
+
+                </div>
+                <div class="w-2/6">
+                    <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Transport</h2>
+                    <p class="text-[#999999] py-1 text-sm font-light ">+48 531 581 109</p>
+                    <p class="text-[#999999] py-1 text-sm font-light ">transport@amitec.com.pl</p>
+
+                </div>
+            </div>
+            <div class="w-full flex justify-between py-12">
+                <div class="w-2/6">
+                    <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Godziny pracy</h2>
+                    <p class="text-[#999999] py-1 text-sm font-light ">Pon. - Pt.</p>
+                    <p class="text-[#999999] py-1 text-sm font-light ">08.00 - 16.00</p>
+                </div>
+                <div class="w-2/6">
+                    <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Projekty</h2>
+                    <p class="text-[#999999] py-1 text-sm font-light ">+48 577 077 419</p>
+                    <p class="text-[#999999] py-1 text-sm font-light ">projekty@amitec.com.pl</p>
+
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <section>
+        <div class="w-full flex justify-between">
+            <div class="w-1/2">
 
-
-    <div class="w-full h-full mx-auto bg-gray-200 ">
-        <div class="mx-auto w-3/4  rounded-lg  overflow-hidden pt-24">
-            <div>
-                <input type="radio" name="tailwind_accordion" id="tab1" class="accordion__input px-2 py-4 hidden" checked>
-                <label for="tab1" class="accordion__label py-6 block w-full flex justify-between">
-                    <h2 class="text-[#2e2e2e] text-5xl font-medium ">Wrzesień</h2>
-                    <div class="h-12 px-6 py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
-                        <div class="text-right text-[#2e2e2e] text-base font-medium ">Rozwiń</div>
-                    </div>
-                </label>
-                <div class="accordion__content grid w-full grid-cols-2 hidden">
-                    {postywrzesien.map((slide, index) => (
-                            <div
-                                    class={`w-full flex items-center ${index % 2 === 1 ? '' : ''} relative`}
-                            >
-                                <div class="w-full py-6">
-                                    <div class="w-full flex flex-wrap  ">
-                                        <div class={`w-full ${index % 2 === 0 ? 'order-0 pr-6' : 'order-1 pl-6'}`}>
-                                            <p class="text-[#707070] text-base font-light  leading-tight">24.08.2024</p>
-                                            <h3 class="text-black text-3xl font-medium  leading-loose">{slide.title}</h3>
-                                            <div class="w-full bg-center bg-no-repeat w-full bg-cover pt-[40vh]"  style={{ backgroundImage: `url(${slide.image})` }} >
-                                            </div>
-                                            <div>
-                                                <p class="py-6 text-[#707070] text-[#707070] text-base font-light leading-tight">
-                                                    {slide.description}
-                                                </p>
-                                            </div>
-                                            <button class="px-2.5 py-2 rounded-sm border border-[#d1d1d1] justify-start items-center gap-2.5 inline-flex">
-                                                <div class="text-[#2e2e2e] text-xs font-normal  leading-3">Zobacz cały artykuł</div>
-                                            </button>
-                                        </div>
-                                        <div class={`w-full h-[40vh] ${index % 2 === 0 ? 'order-1 ' : 'order-0'}`}>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    ))}
-                </div>
             </div>
-
-            <div>
-                <input type="radio" name="tailwind_accordion" id="tab2" class="accordion__input px-2 py-4 hidden">
-                <label for="tab2" class="accordion__label py-6 block w-full flex justify-between">
-                    <h2 class="text-[#2e2e2e] text-5xl font-medium ">Sierpień</h2>
-                    <div class="h-12 px-6 py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
-                        <div class="text-right text-[#2e2e2e] text-base font-medium ">Rozwiń</div>
-                    </div>
-                </label>
-                <div class="accordion__content grid w-full grid-cols-2 hidden">
-                    {postywrzesien.map((slide, index) => (
-                            <div
-                                    class={`w-full flex items-center ${index % 2 === 1 ? '' : ''} relative`}
-                            >
-                                <div class="w-full py-6">
-                                    <div class="w-full flex flex-wrap  ">
-                                        <div class={`w-full ${index % 2 === 0 ? 'order-0 pr-6' : 'order-1 pl-6'}`}>
-                                            <p class="text-[#707070] text-base font-light  leading-tight">24.08.2024</p>
-                                            <h3 class="text-black text-3xl font-medium  leading-loose">{slide.title}</h3>
-                                            <div class="w-full bg-center bg-no-repeat w-full bg-cover pt-[40vh]"  style={{ backgroundImage: `url(${slide.image})` }} >
-                                            </div>
-                                            <div>
-                                                <p class="py-6 text-[#707070] text-[#707070] text-base font-light leading-tight">
-                                                    {slide.description}
-                                                </p>
-                                            </div>
-                                            <button class="px-2.5 py-2 rounded-sm border border-[#d1d1d1] justify-start items-center gap-2.5 inline-flex">
-                                                <div class="text-[#2e2e2e] text-xs font-normal  leading-3">Zobacz cały artykuł</div>
-                                            </button>
-                                        </div>
-                                        <div class={`w-full h-[40vh] ${index % 2 === 0 ? 'order-1 ' : 'order-0'}`}>
-
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="w-1/2">
+                <div class="w-72 h-fit p-5 shadow-2xl  bg-white border-b-4 border-[#ed1c24] flex-col justify-start items-start gap-5 inline-flex">
+                    <div class="text-[#2e2e2e] text-2xl font-medium ">Województwo</div>
+                    <div class="py-5 flex-col relative justify-center items-start gap-11 flex">
+                        <img class="w-24 h-28" src="https://via.placeholder.com/90x112" />
+                        <div class="h-32 flex-col justify-start items-start gap-14 flex">
+                            <div class="self-stretch text-[#2e2e2e] text-2xl font-medium ">Jan Kowalski</div>
+                            <div class="self-stretch h-12 flex-col justify-start items-start gap-2.5 flex">
+                                <div class="self-stretch text-[#2e2e2e] text-sm font-normal ">+48 123 626 632</div>
+                                <div class="self-stretch text-[#2e2e2e] text-sm font-normal ">j.kowalski@amitec.com.pl</div>
                             </div>
-                    ))}
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="tailwind_accordion" id="tab3" class="accordion__input px-2 py-4 hidden">
-                <label for="tab3" class="accordion__label py-6 block w-full flex justify-between">
-                    <h2 class="text-[#2e2e2e] text-5xl font-medium ">Lipiec</h2>
-                    <div class="h-12 px-6 py-4 rounded border border-[#2e2e2e] justify-start items-center gap-2.5 inline-flex">
-                        <div class="text-right text-[#2e2e2e] text-base font-medium ">Rozwiń</div>
+                        </div>
+                        <div class="w-0 h-0
+                      border-l-[20px] border-l-transparent
+                      border-t-[15px] border-t-[#ed1c24]
+                      border-r-[20px] border-r-transparent absolute -bottom-9 translate-x-1/2 left-1/2 ">
+                        </div>
                     </div>
-                </label>
-                <div class="accordion__content grid w-full grid-cols-2 hidden">
-                    {postywrzesien.map((slide, index) => (
-                            <div
-                                    class={`w-full flex items-center ${index % 2 === 1 ? '' : ''} relative`}
-                            >
-                                <div class="w-full py-6">
-                                    <div class="w-full flex flex-wrap  ">
-                                        <div class={`w-full ${index % 2 === 0 ? 'order-0 pr-6' : 'order-1 pl-6'}`}>
-                                            <p class="text-[#707070] text-base font-light  leading-tight">24.08.2024</p>
-                                            <h3 class="text-black text-3xl font-medium  leading-loose">{slide.title}</h3>
-                                            <div class="w-full bg-center bg-no-repeat w-full bg-cover pt-[40vh]"  style={{ backgroundImage: `url(${slide.image})` }} >
-                                            </div>
-                                            <div>
-                                                <p class="py-6 text-[#707070] text-[#707070] text-base font-light leading-tight">
-                                                    {slide.description}
-                                                </p>
-                                            </div>
-                                            <button class="px-2.5 py-2 rounded-sm border border-[#d1d1d1] justify-start items-center gap-2.5 inline-flex">
-                                                <div class="text-[#2e2e2e] text-xs font-normal  leading-3">Zobacz cały artykuł</div>
-                                            </button>
-                                        </div>
-                                        <div class={`w-full h-[40vh] ${index % 2 === 0 ? 'order-1 ' : 'order-0'}`}>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    ))}
                 </div>
+                <img src="public/img/map.svg">
             </div>
         </div>
-    </div>
+    </section>
+
 </Page>
