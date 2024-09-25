@@ -58,15 +58,15 @@ const postywrzesien = [
     </div>
 
     <section>
-        <div class="mx-auto py-12 w-full max-w-[1440px]">
-            <div class="w-full flex justify-between">
-                <div class="w-2/6">
+        <div class="mx-auto py-12 w-full max-w-[1440px] p-6">
+            <div class="w-full flex flex-wrap justify-between">
+                <div class="w-full lg:w-2/6">
                     <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Amitec Sp. z o. o</h2>
                     <p class="text-[#999999] py-1 text-sm font-light ">NIP 9970160909 </p>
                     <p class="text-[#999999] py-1 text-sm font-light ">KRS 0000852064</p>
                     <p class="text-[#999999] py-1 text-sm font-light ">REGON 386631402</p>
                 </div>
-                <div class="w-2/6">
+                <div class="w-full lg:w-2/6 py-6 ">
                     <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Biuro</h2>
                     <p class="text-[#999999] py-1 text-sm font-light ">+48 531 581 109</p>
                     <p class="text-[#999999] py-1 text-sm font-light ">biuro@amitec.com.pl</p>
@@ -74,24 +74,24 @@ const postywrzesien = [
                     <p class="text-[#999999] py-1 text-sm font-light ">98-405 Galewice | Poland</p>
                 </div>
             </div>
-            <div class="w-full flex justify-between py-12">
-                <div class="w-2/6">
+            <div class="w-full flex justify-between py-6 lg:py-12">
+                <div class="hidden lg:block w-2/6">
 
                 </div>
-                <div class="w-2/6">
+                <div class="w-full lg:w-2/6">
                     <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Transport</h2>
                     <p class="text-[#999999] py-1 text-sm font-light ">+48 531 581 109</p>
                     <p class="text-[#999999] py-1 text-sm font-light ">transport@amitec.com.pl</p>
 
                 </div>
             </div>
-            <div class="w-full flex justify-between py-12">
-                <div class="w-2/6">
+            <div class="w-full flex flex-wrap justify-between py-6 lg:py-12">
+                <div class=" order-1 lg:order-0 w-full lg:w-2/6 py-6 lg:py-0">
                     <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Godziny pracy</h2>
                     <p class="text-[#999999] py-1 text-sm font-light ">Pon. - Pt.</p>
                     <p class="text-[#999999] py-1 text-sm font-light ">08.00 - 16.00</p>
                 </div>
-                <div class="w-2/6">
+                <div class=" order-0 lg:order-1 w-full lg:w-2/6">
                     <h2 class="text-[#2e2e2e] mb-12 text-xl font-medium ">Projekty</h2>
                     <p class="text-[#999999] py-1 text-sm font-light ">+48 577 077 419</p>
                     <p class="text-[#999999] py-1 text-sm font-light ">projekty@amitec.com.pl</p>
@@ -102,14 +102,56 @@ const postywrzesien = [
     </section>
 
     <section>
-        <div class="w-full flex justify-between">
-            <div class="w-1/2">
 
+        <div class="mx-auto flex flex-wrap justify-between py-6 lg:py-12 w-full p-6 max-w-[1440px]">
+            <div class="order-1 lg:order-0 w-full lg:w-1/2">
+                <div class="text-[#2e2e2e] text-3xl font-medium font-['Objectivity'] leading-tight relative z-30">
+                    <h2>Napisz do nas</h2>
+                </div>
+                <p class="w-full lg: w-3/4 text-[#707070] my-6 text-base font-light font-['Objectivity'] leading-tight">Wyślij do nas wiadomość! Nasz handlowiec odpisze bądź oddzwoni do Ciebie w wybranym przez Ciebie terminie</p>
+                <div class="w-full lg:w-3/4">
+                    <textarea id="message" rows="4" class="p-4 my-2 w-full text-[#1e1e1e]/40  bg-[#d6d6d6]/10 rounded border border-[#cdcdcd] backdrop-blur-sm justify-start items-start gap-4 inline-flex text-base font-light font-['Objectivity'] leading-none" placeholder="Napisz do nas wiadomość..."></textarea>
+                    <input type="email" id="message" rows="4" class="p-4 my-2 w-full text-[#1e1e1e]/40  bg-[#d6d6d6]/10 rounded border border-[#cdcdcd] backdrop-blur-sm justify-start items-start gap-4 inline-flex text-base font-light font-['Objectivity'] leading-none" placeholder="email..."></input>
+                    <select id="country" class="p-4 my-2 w-full text-[#1e1e1e]/40  bg-[#d6d6d6]/10 rounded border border-[#cdcdcd] backdrop-blur-sm justify-start items-start gap-4 inline-flex text-base font-light font-['Objectivity'] leading-none">
+                        <option selected>wybierz województwo</option>
+                        <option value="WIE">Wielkopolskie</option>
+                        <option value="SWI">Świętorkrzyskie</option>
+                        <option value="MAZ">Mazowieckie</option>
+                        <option value="POM">Pomorskie</option>
+                    </select>
+                </div>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+                <input type="text" id="phone-input" aria-describedby="helper-text-explanation" class="p-4 my-2 w-full lg:w-3/4 text-[#1e1e1e]/40  bg-[#d6d6d6]/10 rounded border border-[#cdcdcd] backdrop-blur-sm justify-start items-start gap-4 inline-flex text-base font-light font-['Objectivity'] leading-none" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="podaj nr tel jesli wolisz kontakt telefoniczny np. 123-456-789" required />
+
+                <div class="flex items-center py-6 space-x-2">
+                    <input
+                            type="checkbox"
+                            id="agreement"
+                            class="form-checkbox text-blue-600 focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label for="agreement" class="text-[#1e1e1e]/60 text-sm  font-light font-['Objectivity'] leading-none">
+                        Zgadzam się na przetwarzanie <a href="#" class="text-red-300 underline">danych osobowych</a>.
+                    </label>
+                </div>
+                <div class="flex items-center  space-x-2">
+                    <input
+                            type="checkbox"
+                            id="agreement"
+                            class="form-checkbox text-blue-600 focus:ring-blue-500 focus:ring-2"
+                    />
+                    <label for="agreement" class="text-[#1e1e1e]/60 text-sm  font-light font-['Objectivity'] leading-none">
+                        Oznajmiam, iż zapoznałem się z  <a href="#" class="text-red-300 underline">regulaminem</a>.
+                    </label>
+                </div>
+                <div class="w-full py-6">
+                    <button class="h-12 px-3 py-2.5 bg-[#ed1c24] rounded justify-start items-center gap-2.5 inline-flex text-white text-base font-medium font-['Objectivity']">Wyślij wiadomość </button>
+                </div>
             </div>
-            <div class="w-1/2">
-                <div class="w-72 h-fit p-5 shadow-2xl  bg-white border-b-4 border-[#ed1c24] flex-col justify-start items-start gap-5 inline-flex">
+            <div class="order-0 lg:order-1 w-full lg:w-1/2 relative">
+                <div class="hidden lg:block w-72 h-fit p-5 shadow-2xl  absolute  bottom-0 bg-white border-b-4 border-[#ed1c24] flex-col justify-start items-start gap-5 inline-flex">
                     <div class="text-[#2e2e2e] text-2xl font-medium ">Województwo</div>
-                    <div class="py-5 flex-col relative justify-center items-start gap-11 flex">
+                    <div id="contact_details" class="  py-5 flex-col relative justify-center items-start gap-11 flex">
                         <img class="w-24 h-28" src="https://via.placeholder.com/90x112" />
                         <div class="h-32 flex-col justify-start items-start gap-14 flex">
                             <div class="self-stretch text-[#2e2e2e] text-2xl font-medium ">Jan Kowalski</div>
